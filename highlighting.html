@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html class="no-js" lang="eng" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Highlighting</title>
+    <link rel="stylesheet" href="theme/css/foundation.min.css">
+    <link rel="stylesheet" href="theme/css/app.css">
+     <link rel="stylesheet" href="theme/css/highlight.js/styles/github-gist.css"> 
+  </head>
+  <body>
+    <div class="expanded row">
+      <div class="small-12 medium-12 large-12 columns align-self-top">
+        <div class="row">
+          
+          <header class="large-12 columns align-self-top a_header">
+            <div class="row">
+              <div class="large-12 columns a_limited top-bar">
+                <div class="top-bar-left">
+                  <p>Ornate Manual</p>
+
+                </div>
+                <div class="top-bar-right">
+                  
+                </div>
+              </div>
+            </div>
+          </header>
+          
+          <div class="small-12 medium-12 large-12 columns align-self-top a_limited a_main">
+            <div class="row">
+              
+              <main class="columns large-order-2 sections" id="_sections">
+                <h1 id="code-highlighting" class="a_section" data-magellan-target="code-highlighting">Code Highlighting<a class="a_hlink" href="#code-highlighting"></a></h1>
+<p>A highlighter is a class that implements the <code class="hljs">Highlighter</code> trait. It can be set in the site configuration in <code class="hljs">global.highlight</code>.</p>
+<p>The default highlighter runs <a href="https://highlightjs.org/">highlight.js</a> at build time in Nashorn. All languages from the highlight.js distribution are supported but only a few of them are enabled by default to improve startup times. This and other settings can be changed in the page or site configuration. These are the defaults:</p>
+<div class="row">
+<pre class="hljs small-expand columns a_xscroll"><code class="language-yaml"><span class="hljs-comment"># Settings for the highlight.js-based syntax highlighter</span>
+highlight.highlightjs {
+  <span class="hljs-comment"># Preloaded languages. Any language that you want to access via an alias should be listed here.</span>
+  preload = [scala, java, json, yaml, sql, ini, diff, bash, xml, markdown]
+
+  <span class="hljs-comment"># Default language when none is specified. Can be one of the supported languages, an array</span>
+  <span class="hljs-comment"># of languages from which to pick automatically, or null or an empty list for plain text.</span>
+  <span class="hljs-comment"># There are separate defaults for fenced code blocks, indented code blocks and inline code.</span>
+  fenced    = ${highlight.highlightjs.preload}
+  indented  = ${highlight.highlightjs.preload}
+  inline    = <span class="hljs-literal">null</span>
+
+  <span class="hljs-comment"># URIs of CSS files and assorted resources required for the style (relative to webjar:/highlight.js/styles/)</span>
+  styleResources = [ github-gist.css ]
+}
+</code></pre>
+</div>
+<p>Note that the default theme overrides any background color set by the highlight.js style.</p>
+
+              </main>
+              
+              
+                <div data-sticky-container class="small-12 medium-12 large-2 large-order-1 columns a_sitenav_container">
+                  <nav class="a_sitenav" data-sticky data-sticky-on="large" data-anchor="_sections">
+                    
+                  <ul>
+                     
+  <li >
+    
+      <a href="index.html">Introduction</a>
+    
+    
+  </li>
+  
+  <li >
+    
+      <a href="configuration.html">Configuration</a>
+    
+    
+  </li>
+  
+  <li >
+    
+      <a href="uris.html">URIs</a>
+    
+    
+  </li>
+  
+  <li >
+    
+      <a href="markdown.html">Markdown Extensions</a>
+    
+    
+  </li>
+  
+  <li  class="a_thispage" >
+    
+      <a href="highlighting.html">Code Highlighting</a>
+    
+    
+  </li>
+  
+  <li >
+    
+      <a href="elements.html">All Elements</a>
+    
+    
+  </li>
+  
+  <li >
+    
+      <a href="test.html">Test Page</a>
+    
+    
+  </li>
+ 
+                  </ul>
+                  </nav>
+                </div>
+              
+              
+              
+                <div class="small-12 medium-12 large-2 large-order-3 columns a_show-for-xlarge" data-sticky-container>
+                  <nav class="a_pagenav" data-sticky data-sticky-on="large" data-anchor="_sections">
+                     <header><p>On This Page</p>
+</header> 
+                    <ul class="vertical menu" data-magellan>
+                       
+  <li>
+    
+       <a href="#code-highlighting">Code Highlighting</a> 
+    
+    
+  </li>
+ 
+                    </ul>
+                  </nav>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer class="small-12 medium-12 large-12 columns align-self-bottom a_footer">
+        <div class="row">
+          <div class="small-12 medium-12 large-12 columns top-bar">
+            <div class="top-bar-left">
+              <p>© Copyright 2016 Stefan Zeiger</p>
+
+            </div>
+            <div class="top-bar-right">
+              <p>Generated with <a href="https://github.com/szeiger/ornate">Ornate</a>.</p>
+
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="theme/js/jquery.min.js"></script>
+    <script src="theme/js/what-input.min.js"></script>
+    <script src="theme/js/foundation.min.js"></script>
+    
+    <script src="theme/js/app.js"></script>
+  </body>
+</html>

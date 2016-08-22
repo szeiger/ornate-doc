@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html class="no-js" lang="eng" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuration</title>
+    <link rel="stylesheet" href="theme/css/foundation.min.css">
+    <link rel="stylesheet" href="theme/css/app.css">
+     <link rel="stylesheet" href="theme/css/highlight.js/styles/github-gist.css"> 
+  </head>
+  <body>
+    <div class="expanded row">
+      <div class="small-12 medium-12 large-12 columns align-self-top">
+        <div class="row">
+          
+          <header class="large-12 columns align-self-top a_header">
+            <div class="row">
+              <div class="large-12 columns a_limited top-bar">
+                <div class="top-bar-left">
+                  <p>Ornate Manual</p>
+
+                </div>
+                <div class="top-bar-right">
+                  
+                </div>
+              </div>
+            </div>
+          </header>
+          
+          <div class="small-12 medium-12 large-12 columns align-self-top a_limited a_main">
+            <div class="row">
+              
+              <main class="columns large-order-2 sections" id="_sections">
+                <h1 id="configuration" class="a_section" data-magellan-target="configuration">Configuration<a class="a_hlink" href="#configuration"></a></h1>
+<p>The configuration is written in HOCON. The site configuration is in <code class="hljs">ornate.conf</code>. It is resolved against the reference configuration <code class="hljs">ornate-reference.conf</code> that ships with ornate. Every page may have a HOCON front matter section at the top, for example:</p>
+<div class="row">
+<pre class="hljs small-expand columns a_xscroll"><code class="language-yaml"><span class="hljs-meta">---</span>
+highlight.highlightjs.inline = scala
+<span class="hljs-meta">---</span>
+<span class="hljs-comment"># Page Title</span>
+
+All `inline code` on this page gets Scala highlighting!
+</code></pre>
+</div>
+<p>The page configuration consists of the front matter resolved against the site configuration, so you can override site configuration settings for a page, or even define new variables in the site configuration and reference them from a page configuration.</p>
+<h2 id="global-settings" class="a_section" data-magellan-target="global-settings">Global Settings<a class="a_hlink" href="#global-settings"></a></h2>
+<p>The configuration path <code class="hljs">global</code> contains settings that are used in a global context, i.e. they are always looked up in the site configuration and not in page configurations.</p>
+<blockquote class="note">
+<p><em>Note:</em> There are other paths for specific modules like <code class="hljs">theme.default.global</code> which are treated the same. This behavior is only by convention. Configuration and lookup for these sections is the same as for any other part of the configuration but overriding settings in these sections in a page configuration would be fruitless because they are never used. Configuration settings outside of <code class="hljs">global</code> sections are generally looked up in page configurations.</p>
+</blockquote>
+<p>The most important global settings are:</p>
+<div class="row">
+<pre class="hljs small-expand columns a_xscroll"><code class="language-yaml">global {
+  <span class="hljs-comment"># Directory containing the document sources</span>
+  sourceDir = <span class="hljs-string">"src"</span>
+  <span class="hljs-comment"># Directory containing static resources that should be copied to the target site</span>
+  resourceDir = ${global.sourceDir}
+  <span class="hljs-comment"># Directory to which the output is rendered</span>
+  targetDir = <span class="hljs-string">"target"</span>
+  <span class="hljs-comment"># TOC structure or null for no TOC</span>
+  toc = <span class="hljs-literal">null</span>
+  <span class="hljs-comment"># The theme, which also determines the output format</span>
+  theme = default
+}
+</code></pre>
+</div>
+<h2 id="table-of-contents" class="a_section" data-magellan-target="table-of-contents">Table of Contents<a class="a_hlink" href="#table-of-contents"></a></h2>
+<p><code class="hljs">global.toc</code> is a list of pages. Is is necessary to list them explicitly so that they can be included in the desired order. Any page not listed in <code class="hljs">global.toc</code> will still be processed as part of the site but it will not contribute TOC entries.</p>
+<p>Here is a simple TOC:</p>
+<div class="row">
+<pre class="hljs small-expand columns a_xscroll"><code class="language-yaml">global.toc = [
+  index.md
+  configuration.md
+  elements.md
+]
+</code></pre>
+</div>
+<p>TOC entries are either <code class="hljs">site:</code> URIs (relative to <code class="hljs">site:/</code>) or objects containing a URI and a title:</p>
+<div class="row">
+<pre class="hljs small-expand columns a_xscroll"><code class="language-yaml">  { title = <span class="hljs-string">"Test Page"</span>, url = <span class="hljs-string">"test.md"</span> }
+</code></pre>
+</div>
+<p>Setting a title in the TOC should rarely be necessary. If unset, the title defaults to the page title, which can be set in the front matter or default to the first heading on the page.</p>
+
+              </main>
+              
+              
+                <div data-sticky-container class="small-12 medium-12 large-2 large-order-1 columns a_sitenav_container">
+                  <nav class="a_sitenav" data-sticky data-sticky-on="large" data-anchor="_sections">
+                    
+                  <ul>
+                     
+  <li >
+    
+      <a href="index.html">Introduction</a>
+    
+    
+  </li>
+  
+  <li  class="a_thispage" >
+    
+      <a href="configuration.html">Configuration</a>
+    
+    
+  </li>
+  
+  <li >
+    
+      <a href="uris.html">URIs</a>
+    
+    
+  </li>
+  
+  <li >
+    
+      <a href="markdown.html">Markdown Extensions</a>
+    
+    
+  </li>
+  
+  <li >
+    
+      <a href="highlighting.html">Code Highlighting</a>
+    
+    
+  </li>
+  
+  <li >
+    
+      <a href="elements.html">All Elements</a>
+    
+    
+  </li>
+  
+  <li >
+    
+      <a href="test.html">Test Page</a>
+    
+    
+  </li>
+ 
+                  </ul>
+                  </nav>
+                </div>
+              
+              
+              
+                <div class="small-12 medium-12 large-2 large-order-3 columns a_show-for-xlarge" data-sticky-container>
+                  <nav class="a_pagenav" data-sticky data-sticky-on="large" data-anchor="_sections">
+                     <header><p>On This Page</p>
+</header> 
+                    <ul class="vertical menu" data-magellan>
+                       
+  <li>
+    
+       <a href="#configuration">Configuration</a> 
+    
+    
+      <ul class="vertical menu">  
+  <li>
+    
+       <a href="#global-settings">Global Settings</a> 
+    
+    
+  </li>
+  
+  <li>
+    
+       <a href="#table-of-contents">Table of Contents</a> 
+    
+    
+  </li>
+  </ul>
+    
+  </li>
+ 
+                    </ul>
+                  </nav>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer class="small-12 medium-12 large-12 columns align-self-bottom a_footer">
+        <div class="row">
+          <div class="small-12 medium-12 large-12 columns top-bar">
+            <div class="top-bar-left">
+              <p>© Copyright 2016 Stefan Zeiger</p>
+
+            </div>
+            <div class="top-bar-right">
+              <p>Generated with <a href="https://github.com/szeiger/ornate">Ornate</a>.</p>
+
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="theme/js/jquery.min.js"></script>
+    <script src="theme/js/what-input.min.js"></script>
+    <script src="theme/js/foundation.min.js"></script>
+    
+    <script src="theme/js/app.js"></script>
+  </body>
+</html>

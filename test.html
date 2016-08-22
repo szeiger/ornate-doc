@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html class="no-js" lang="eng" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Target</title>
+    <link rel="stylesheet" href="theme/css/foundation.min.css">
+    <link rel="stylesheet" href="theme/css/app.css">
+     <link rel="stylesheet" href="theme/css/highlight.js/styles/github-gist.css"> 
+  </head>
+  <body>
+    <div class="expanded row">
+      <div class="small-12 medium-12 large-12 columns align-self-top">
+        <div class="row">
+          
+          <header class="large-12 columns align-self-top a_header">
+            <div class="row">
+              <div class="large-12 columns a_limited top-bar">
+                <div class="top-bar-left">
+                  <p>Ornate Manual</p>
+
+                </div>
+                <div class="top-bar-right">
+                  
+                </div>
+              </div>
+            </div>
+          </header>
+          
+          <div class="small-12 medium-12 large-12 columns align-self-top a_limited a_main">
+            <div class="row">
+              
+              <main class="columns large-order-2 sections" id="_sections">
+                <h1 id="target" class="a_section" data-magellan-target="target">Target<a class="a_hlink" href="#target"></a></h1>
+<h2 id="nd-level" class="a_section" data-magellan-target="nd-level">2nd level<a class="a_hlink" href="#nd-level"></a></h2>
+<h2 id="code-snippet" class="a_section" data-magellan-target="code-snippet">Code snippet<a class="a_hlink" href="#code-snippet"></a></h2>
+<p>Here's some Scala code:</p>
+<div class="row">
+<pre class="hljs small-expand columns a_xscroll"><code class="language-scala">  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AttributedHeading</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Heading</span> </span>{
+    <span class="hljs-keyword">var</span> id: <span class="hljs-type">String</span> = <span class="hljs-literal">null</span>
+    <span class="hljs-keyword">val</span> attrs: <span class="hljs-type">ListBuffer</span>[<span class="hljs-type">String</span>] = <span class="hljs-keyword">new</span> <span class="hljs-type">ListBuffer</span>
+
+    <span class="hljs-keyword">override</span> <span class="hljs-keyword">protected</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">toStringAttributes</span> </span>= {
+      <span class="hljs-keyword">val</span> b = <span class="hljs-keyword">new</span> <span class="hljs-type">StringBuilder</span>().append(<span class="hljs-string">s"level=<span class="hljs-subst">$getLevel</span>"</span>)
+      <span class="hljs-keyword">if</span>(id ne <span class="hljs-literal">null</span>) b.append(<span class="hljs-string">" id="</span>+id)
+      <span class="hljs-keyword">if</span>(attrs.nonEmpty) b.append(attrs.mkString(<span class="hljs-string">" attrs=["</span>, <span class="hljs-string">", "</span>, <span class="hljs-string">"]"</span>))
+      b.toString
+    }
+  }
+</code></pre>
+</div>
+<p>And an indented block:</p>
+<div class="row">
+<pre class="hljs small-expand columns a_xscroll"><code class="language-scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span> </span>{
+}
+</code></pre>
+</div>
+<p>And this <code class="hljs language-scala"><span class="hljs-keyword">val</span> x = <span class="hljs-number">42</span></code> is inline code.</p>
+<p>Here's an image from highlight.js:</p>
+<p><img src="theme/images/highlight.js/styles/brown-papersq.png" alt="" /></p>
+<h2 id="title" class="a_section" data-magellan-target="title">Title<a class="a_hlink" href="#title"></a></h2>
+<h4 id="level-4" class="a_section" data-magellan-target="level-4">Level 4<a class="a_hlink" href="#level-4"></a></h4>
+<h4 id="level-4-1" class="a_section" data-magellan-target="level-4-1">Level 4<a class="a_hlink" href="#level-4-1"></a></h4>
+<h3 id="level-3" class="a_section" data-magellan-target="level-3">Level 3<a class="a_hlink" href="#level-3"></a></h3>
+<h3 id="level-3-1" class="a_section" data-magellan-target="level-3-1">Level 3<a class="a_hlink" href="#level-3-1"></a></h3>
+<h2 id="subtitle" class="a_section" data-magellan-target="subtitle">Subtitle<a class="a_hlink" href="#subtitle"></a></h2>
+<h2 id="toctreemaxlevel2mergefirstfalse" class="a_section" data-magellan-target="toctreemaxlevel2mergefirstfalse">toctree:maxLevel=2,mergeFirst=false<a class="a_hlink" href="#toctreemaxlevel2mergefirstfalse"></a></h2>
+<ul>
+<li><a href="index.html">Introduction</a>
+<ul>
+<li><a href="index.html#introduction">Introduction</a>
+<ul>
+<li><a href="index.html#running">Running</a></li>
+<li><a href="index.html#terminology">Terminology</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="configuration.html">Configuration</a>
+<ul>
+<li><a href="configuration.html#configuration">Configuration</a>
+<ul>
+<li><a href="configuration.html#global-settings">Global Settings</a></li>
+<li><a href="configuration.html#table-of-contents">Table of Contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="uris.html">URIs</a>
+<ul>
+<li><a href="uris.html#uris">URIs</a>
+<ul>
+<li><a href="uris.html#site">site</a></li>
+<li><a href="uris.html#webjar-theme-classpath">webjar, theme, classpath</a></li>
+<li><a href="uris.html#abs">abs</a></li>
+<li><a href="uris.html#file">file</a></li>
+<li><a href="uris.html#toctree">toctree</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="markdown.html">Markdown Extensions</a>
+<ul>
+<li><a href="markdown.html#markdown-extensions">Markdown Extensions</a>
+<ul>
+<li><a href="markdown.html#commonmark-java-extensions">commonmark-java extensions</a></li>
+<li><a href="markdown.html#headerattributes-and-autoidentifiers">headerAttributes and autoIdentifiers</a></li>
+<li><a href="markdown.html#blockquoteattributes">blockQuoteAttributes</a></li>
+<li><a href="markdown.html#mergetabs">mergeTabs</a></li>
+<li><a href="markdown.html#includecode">includeCode</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="highlighting.html">Code Highlighting</a>
+<ul>
+<li><a href="highlighting.html#code-highlighting">Code Highlighting</a></li>
+</ul>
+</li>
+<li><a href="elements.html">All Elements</a>
+<ul>
+<li><a href="elements.html#all-elements">All Elements</a>
+<ul>
+<li><a href="elements.html#plain-text-paragraphs">Plain Text Paragraphs</a></li>
+<li><a href="elements.html#inline-elements">Inline Elements</a></li>
+<li><a href="elements.html#code-blocks">Code Blocks</a></li>
+<li><a href="elements.html#block-quotes">Block Quotes</a></li>
+<li><a href="elements.html#lines">Lines</a></li>
+<li><a href="elements.html#lists">Lists</a></li>
+<li><a href="elements.html#tables">Tables</a></li>
+<li><a href="elements.html#toc-trees">TOC Trees</a></li>
+<li><a href="elements.html#section-titles">Section Titles</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="test.html">Test Page</a>
+<ul>
+<li><a href="test.html#target">Target</a>
+<ul>
+<li><a href="test.html#nd-level">2nd level</a></li>
+<li><a href="test.html#code-snippet">Code snippet</a></li>
+<li><a href="test.html#title">Title</a></li>
+<li><a href="test.html#subtitle">Subtitle</a></li>
+<li><a href="test.html#toctreemaxlevel2mergefirstfalse">toctree:maxLevel=2,mergeFirst=false</a></li>
+<li><a href="test.html#toctree">toctree:</a></li>
+<li><a href="test.html#pages">Pages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="toctree" class="a_section" data-magellan-target="toctree">toctree:<a class="a_hlink" href="#toctree"></a></h2>
+<ul>
+<li><a href="index.html">Introduction</a>
+<ul>
+<li><a href="index.html#running">Running</a></li>
+<li><a href="index.html#terminology">Terminology</a></li>
+</ul>
+</li>
+<li><a href="configuration.html">Configuration</a>
+<ul>
+<li><a href="configuration.html#global-settings">Global Settings</a></li>
+<li><a href="configuration.html#table-of-contents">Table of Contents</a></li>
+</ul>
+</li>
+<li><a href="uris.html">URIs</a>
+<ul>
+<li><a href="uris.html#site">site</a></li>
+<li><a href="uris.html#webjar-theme-classpath">webjar, theme, classpath</a></li>
+<li><a href="uris.html#abs">abs</a></li>
+<li><a href="uris.html#file">file</a></li>
+<li><a href="uris.html#toctree">toctree</a></li>
+</ul>
+</li>
+<li><a href="markdown.html">Markdown Extensions</a>
+<ul>
+<li><a href="markdown.html#commonmark-java-extensions">commonmark-java extensions</a></li>
+<li><a href="markdown.html#headerattributes-and-autoidentifiers">headerAttributes and autoIdentifiers</a></li>
+<li><a href="markdown.html#blockquoteattributes">blockQuoteAttributes</a></li>
+<li><a href="markdown.html#mergetabs">mergeTabs</a></li>
+<li><a href="markdown.html#includecode">includeCode</a></li>
+</ul>
+</li>
+<li><a href="highlighting.html">Code Highlighting</a></li>
+<li><a href="elements.html">All Elements</a>
+<ul>
+<li><a href="elements.html#plain-text-paragraphs">Plain Text Paragraphs</a></li>
+<li><a href="elements.html#inline-elements">Inline Elements</a></li>
+<li><a href="elements.html#code-blocks">Code Blocks</a></li>
+<li><a href="elements.html#block-quotes">Block Quotes</a></li>
+<li><a href="elements.html#lines">Lines</a></li>
+<li><a href="elements.html#lists">Lists</a></li>
+<li><a href="elements.html#tables">Tables</a></li>
+<li><a href="elements.html#toc-trees">TOC Trees</a></li>
+<li><a href="elements.html#section-titles">Section Titles</a>
+<ul>
+<li><a href="elements.html#h3-title">H3 Title</a>
+<ul>
+<li><a href="elements.html#h4-title">H4 Title</a>
+<ul>
+<li><a href="elements.html#h5-title">H5 Title</a>
+<ul>
+<li><a href="elements.html#h6-title">H6 Title</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="test.html">Test Page</a>
+<ul>
+<li><a href="test.html#nd-level">2nd level</a></li>
+<li><a href="test.html#code-snippet">Code snippet</a></li>
+<li><a href="test.html#title">Title</a>
+<ul>
+<li>
+<ul>
+<li><a href="test.html#level-4">Level 4</a></li>
+<li><a href="test.html#level-4-1">Level 4</a></li>
+</ul>
+</li>
+<li><a href="test.html#level-3">Level 3</a></li>
+<li><a href="test.html#level-3-1">Level 3</a></li>
+</ul>
+</li>
+<li><a href="test.html#subtitle">Subtitle</a></li>
+<li><a href="test.html#toctreemaxlevel2mergefirstfalse">toctree:maxLevel=2,mergeFirst=false</a></li>
+<li><a href="test.html#toctree">toctree:</a></li>
+<li><a href="test.html#pages">Pages</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="pages" class="a_section" data-magellan-target="pages">Pages<a class="a_hlink" href="#pages"></a></h2>
+<ul>
+<li><a href="index.html">Introduction</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="uris.html">URIs</a></li>
+<li><a href="markdown.html">Markdown Extensions</a></li>
+<li><a href="highlighting.html">Code Highlighting</a></li>
+<li><a href="elements.html">All Elements</a></li>
+<li><a href="test.html">Test Page</a></li>
+</ul>
+<p>End of document</p>
+
+              </main>
+              
+              
+                <div data-sticky-container class="small-12 medium-12 large-2 large-order-1 columns a_sitenav_container">
+                  <nav class="a_sitenav" data-sticky data-sticky-on="large" data-anchor="_sections">
+                    
+                  <ul>
+                     
+  <li >
+    
+      <a href="index.html">Introduction</a>
+    
+    
+  </li>
+  
+  <li >
+    
+      <a href="configuration.html">Configuration</a>
+    
+    
+  </li>
+  
+  <li >
+    
+      <a href="uris.html">URIs</a>
+    
+    
+  </li>
+  
+  <li >
+    
+      <a href="markdown.html">Markdown Extensions</a>
+    
+    
+  </li>
+  
+  <li >
+    
+      <a href="highlighting.html">Code Highlighting</a>
+    
+    
+  </li>
+  
+  <li >
+    
+      <a href="elements.html">All Elements</a>
+    
+    
+  </li>
+  
+  <li  class="a_thispage" >
+    
+      <a href="test.html">Test Page</a>
+    
+    
+  </li>
+ 
+                  </ul>
+                  </nav>
+                </div>
+              
+              
+              
+                <div class="small-12 medium-12 large-2 large-order-3 columns a_show-for-xlarge" data-sticky-container>
+                  <nav class="a_pagenav" data-sticky data-sticky-on="large" data-anchor="_sections">
+                     <header><p>On This Page</p>
+</header> 
+                    <ul class="vertical menu" data-magellan>
+                       
+  <li>
+    
+       <a href="#target">Target</a> 
+    
+    
+      <ul class="vertical menu">  
+  <li>
+    
+       <a href="#nd-level">2nd level</a> 
+    
+    
+  </li>
+  
+  <li>
+    
+       <a href="#code-snippet">Code snippet</a> 
+    
+    
+  </li>
+  
+  <li>
+    
+       <a href="#title">Title</a> 
+    
+    
+      <ul class="vertical menu">  
+  <li>
+    
+    
+      <ul class="vertical menu">  
+  <li>
+    
+       <a href="#level-4">Level 4</a> 
+    
+    
+  </li>
+  
+  <li>
+    
+       <a href="#level-4-1">Level 4</a> 
+    
+    
+  </li>
+  </ul>
+    
+  </li>
+  
+  <li>
+    
+       <a href="#level-3">Level 3</a> 
+    
+    
+  </li>
+  
+  <li>
+    
+       <a href="#level-3-1">Level 3</a> 
+    
+    
+  </li>
+  </ul>
+    
+  </li>
+  
+  <li>
+    
+       <a href="#subtitle">Subtitle</a> 
+    
+    
+  </li>
+  
+  <li>
+    
+       <a href="#toctreemaxlevel2mergefirstfalse">toctree:maxLevel=2,mergeFirst=false</a> 
+    
+    
+  </li>
+  
+  <li>
+    
+       <a href="#toctree">toctree:</a> 
+    
+    
+  </li>
+  
+  <li>
+    
+       <a href="#pages">Pages</a> 
+    
+    
+  </li>
+  </ul>
+    
+  </li>
+ 
+                    </ul>
+                  </nav>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer class="small-12 medium-12 large-12 columns align-self-bottom a_footer">
+        <div class="row">
+          <div class="small-12 medium-12 large-12 columns top-bar">
+            <div class="top-bar-left">
+              <p>© Copyright 2016 Stefan Zeiger</p>
+
+            </div>
+            <div class="top-bar-right">
+              <p>Generated with <a href="https://github.com/szeiger/ornate">Ornate</a>.</p>
+
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="theme/js/jquery.min.js"></script>
+    <script src="theme/js/what-input.min.js"></script>
+    <script src="theme/js/foundation.min.js"></script>
+    
+    <script src="theme/js/app.js"></script>
+  </body>
+</html>

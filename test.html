@@ -18,7 +18,7 @@
             <div class="row">
               <div class="large-12 columns a_limited top-bar">
                 <div class="top-bar-left">
-                  <p>Ornate Manual</p>
+                  <p>Ornate 0.1-SNAPSHOT Manual</p>
 
                 </div>
                 <div class="top-bar-right">
@@ -59,13 +59,13 @@
 <p>And this <code class="hljs language-scala"><span class="hljs-keyword">val</span> x = <span class="hljs-number">42</span></code> is inline code.</p>
 <p>Here's an image from highlight.js:</p>
 <p><img src="theme/images/highlight.js/styles/brown-papersq.png" alt="" /></p>
-<h2 id="title" class="a_section" data-magellan-target="title">Title<a class="a_hlink" href="#title"></a></h2>
+<h2 id="title_id" class="a_section" data-magellan-target="title_id">Title<a class="a_hlink" href="#title_id"></a></h2>
 <h4 id="level-4" class="a_section" data-magellan-target="level-4">Level 4<a class="a_hlink" href="#level-4"></a></h4>
 <h4 id="level-4-1" class="a_section" data-magellan-target="level-4-1">Level 4<a class="a_hlink" href="#level-4-1"></a></h4>
 <h3 id="level-3" class="a_section" data-magellan-target="level-3">Level 3<a class="a_hlink" href="#level-3"></a></h3>
 <h3 id="level-3-1" class="a_section" data-magellan-target="level-3-1">Level 3<a class="a_hlink" href="#level-3-1"></a></h3>
 <h2 id="subtitle" class="a_section" data-magellan-target="subtitle">Subtitle<a class="a_hlink" href="#subtitle"></a></h2>
-<h2 id="toctreemaxlevel2mergefirstfalse" class="a_section" data-magellan-target="toctreemaxlevel2mergefirstfalse">toctree:maxLevel=2,mergeFirst=false<a class="a_hlink" href="#toctreemaxlevel2mergefirstfalse"></a></h2>
+<h2 id="contents_id" class="a_section" data-magellan-target="contents_id">toctree:maxLevel=2,mergeFirst=false<a class="a_hlink" href="#contents_id"></a></h2>
 <ul>
 <li><a href="index.html">Introduction</a>
 <ul>
@@ -87,6 +87,30 @@
 </li>
 </ul>
 </li>
+<li><a href="markdown.html">Markdown Extensions</a>
+<ul>
+<li><a href="markdown.html#markdown-extensions">Markdown Extensions</a>
+<ul>
+<li><a href="markdown.html#commonmark-java-extensions">commonmark-java extensions</a></li>
+<li><a href="markdown.html#header_attributes">headerAttributes and autoIdentifiers</a></li>
+<li><a href="markdown.html#blockquoteattributes">blockQuoteAttributes</a></li>
+<li><a href="markdown.html#mergetabs">mergeTabs</a></li>
+<li><a href="markdown.html#includecode">includeCode</a></li>
+<li><a href="markdown.html#emoji">emoji</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="images.html">Image Elements</a>
+<ul>
+<li><a href="images.html#image-elements">Image Elements</a>
+<ul>
+<li><a href="images.html#table-of-contents">Table of Contents</a></li>
+<li><a href="images.html#configuration-values">Configuration Values</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a href="uris.html">URIs</a>
 <ul>
 <li><a href="uris.html#uris">URIs</a>
@@ -95,20 +119,7 @@
 <li><a href="uris.html#webjar-theme-classpath">webjar, theme, classpath</a></li>
 <li><a href="uris.html#abs">abs</a></li>
 <li><a href="uris.html#file">file</a></li>
-<li><a href="uris.html#toctree">toctree</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="markdown.html">Markdown Extensions</a>
-<ul>
-<li><a href="markdown.html#markdown-extensions">Markdown Extensions</a>
-<ul>
-<li><a href="markdown.html#commonmark-java-extensions">commonmark-java extensions</a></li>
-<li><a href="markdown.html#headerattributes-and-autoidentifiers">headerAttributes and autoIdentifiers</a></li>
-<li><a href="markdown.html#blockquoteattributes">blockQuoteAttributes</a></li>
-<li><a href="markdown.html#mergetabs">mergeTabs</a></li>
-<li><a href="markdown.html#includecode">includeCode</a></li>
+<li><a href="uris.html#toctree-and-config">toctree and config</a></li>
 </ul>
 </li>
 </ul>
@@ -141,17 +152,17 @@
 <ul>
 <li><a href="test.html#nd-level">2nd level</a></li>
 <li><a href="test.html#code-snippet">Code snippet</a></li>
-<li><a href="test.html#title">Title</a></li>
+<li><a href="test.html#title_id">Title</a></li>
 <li><a href="test.html#subtitle">Subtitle</a></li>
-<li><a href="test.html#toctreemaxlevel2mergefirstfalse">toctree:maxLevel=2,mergeFirst=false</a></li>
-<li><a href="test.html#toctree">toctree:</a></li>
+<li><a href="test.html#contents_id">toctree:maxLevel=2,mergeFirst=false</a></li>
+<li><a href="test.html#contents_id-1">toctree:</a></li>
 <li><a href="test.html#pages">Pages</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<h2 id="toctree" class="a_section" data-magellan-target="toctree">toctree:<a class="a_hlink" href="#toctree"></a></h2>
+<h2 id="contents_id-1" class="a_section" data-magellan-target="contents_id-1">toctree:<a class="a_hlink" href="#contents_id-1"></a></h2>
 <ul>
 <li><a href="index.html">Introduction</a>
 <ul>
@@ -165,22 +176,29 @@
 <li><a href="configuration.html#table-of-contents">Table of Contents</a></li>
 </ul>
 </li>
+<li><a href="markdown.html">Markdown Extensions</a>
+<ul>
+<li><a href="markdown.html#commonmark-java-extensions">commonmark-java extensions</a></li>
+<li><a href="markdown.html#header_attributes">headerAttributes and autoIdentifiers</a></li>
+<li><a href="markdown.html#blockquoteattributes">blockQuoteAttributes</a></li>
+<li><a href="markdown.html#mergetabs">mergeTabs</a></li>
+<li><a href="markdown.html#includecode">includeCode</a></li>
+<li><a href="markdown.html#emoji">emoji</a></li>
+</ul>
+</li>
+<li><a href="images.html">Image Elements</a>
+<ul>
+<li><a href="images.html#table-of-contents">Table of Contents</a></li>
+<li><a href="images.html#configuration-values">Configuration Values</a></li>
+</ul>
+</li>
 <li><a href="uris.html">URIs</a>
 <ul>
 <li><a href="uris.html#site">site</a></li>
 <li><a href="uris.html#webjar-theme-classpath">webjar, theme, classpath</a></li>
 <li><a href="uris.html#abs">abs</a></li>
 <li><a href="uris.html#file">file</a></li>
-<li><a href="uris.html#toctree">toctree</a></li>
-</ul>
-</li>
-<li><a href="markdown.html">Markdown Extensions</a>
-<ul>
-<li><a href="markdown.html#commonmark-java-extensions">commonmark-java extensions</a></li>
-<li><a href="markdown.html#headerattributes-and-autoidentifiers">headerAttributes and autoIdentifiers</a></li>
-<li><a href="markdown.html#blockquoteattributes">blockQuoteAttributes</a></li>
-<li><a href="markdown.html#mergetabs">mergeTabs</a></li>
-<li><a href="markdown.html#includecode">includeCode</a></li>
+<li><a href="uris.html#toctree-and-config">toctree and config</a></li>
 </ul>
 </li>
 <li><a href="highlighting.html">Code Highlighting</a></li>
@@ -217,7 +235,7 @@
 <ul>
 <li><a href="test.html#nd-level">2nd level</a></li>
 <li><a href="test.html#code-snippet">Code snippet</a></li>
-<li><a href="test.html#title">Title</a>
+<li><a href="test.html#title_id">Title</a>
 <ul>
 <li>
 <ul>
@@ -230,8 +248,8 @@
 </ul>
 </li>
 <li><a href="test.html#subtitle">Subtitle</a></li>
-<li><a href="test.html#toctreemaxlevel2mergefirstfalse">toctree:maxLevel=2,mergeFirst=false</a></li>
-<li><a href="test.html#toctree">toctree:</a></li>
+<li><a href="test.html#contents_id">toctree:maxLevel=2,mergeFirst=false</a></li>
+<li><a href="test.html#contents_id-1">toctree:</a></li>
 <li><a href="test.html#pages">Pages</a></li>
 </ul>
 </li>
@@ -240,8 +258,9 @@
 <ul>
 <li><a href="index.html">Introduction</a></li>
 <li><a href="configuration.html">Configuration</a></li>
-<li><a href="uris.html">URIs</a></li>
 <li><a href="markdown.html">Markdown Extensions</a></li>
+<li><a href="images.html">Image Elements</a></li>
+<li><a href="uris.html">URIs</a></li>
 <li><a href="highlighting.html">Code Highlighting</a></li>
 <li><a href="elements.html">All Elements</a></li>
 <li><a href="test.html">Test Page</a></li>
@@ -272,14 +291,21 @@
   
   <li >
     
-      <a href="uris.html">URIs</a>
+      <a href="markdown.html">Markdown Extensions</a>
     
     
   </li>
   
   <li >
     
-      <a href="markdown.html">Markdown Extensions</a>
+      <a href="images.html">Image Elements</a>
+    
+    
+  </li>
+  
+  <li >
+    
+      <a href="uris.html">URIs</a>
     
     
   </li>
@@ -339,7 +365,7 @@
   
   <li>
     
-       <a href="#title">Title</a> 
+       <a href="#title_id">Title</a> 
     
     
       <ul class="vertical menu">  
@@ -390,14 +416,14 @@
   
   <li>
     
-       <a href="#toctreemaxlevel2mergefirstfalse">toctree:maxLevel=2,mergeFirst=false</a> 
+       <a href="#contents_id">toctree:maxLevel=2,mergeFirst=false</a> 
     
     
   </li>
   
   <li>
     
-       <a href="#toctree">toctree:</a> 
+       <a href="#contents_id-1">toctree:</a> 
     
     
   </li>

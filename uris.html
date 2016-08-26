@@ -18,7 +18,7 @@
             <div class="row">
               <div class="large-12 columns a_limited top-bar">
                 <div class="top-bar-left">
-                  <p>Ornate Manual</p>
+                  <p>Ornate 0.1-SNAPSHOT Manual</p>
 
                 </div>
                 <div class="top-bar-right">
@@ -34,25 +34,19 @@
               <main class="columns large-order-2 sections" id="_sections">
                 <h1 id="uris" class="a_section" data-magellan-target="uris">URIs<a class="a_hlink" href="#uris"></a></h1>
 <p>URIs are used pervasively throughout Ornate for referencing different kinds of content. The following schemes (including several custom schemes) are supported:</p>
-<h2 id="site" class="a_section" data-magellan-target="site">site<a class="a_hlink" href="#site"></a></h2>
+<h2 id="site" class="a_section" data-magellan-target="site"><code class="hljs">site</code><a class="a_hlink" href="#site"></a></h2>
 <p>All pages and resources have a <code class="hljs">site</code> URI. For example, if the source directory is <code class="hljs">./doc/src</code>, the page located at <code class="hljs">./doc/src/foo/bar.md</code> gets the <code class="hljs">site</code> URI <code class="hljs">site:/foo/bar.md</code>. All links and images on a page are resolved against the page's <code class="hljs">site</code> URI. This makes it easy to use relative links that are identical to the corresponding <code class="hljs">file</code> source URI links (for compatibility with other Markdown processors) or, alternatively, to use absolute links on deeply nested sites.</p>
 <blockquote class="note">
 <p>Note that rendered sites always use relative links for pages and resources. They can be placed anywhere in a filesystem or on an HTTP server.</p>
 </blockquote>
-<h2 id="webjar-theme-classpath" class="a_section" data-magellan-target="webjar-theme-classpath">webjar, theme, classpath<a class="a_hlink" href="#webjar-theme-classpath"></a></h2>
+<h2 id="webjar-theme-classpath" class="a_section" data-magellan-target="webjar-theme-classpath"><code class="hljs">webjar</code>, <code class="hljs">theme</code>, <code class="hljs">classpath</code><a class="a_hlink" href="#webjar-theme-classpath"></a></h2>
 <p>These protocols reference resources on the classpath. They differ only in the lookup location. <code class="hljs">classpath:/</code> points to the classpath root, <code class="hljs">theme:/</code> points to the package containing the theme class and <code class="hljs">webjar:/name/path</code> points to a path in the named webjar. They can be used for referencing CSS, JS and image resources in themes and image markup elements. These files are copied into the generated site as resources.</p>
-<h2 id="abs" class="a_section" data-magellan-target="abs">abs<a class="a_hlink" href="#abs"></a></h2>
+<h2 id="abs" class="a_section" data-magellan-target="abs"><code class="hljs">abs</code><a class="a_hlink" href="#abs"></a></h2>
 <p>This is a special prefix for using arbitrary link destinations for links and images. The <code class="hljs">abs:</code> prefix is stripped off and the remainder inserted verbatim into the generated site. This can be used to link to resources outside of the generated site. For example, <code class="hljs">abs:/</code> links to the root of whatever filesystem or HTTP server the generated site is placed into. It is generally advisable to use <code class="hljs">https:</code> links in these cases.</p>
-<h2 id="file" class="a_section" data-magellan-target="file">file<a class="a_hlink" href="#file"></a></h2>
+<h2 id="file" class="a_section" data-magellan-target="file"><code class="hljs">file</code><a class="a_hlink" href="#file"></a></h2>
 <p>Standard <code class="hljs">file</code> URIs. They can be used for referencing CSS, JS and image resources in themes and image markup elements. These files are copied into the generated site as resources.</p>
-<h2 id="toctree" class="a_section" data-magellan-target="toctree">toctree<a class="a_hlink" href="#toctree"></a></h2>
-<p><code class="hljs">toctree</code> URIs represent the generated Table of Contents. They can be used in image elements or parts of the theme configuration. URIs are of the form <code class="hljs">toctree:key=value,key=value,...</code> with case-insentive keys. The following keys are supported:</p>
-<ul>
-<li><code class="hljs">maxLevel</code>: The maximum nesting level to show in the TOC. Pages have level 0, heading elements have levels 1 to 6. When unset, this defaults to the configuration setting <code class="hljs">global.toxMaxLevel</code>.</li>
-<li><code class="hljs">mergeFirst</code>: Whether to merge the page and the first heading (<code class="hljs">true</code> or <code class="hljs">false</code>). Usually pages have a single level-1 heading at the top and no separate title, so it does not make sense to show them in the TOC. With <code class="hljs">mergeFirst=true</code> the first heading is shown as the title but the link goes to the page. When unset, this defaults to the configuration setting <code class="hljs">global.toxMergeFirst</code>.</li>
-<li><code class="hljs">local</code>: Whether to include only TOC entries from the current page. Defaults to <code class="hljs">false</code>.</li>
-<li><code class="hljs">focusMaxLevel</code>: A separate maximum nesting level for the current page. When unset, this is the same as <code class="hljs">maxLevel</code>.</li>
-</ul>
+<h2 id="toctree-and-config" class="a_section" data-magellan-target="toctree-and-config"><code class="hljs">toctree</code> and <code class="hljs">config</code><a class="a_hlink" href="#toctree-and-config"></a></h2>
+<p>These protocols are used to include TOCs and config values in a document. See <a href="images.html">Image Elements</a> for more details.</p>
 
               </main>
               
@@ -76,16 +70,23 @@
     
   </li>
   
-  <li  class="a_thispage" >
+  <li >
     
-      <a href="uris.html">URIs</a>
+      <a href="markdown.html">Markdown Extensions</a>
     
     
   </li>
   
   <li >
     
-      <a href="markdown.html">Markdown Extensions</a>
+      <a href="images.html">Image Elements</a>
+    
+    
+  </li>
+  
+  <li  class="a_thispage" >
+    
+      <a href="uris.html">URIs</a>
     
     
   </li>
@@ -159,7 +160,7 @@
   
   <li>
     
-       <a href="#toctree">toctree</a> 
+       <a href="#toctree-and-config">toctree and config</a> 
     
     
   </li>

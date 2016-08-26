@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Highlighting</title>
+    <title>Image Elements</title>
     <link rel="stylesheet" href="theme/css/foundation.min.css">
     <link rel="stylesheet" href="theme/css/app.css">
      <link rel="stylesheet" href="theme/css/highlight.js/styles/github-gist.css"> 
@@ -32,28 +32,40 @@
             <div class="row">
               
               <main class="columns large-order-2 sections" id="_sections">
-                <h1 id="code-highlighting" class="a_section" data-magellan-target="code-highlighting">Code Highlighting<a class="a_hlink" href="#code-highlighting"></a></h1>
-<p>A highlighter is a class that implements the <code class="hljs">Highlighter</code> trait. It can be set in the site configuration in <code class="hljs">global.highlight</code>.</p>
-<p>The default highlighter runs <a href="https://highlightjs.org/">highlight.js</a> at build time in Nashorn. All languages from the highlight.js distribution are supported but only a few of them are enabled by default to improve startup times. This and other settings can be changed in the page or site configuration. These are the defaults:</p>
+                <h1 id="image-elements" class="a_section" data-magellan-target="image-elements">Image Elements<a class="a_hlink" href="#image-elements"></a></h1>
+<p>Ornate extends the use of standard Markdown image elements to non-image objects. These are not limited to external files, they can be included directly in the page depending on the <a href="uris.html">URI protocol</a>.</p>
+<h2 id="table-of-contents" class="a_section" data-magellan-target="table-of-contents">Table of Contents<a class="a_hlink" href="#table-of-contents"></a></h2>
+<p><code class="hljs">toctree</code> URIs represent the generated Table of Contents. They can be used in image elements or parts of the theme configuration. URIs are of the form <code class="hljs">toctree:key=value,key=value,...</code> with case-insentive keys. The following keys are supported:</p>
+<ul>
+<li><code class="hljs">maxLevel</code>: The maximum nesting level to show in the TOC. Pages have level 0, heading elements have levels 1 to 6. When unset, this defaults to the configuration setting <code class="hljs">global.tocMaxLevel</code>.</li>
+<li><code class="hljs">mergeFirst</code>: Whether to merge the page and the first heading (<code class="hljs">true</code> or <code class="hljs">false</code>). Usually pages have a single level-1 heading at the top and no separate title, so it does not make sense to show them in the TOC. With <code class="hljs">mergeFirst=true</code> the first heading is shown as the title but the link goes to the page. When unset, this defaults to the configuration setting <code class="hljs">global.toxMergeFirst</code>.</li>
+<li><code class="hljs">local</code>: Whether to include only TOC entries from the current page. Defaults to <code class="hljs">false</code>.</li>
+<li><code class="hljs">focusMaxLevel</code>: A separate maximum nesting level for the current page. When unset, this is the same as <code class="hljs">maxLevel</code>.</li>
+</ul>
+<p>A <code class="hljs">toctree</code> image elements may only be used in a paragraph of its own. It cannot be used as an inline element. Title and text of the element are ignored.</p>
+<p>For example, this image element references the TOC of the current page:</p>
 <div class="row">
-<pre class="hljs small-expand columns a_xscroll"><code class="language-yaml"><span class="hljs-comment"># Settings for the highlight.js-based syntax highlighter</span>
-highlight.highlightjs {
-  <span class="hljs-comment"># Preloaded languages. Any language that you want to access via an alias should be listed here.</span>
-  preload = [scala, java, json, yaml, sql, ini, diff, bash, xml, markdown]
-
-  <span class="hljs-comment"># Default language when none is specified. Can be one of the supported languages, an array</span>
-  <span class="hljs-comment"># of languages from which to pick automatically, or null or an empty list for plain text.</span>
-  <span class="hljs-comment"># There are separate defaults for fenced code blocks, indented code blocks and inline code.</span>
-  fenced    = ${highlight.highlightjs.preload}
-  indented  = ${highlight.highlightjs.preload}
-  inline    = <span class="hljs-literal">null</span>
-
-  <span class="hljs-comment"># URIs of CSS files and assorted resources required for the style (relative to webjar:/highlight.js/styles/)</span>
-  styleResources = [ github-gist.css ]
-}
+<pre class="hljs small-expand columns a_xscroll"><code class="language-markdown">![](toctree:maxLevel=6,local=true,mergeFirst=false)
 </code></pre>
 </div>
-<p>Note that the default theme overrides any background color set by the highlight.js style.</p>
+<p>It is rendered as:</p>
+<ul>
+<li><a href="images.html#image-elements">Image Elements</a>
+<ul>
+<li><a href="images.html#table-of-contents">Table of Contents</a></li>
+<li><a href="images.html#configuration-values">Configuration Values</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="configuration-values" class="a_section" data-magellan-target="configuration-values">Configuration Values<a class="a_hlink" href="#configuration-values"></a></h2>
+<p><code class="hljs">config</code> URIs can be used in image elements. They expand to strings from the page configuration. Title and text of the element are ignored.</p>
+<p>Example:</p>
+<div class="row">
+<pre class="hljs small-expand columns a_xscroll"><code class="language-markdown">The current theme is ![](config:global.theme).
+</code></pre>
+</div>
+<p>It is rendered as:</p>
+<p>The current theme is default.</p>
 
               </main>
               
@@ -84,7 +96,7 @@ highlight.highlightjs {
     
   </li>
   
-  <li >
+  <li  class="a_thispage" >
     
       <a href="images.html">Image Elements</a>
     
@@ -98,7 +110,7 @@ highlight.highlightjs {
     
   </li>
   
-  <li  class="a_thispage" >
+  <li >
     
       <a href="highlighting.html">Code Highlighting</a>
     
@@ -133,8 +145,24 @@ highlight.highlightjs {
                        
   <li>
     
-       <a href="#code-highlighting">Code Highlighting</a> 
+       <a href="#image-elements">Image Elements</a> 
     
+    
+      <ul class="vertical menu">  
+  <li>
+    
+       <a href="#table-of-contents">Table of Contents</a> 
+    
+    
+  </li>
+  
+  <li>
+    
+       <a href="#configuration-values">Configuration Values</a> 
+    
+    
+  </li>
+  </ul>
     
   </li>
  

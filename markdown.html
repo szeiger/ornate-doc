@@ -18,7 +18,7 @@
             <div class="row">
               <div class="large-12 columns a_limited top-bar">
                 <div class="top-bar-left">
-                  <p>Ornate Manual</p>
+                  <p>Ornate 0.1-SNAPSHOT Manual</p>
 
                 </div>
                 <div class="top-bar-right">
@@ -44,12 +44,13 @@
   autoIdentifiers      = com.novocode.ornate.commonmark.AutoIdentifiersExtension
   mergeTabs            = com.novocode.ornate.commonmark.MergeTabsExtension
   includeCode          = com.novocode.ornate.IncludeCodeExtension
+  emoji                = com.novocode.ornate.EmojiExtension
 }
 </code></pre>
 </div>
 <h2 id="commonmark-java-extensions" class="a_section" data-magellan-target="commonmark-java-extensions">commonmark-java extensions<a class="a_hlink" href="#commonmark-java-extensions"></a></h2>
 <p>See the <a href="https://github.com/atlassian/commonmark-java#extensions">commonmark-java documentation</a> for <code class="hljs">autolink</code>, <code class="hljs">strikethrough</code> and <code class="hljs">tables</code>.</p>
-<h2 id="headerattributes-and-autoidentifiers" class="a_section" data-magellan-target="headerattributes-and-autoidentifiers">headerAttributes and autoIdentifiers<a class="a_hlink" href="#headerattributes-and-autoidentifiers"></a></h2>
+<h2 id="header_attributes" class="a_section" data-magellan-target="header_attributes"><code class="hljs">headerAttributes</code> and <code class="hljs">autoIdentifiers</code><a class="a_hlink" href="#header_attributes"></a></h2>
 <p>The <code class="hljs">headerAttributes</code> extension implements the same header attribute syntax as <a href="http://pandoc.org/MANUAL.html#header-identifiers">Pandoc</a> and <a href="https://michelf.ca/projects/php-markdown/extra/">PHP Markdown Extra</a>. Only the IDs are used by Ornate. Classes and key/value pairs are currently ignored. This extension is essential for controlling header links. Every heading to which you want to link from other parts of the document, from the TOC, or from external sources, requires an ID. In case of the TOC, headings without an ID will still be listed but not linked.</p>
 <p>Here is an example for a heading title with an ID:</p>
 <div class="row">
@@ -60,8 +61,8 @@ Links to this section get to use <span class="hljs-code">`#settings`</span> inst
 </code></pre>
 </div>
 <p>The <code class="hljs">autoIdentifiers</code> extension uses the same algorithm as Pandoc to automatically derive an ID from the heading title if no ID was set explicitly via <code class="hljs">headerAttributes</code></p>
-<h2 id="blockquoteattributes" class="a_section" data-magellan-target="blockquoteattributes">blockQuoteAttributes<a class="a_hlink" href="#blockquoteattributes"></a></h2>
-<p>This extension implements the same header attribute syntax for block quotes. Ornate recogizes the classes <code class="hljs">.note</code> and <code class="hljs">.warning</code> in block quote attributes to generate appropriately styles note and warning block. The header attributes must be the only thing on the first line of the block quote. Content starts on the second line.</p>
+<h2 id="blockquoteattributes" class="a_section" data-magellan-target="blockquoteattributes"><code class="hljs">blockQuoteAttributes</code><a class="a_hlink" href="#blockquoteattributes"></a></h2>
+<p>This extension implements the same header attribute syntax for block quotes. Ornate recogizes the classes <code class="hljs">.note</code> and <code class="hljs">.warning</code> in block quote attributes to generate appropriately styled note and warning blocks. The header attributes must be the only thing on the first line of the block quote. Content starts on the second line.</p>
 <p>Example source:</p>
 <div class="row">
 <pre class="hljs small-expand columns a_xscroll"><code class="language-markdown"><span class="hljs-quote">&gt; This is a reqular block quote.</span>
@@ -83,7 +84,7 @@ Links to this section get to use <span class="hljs-code">`#settings`</span> inst
 <blockquote class="warning">
 <p>This is a warning.</p>
 </blockquote>
-<h2 id="mergetabs" class="a_section" data-magellan-target="mergetabs">mergeTabs<a class="a_hlink" href="#mergetabs"></a></h2>
+<h2 id="mergetabs" class="a_section" data-magellan-target="mergetabs"><code class="hljs">mergeTabs</code><a class="a_hlink" href="#mergetabs"></a></h2>
 <p>This extension allows you to merge directly adjacent fenced code blocks into a tabbed view. This is controlled through the <em>info string</em> of the fenced code block. The CommonMark specification leaves interpretation of this string undefined, suggesting only that the first token define the highlighting language. Ornate parses the info string with the same syntax as <a href="markdown.html#header_attributes">header attributes</a>. Adjacent fenced code blocks are merged if their info string contains a key/value pair with the key <code class="hljs">tab</code>. The value is used as the tab title.</p>
 <p>Example source:</p>
 <div class="row">
@@ -117,7 +118,7 @@ public class AttributedHeading extends Heading {
 </code></pre>
 </div>
 </div></div>
-<h2 id="includecode" class="a_section" data-magellan-target="includecode">includeCode<a class="a_hlink" href="#includecode"></a></h2>
+<h2 id="includecode" class="a_section" data-magellan-target="includecode"><code class="hljs">includeCode</code><a class="a_hlink" href="#includecode"></a></h2>
 <p>This extension allows you to include code snippets from an external file in a fenced code block. The <code class="hljs">src</code> attribute specifies the external file relative to the source URI of the current page. If the URI has a fragment, it is used to extract only parts the file delimited by lines ending with the fragment ID (including the <code class="hljs">#</code> symbol). The delimiter lines are not included, only the lines between them. Multiple delimited sections are allowed. They are concatenated when extrating the snippet. Each section is dedented individually by stripping off leading whitespace that is common to all lines (<em>including</em> the delimiter lines).</p>
 <p>If the fenced code block is not empty, its original content is discarded. It can be used to show a placeholder in Markdown processors without this <code class="hljs">includeCode</code> feature.</p>
 <p>Example source:</p>
@@ -139,7 +140,7 @@ public class AttributedHeading extends Heading {
 
 <span class="hljs-keyword">val</span> sip = <span class="hljs-keyword">new</span> <span class="hljs-type">SpecialImageProcessor</span>(global.userConfig)
 pages.foreach { p =&gt;
-  <span class="hljs-keyword">val</span> pagepp = p.extensions.ornate.flatMap(_.pageProcessors(global, site))
+  <span class="hljs-keyword">val</span> pagepp = p.extensions.ornate.flatMap(_.pageProcessors(site))
   p.processors = (<span class="hljs-type">AttributeFencedCodeBlocksProcessor</span> +: sip +: pagepp)
   p.applyProcessors()
 }
@@ -149,6 +150,15 @@ pages.foreach(etp)
 
 global.theme.render(site)</code></pre>
 </div>
+<h2 id="emoji" class="a_section" data-magellan-target="emoji"><code class="hljs">emoji</code><a class="a_hlink" href="#emoji"></a></h2>
+<p>The <code class="hljs">emoji</code> extension translates Emoji names to the appropriate Unicode representations or images.</p>
+<p>Example source:</p>
+<div class="row">
+<pre class="hljs small-expand columns a_xscroll"><code class="language-markdown">Is this feature :thumbsup: or :thumbsdown:?
+</code></pre>
+</div>
+<p>This gets rendered as:</p>
+<p>Is this feature <img class="emoji" title="thumbsup" alt="👍" src="theme/images/emojione/assets/svg/1f44d.svg""/> or <img class="emoji" title="thumbsdown" alt="👎" src="theme/images/emojione/assets/svg/1f44e.svg""/>?</p>
 
               </main>
               
@@ -172,16 +182,23 @@ global.theme.render(site)</code></pre>
     
   </li>
   
-  <li >
+  <li  class="a_thispage" >
     
-      <a href="uris.html">URIs</a>
+      <a href="markdown.html">Markdown Extensions</a>
     
     
   </li>
   
-  <li  class="a_thispage" >
+  <li >
     
-      <a href="markdown.html">Markdown Extensions</a>
+      <a href="images.html">Image Elements</a>
+    
+    
+  </li>
+  
+  <li >
+    
+      <a href="uris.html">URIs</a>
     
     
   </li>
@@ -234,7 +251,7 @@ global.theme.render(site)</code></pre>
   
   <li>
     
-       <a href="#headerattributes-and-autoidentifiers">headerAttributes and autoIdentifiers</a> 
+       <a href="#header_attributes">headerAttributes and autoIdentifiers</a> 
     
     
   </li>
@@ -256,6 +273,13 @@ global.theme.render(site)</code></pre>
   <li>
     
        <a href="#includecode">includeCode</a> 
+    
+    
+  </li>
+  
+  <li>
+    
+       <a href="#emoji">emoji</a> 
     
     
   </li>

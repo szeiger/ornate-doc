@@ -36,22 +36,23 @@
 <p>A highlighter is a class that implements the <code class="hljs">Highlighter</code> trait. It can be set in the site configuration in <code class="hljs">global.highlight</code>.</p>
 <p>The default highlighter runs <a href="https://highlightjs.org/">highlight.js</a> at build time in Nashorn. All languages from the highlight.js distribution are supported but only a few of them are enabled by default to improve startup times. This and other settings can be changed in the page or site configuration. These are the defaults:</p>
 <div class="row">
-<pre class="hljs small-expand columns a_xscroll"><code class="language-yaml"><span class="hljs-comment"># Settings for the highlight.js-based syntax highlighter</span>
-highlight.highlightjs {
-  <span class="hljs-comment"># Preloaded languages. Any language that you want to access via an alias should be listed here.</span>
+<pre class="hljs small-expand columns a_xscroll"><code class="language-yaml">highlight.highlightjs {
+  <span class="hljs-comment"># Preloaded languages. Any language that you want to access via an alias</span>
+  <span class="hljs-comment"># should be listed here.</span>
   preload = [scala, java, json, yaml, sql, ini, diff, bash, xml, markdown]
 
-  <span class="hljs-comment"># Default language when none is specified. Can be one of the supported languages, an array</span>
-  <span class="hljs-comment"># of languages from which to pick automatically, or null or an empty list for plain text.</span>
-  <span class="hljs-comment"># There are separate defaults for fenced code blocks, indented code blocks and inline code.</span>
+  <span class="hljs-comment"># Default language when none is specified. Can be one of the supported languages,</span>
+  <span class="hljs-comment"># an array of languages from which to pick automatically, or null or an empty list</span>
+  <span class="hljs-comment"># for plain text. There are separate defaults for fenced code blocks, indented</span>
+  <span class="hljs-comment"># code blocks and inline code.</span>
   fenced    = ${highlight.highlightjs.preload}
   indented  = ${highlight.highlightjs.preload}
   inline    = <span class="hljs-literal">null</span>
 
-  <span class="hljs-comment"># URIs of CSS files and assorted resources required for the style (relative to webjar:/highlight.js/styles/)</span>
+  <span class="hljs-comment"># URIs of CSS files and assorted resources required for the style</span>
+  <span class="hljs-comment"># (relative to webjar:/highlight.js/styles/)</span>
   styleResources = [ github-gist.css ]
-}
-</code></pre>
+}</code></pre>
 </div>
 <p>Note that the default theme overrides any background color set by the highlight.js style.</p>
 
@@ -101,6 +102,13 @@ highlight.highlightjs {
   <li  class="a_thispage" >
     
       <a href="highlighting.html">Code Highlighting</a>
+    
+    
+  </li>
+  
+  <li >
+    
+      <a href="default-theme.html">Default Theme</a>
     
     
   </li>

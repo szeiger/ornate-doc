@@ -34,7 +34,7 @@
               <main class="columns large-order-2 sections" id="_sections">
                 <h1 id="image-elements" class="a_section" data-magellan-target="image-elements">Image Elements<a class="a_hlink" href="#image-elements"></a></h1>
 <p>Ornate extends the use of standard Markdown image elements to non-image objects. These are not limited to external files, they can be included directly in the page depending on the <a href="uris.html">URI protocol</a>.</p>
-<h2 id="table-of-contents" class="a_section" data-magellan-target="table-of-contents">Table of Contents<a class="a_hlink" href="#table-of-contents"></a></h2>
+<h2 id="toctree" class="a_section" data-magellan-target="toctree">Table of Contents<a class="a_hlink" href="#toctree"></a></h2>
 <p><code class="hljs">toctree</code> URIs represent the generated Table of Contents. They can be used in image elements or parts of the theme configuration. URIs are of the form <code class="hljs">toctree:key=value,key=value,...</code> with case-insentive keys. The following keys are supported:</p>
 <ul>
 <li><code class="hljs">maxLevel</code>: The maximum nesting level to show in the TOC. Pages have level 0, heading elements have levels 1 to 6. When unset, this defaults to the configuration setting <code class="hljs">global.tocMaxLevel</code>.</li>
@@ -52,12 +52,12 @@
 <ul>
 <li><a href="images.html#image-elements">Image Elements</a>
 <ul>
-<li><a href="images.html#table-of-contents">Table of Contents</a></li>
-<li><a href="images.html#configuration-values">Configuration Values</a></li>
+<li><a href="images.html#toctree">Table of Contents</a></li>
+<li><a href="images.html#config">Configuration Values</a></li>
 </ul>
 </li>
 </ul>
-<h2 id="configuration-values" class="a_section" data-magellan-target="configuration-values">Configuration Values<a class="a_hlink" href="#configuration-values"></a></h2>
+<h2 id="config" class="a_section" data-magellan-target="config">Configuration Values<a class="a_hlink" href="#config"></a></h2>
 <p><code class="hljs">config</code> URIs can be used in image elements. They expand to strings from the page configuration. Title and text of the element are ignored.</p>
 <p>Example:</p>
 <div class="row">
@@ -119,6 +119,13 @@
   
   <li >
     
+      <a href="default-theme.html">Default Theme</a>
+    
+    
+  </li>
+  
+  <li >
+    
       <a href="elements.html">All Elements</a>
     
     
@@ -151,14 +158,14 @@
       <ul class="vertical menu">  
   <li>
     
-       <a href="#table-of-contents">Table of Contents</a> 
+       <a href="#toctree">Table of Contents</a> 
     
     
   </li>
   
   <li>
     
-       <a href="#configuration-values">Configuration Values</a> 
+       <a href="#config">Configuration Values</a> 
     
     
   </li>

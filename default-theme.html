@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Table of Contents</title>
+    <title>Default Theme</title>
     <link rel="stylesheet" href="theme/css/foundation.min.css">
     <link rel="stylesheet" href="theme/css/app.css">
-    
+     <link rel="stylesheet" href="theme/css/highlight.js/styles/github-gist.css"> 
   </head>
   <body>
     <div class="expanded row">
@@ -32,100 +32,46 @@
             <div class="row">
               
               <main class="columns large-order-2 sections" id="_sections">
-                <h1 id="table-of-contents" class="a_section" data-magellan-target="table-of-contents">Table of Contents<a class="a_hlink" href="#table-of-contents"></a></h1>
-<ul>
-<li><a href="index.html">Introduction</a>
-<ul>
-<li><a href="index.html#running">Running</a></li>
-<li><a href="index.html#terminology">Terminology</a></li>
-</ul>
-</li>
-<li><a href="configuration.html">Configuration</a>
-<ul>
-<li><a href="configuration.html#global-settings">Global Settings</a></li>
-<li><a href="configuration.html#table-of-contents">Table of Contents</a></li>
-</ul>
-</li>
-<li><a href="markdown.html">Markdown Extensions</a>
-<ul>
-<li><a href="markdown.html#commonmark-java-extensions">commonmark-java extensions</a></li>
-<li><a href="markdown.html#header_attributes">headerAttributes and autoIdentifiers</a></li>
-<li><a href="markdown.html#blockquoteattributes">blockQuoteAttributes</a></li>
-<li><a href="markdown.html#mergetabs">mergeTabs</a></li>
-<li><a href="markdown.html#includecode">includeCode</a></li>
-<li><a href="markdown.html#expandvars">expandVars</a></li>
-<li><a href="markdown.html#emoji">emoji</a></li>
-</ul>
-</li>
-<li><a href="images.html">Image Elements</a>
-<ul>
-<li><a href="images.html#toctree">Table of Contents</a></li>
-<li><a href="images.html#config">Configuration Values</a></li>
-</ul>
-</li>
-<li><a href="uris.html">URIs</a>
-<ul>
-<li><a href="uris.html#site">site</a></li>
-<li><a href="uris.html#webjar-theme-classpath">webjar, theme, classpath</a></li>
-<li><a href="uris.html#abs">abs</a></li>
-<li><a href="uris.html#file">file</a></li>
-<li><a href="uris.html#toctree-and-config">toctree and config</a></li>
-</ul>
-</li>
-<li><a href="highlighting.html">Code Highlighting</a></li>
-<li><a href="default-theme.html">Default Theme</a></li>
-<li><a href="elements.html">All Elements</a>
-<ul>
-<li><a href="elements.html#plain-text-paragraphs">Plain Text Paragraphs</a></li>
-<li><a href="elements.html#inline-elements">Inline Elements</a></li>
-<li><a href="elements.html#code-blocks">Code Blocks</a></li>
-<li><a href="elements.html#block-quotes">Block Quotes</a></li>
-<li><a href="elements.html#lines">Lines</a></li>
-<li><a href="elements.html#lists">Lists</a></li>
-<li><a href="elements.html#tables">Tables</a></li>
-<li><a href="elements.html#toc-trees">TOC Trees</a></li>
-<li><a href="elements.html#section-titles">Section Titles</a>
-<ul>
-<li><a href="elements.html#h3-title">H3 Title</a>
-<ul>
-<li><a href="elements.html#h4-title">H4 Title</a>
-<ul>
-<li><a href="elements.html#h5-title">H5 Title</a>
-<ul>
-<li><a href="elements.html#h6-title">H6 Title</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="test.html">Test Page</a>
-<ul>
-<li><a href="test.html#nd-level">2nd level</a></li>
-<li><a href="test.html#code-snippet">Code snippet</a></li>
-<li><a href="test.html#title_id">Title</a>
-<ul>
-<li>
-<ul>
-<li><a href="test.html#level-4">Level 4</a></li>
-<li><a href="test.html#level-4-1">Level 4</a></li>
-</ul>
-</li>
-<li><a href="test.html#level-3">Level 3</a></li>
-<li><a href="test.html#level-3-1">Level 3</a></li>
-</ul>
-</li>
-<li><a href="test.html#subtitle">Subtitle</a></li>
-<li><a href="test.html#contents_id">toctree:maxLevel=2,mergeFirst=false</a></li>
-<li><a href="test.html#contents_id-1">toctree:</a></li>
-<li><a href="test.html#pages">Pages</a></li>
-</ul>
-</li>
-</ul>
+                <h1 id="default-theme" class="a_section" data-magellan-target="default-theme">Default Theme<a class="a_hlink" href="#default-theme"></a></h1>
+<p>Ornate's default theme generates multiple HTML pages for the site, one per page. It uses <a href="http://foundation.zurb.com/">Foundation</a>'s Flexbox-based CSS layout for responsive design across different classes of devices. All assets are included in the generated site by default.</p>
+<p>This is the theme's default configuration:</p>
+<div class="row">
+<pre class="hljs small-expand columns a_xscroll"><code class="language-yaml">theme.default {
+  <span class="hljs-comment"># Settings which are only accessed globally</span>
+  global {
+    <span class="hljs-comment"># Synthetic pages to be generated without matching source files.</span>
+    <span class="hljs-comment"># Source URI (relative to site:/), or null to omit a page.</span>
+    pages {
+      toc = <span class="hljs-string">"contents.md"</span>
+    }
+    <span class="hljs-comment"># Directories (as URIs relative to site:/) where the theme places generated resources</span>
+    dirs = {
+      css   = <span class="hljs-string">"_theme/css"</span>
+      js    = <span class="hljs-string">"_theme/js"</span>
+      image = <span class="hljs-string">"_theme/images"</span>
+    }
+    <span class="hljs-comment"># If set to a file name like "index.html", generated links to this name will go the</span>
+    <span class="hljs-comment"># directory instead</span>
+    indexPage = <span class="hljs-literal">null</span>
+  }
+  <span class="hljs-comment"># English-language default strings, referenced from theme.default.strings. All strings</span>
+  <span class="hljs-comment"># are parsed as Markdown in the context of the surrounding page.</span>
+  en {
+    siteNav = <span class="hljs-literal">null</span>
+    pageNav = <span class="hljs-string">"On This Page"</span>
+    headerLeft = ${meta.siteTitle}
+    headerRight = <span class="hljs-literal">null</span>
+    footerLeft = ${meta.copyright}
+    footerRight = <span class="hljs-string">"Generated with [Ornate](https://github.com/szeiger/ornate)."</span>
+  }
+  <span class="hljs-comment"># Localized strings</span>
+  strings = ${theme.default.en}
+  <span class="hljs-comment"># Type of the site navigation on the left side ("toctree:" URI or null)</span>
+  siteNav = <span class="hljs-string">"toctree:maxLevel=1"</span>
+  <span class="hljs-comment"># Show page navigation on the right side (true or false)</span>
+  pageNav = <span class="hljs-literal">true</span>
+}</code></pre>
+</div>
 
               </main>
               
@@ -177,7 +123,7 @@
     
   </li>
   
-  <li >
+  <li  class="a_thispage" >
     
       <a href="default-theme.html">Default Theme</a>
     
@@ -212,7 +158,7 @@
                        
   <li>
     
-       <a href="#table-of-contents">Table of Contents</a> 
+       <a href="#default-theme">Default Theme</a> 
     
     
   </li>

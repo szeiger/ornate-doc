@@ -103,17 +103,21 @@ euismod ligula egestas sit amet. Suspendisse congue orci neque.</p>
             <span class="hljs-tag">&lt;<span class="hljs-name">pattern</span>&gt;</span>%highlight([%1.-1level]) %20.20logger{20}: %msg%n<span class="hljs-tag">&lt;/<span class="hljs-name">pattern</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">encoder</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">appender</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">appender</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"TRIGGER"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"com.novocode.ornate.ErrorRecognitionAppender"</span> /&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">root</span> <span class="hljs-attr">level</span>=<span class="hljs-string">"${log.root:-debug}"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">appender-ref</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"STDOUT"</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">appender-ref</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"TRIGGER"</span> /&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">root</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">logger</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"com.novocode.ornate.config.Global"</span>                    <span class="hljs-attr">level</span>=<span class="hljs-string">"info"</span> /&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">logger</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"com.novocode.ornate.PageParser"</span>                       <span class="hljs-attr">level</span>=<span class="hljs-string">"info"</span> /&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">logger</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"com.novocode.ornate.TocParser"</span>                        <span class="hljs-attr">level</span>=<span class="hljs-string">"warn"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">logger</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"com.novocode.ornate.EmojiParserExtension"</span>             <span class="hljs-attr">level</span>=<span class="hljs-string">"info"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">logger</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"com.novocode.ornate.IncludeCodeProcessor"</span>             <span class="hljs-attr">level</span>=<span class="hljs-string">"info"</span> /&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">logger</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"com.novocode.ornate.commonmark.SpecialImageProcessor"</span> <span class="hljs-attr">level</span>=<span class="hljs-string">"debug"</span> /&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">logger</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"com.novocode.ornate.commonmark.ExpandTocProcessor"</span>    <span class="hljs-attr">level</span>=<span class="hljs-string">"info"</span> /&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">logger</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"com.novocode.ornate.commonmark.MergeTabsProcessor"</span>    <span class="hljs-attr">level</span>=<span class="hljs-string">"info"</span> /&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">logger</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"com.novocode.ornate.theme.SpecialLinkProcessor"</span>       <span class="hljs-attr">level</span>=<span class="hljs-string">"info"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">logger</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"com.novocode.ornate.theme.default.html.Theme"</span>         <span class="hljs-attr">level</span>=<span class="hljs-string">"debug"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">logger</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"com.novocode.ornate.theme.default.html.Theme"</span>         <span class="hljs-attr">level</span>=<span class="hljs-string">"info"</span> /&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">logger</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"com.novocode.ornate.js.Modules"</span>                       <span class="hljs-attr">level</span>=<span class="hljs-string">"info"</span> /&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">logger</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"com.novocode.ornate.highlight.HighlightJSHighlighter"</span> <span class="hljs-attr">level</span>=<span class="hljs-string">"info"</span> /&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">configuration</span>&gt;</span></code></pre>
@@ -125,6 +129,7 @@ euismod ligula egestas sit amet. Suspendisse congue orci neque.</p>
 <span class="hljs-keyword">val</span> themePages = global.theme.synthesizePages(themePageURIs)
 <span class="hljs-keyword">val</span> pages = userPages ++ themePages
 
+logger.info(<span class="hljs-string">"Processing site"</span>)
 <span class="hljs-keyword">val</span> toc = <span class="hljs-type">TocParser</span>.parse(global.userConfig, pages)
 <span class="hljs-keyword">val</span> site = <span class="hljs-keyword">new</span> <span class="hljs-type">Site</span>(pages, toc)
 
@@ -138,6 +143,7 @@ pages.foreach { p =&gt;
 <span class="hljs-keyword">val</span> etp = <span class="hljs-keyword">new</span> <span class="hljs-type">ExpandTocProcessor</span>(toc)
 pages.foreach(etp)
 
+logger.info(<span class="hljs-string">"Rendering site"</span>)
 global.theme.render(site)</code></pre>
 </div>
 <h2 id="block-quotes" class="a_section" data-magellan-target="block-quotes">Block Quotes<a class="a_hlink" href="#block-quotes"></a></h2>
@@ -349,13 +355,14 @@ global.theme.render(site)</code></pre>
 <li><a href="markdown.html#blockquoteattributes">blockQuoteAttributes</a></li>
 <li><a href="markdown.html#mergetabs">mergeTabs</a></li>
 <li><a href="markdown.html#includecode">includeCode</a></li>
+<li><a href="markdown.html#expandvars">expandVars</a></li>
 <li><a href="markdown.html#emoji">emoji</a></li>
 </ul>
 </li>
 <li><a href="images.html">Image Elements</a>
 <ul>
-<li><a href="images.html#table-of-contents">Table of Contents</a></li>
-<li><a href="images.html#configuration-values">Configuration Values</a></li>
+<li><a href="images.html#toctree">Table of Contents</a></li>
+<li><a href="images.html#config">Configuration Values</a></li>
 </ul>
 </li>
 <li><a href="uris.html">URIs</a>
@@ -368,6 +375,7 @@ global.theme.render(site)</code></pre>
 </ul>
 </li>
 <li><a href="highlighting.html">Code Highlighting</a></li>
+<li><a href="default-theme.html">Default Theme</a></li>
 <li><a href="elements.html">All Elements</a>
 <ul>
 <li><a href="elements.html#plain-text-paragraphs">Plain Text Paragraphs</a></li>
@@ -477,6 +485,13 @@ global.theme.render(site)</code></pre>
   <li >
     
       <a href="highlighting.html">Code Highlighting</a>
+    
+    
+  </li>
+  
+  <li >
+    
+      <a href="default-theme.html">Default Theme</a>
     
     
   </li>

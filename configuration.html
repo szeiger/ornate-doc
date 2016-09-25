@@ -33,7 +33,7 @@
               
               <main class="columns large-order-2 sections" id="_sections">
                 <h1 id="configuration" class="a_section" data-magellan-target="configuration">Configuration<a class="a_hlink" href="#configuration"></a></h1>
-<p>The configuration is written in HOCON. The site configuration is in <code class="hljs">ornate.conf</code>. It is resolved against the reference configuration <code class="hljs">ornate-reference.conf</code> that ships with ornate. Every page may have a HOCON front matter section at the top, for example:</p>
+<p>The configuration is written in HOCON. The site configuration is in <code class="hljs">ornate.conf</code>. It is resolved against the reference configuration <code class="hljs">ornate-reference.conf</code> that ships with Ornate. Every page may have a HOCON front matter section at the top, for example:</p>
 <div class="row">
 <pre class="hljs small-expand columns a_xscroll"><code class="language-yaml"><span class="hljs-meta">---</span>
 highlight.highlightjs.inline = scala
@@ -56,14 +56,18 @@ All `inline code` on this page gets Scala highlighting!
   sourceDir = <span class="hljs-string">"src"</span>
   <span class="hljs-comment"># Directory containing static resources that should be copied to the target site</span>
   resourceDir = ${global.sourceDir}
+  <span class="hljs-comment"># List of gitignore-style patterns (relative to global.resourcedir) matching</span>
+  <span class="hljs-comment"># resources that should not be copied</span>
+  excludeResources = [<span class="hljs-string">"*.md"</span>, <span class="hljs-string">".DS_Store"</span>, <span class="hljs-string">"Thumbs.db"</span>, <span class="hljs-string">"*~"</span>]
   <span class="hljs-comment"># Directory to which the output is rendered</span>
   targetDir = <span class="hljs-string">"target"</span>
   <span class="hljs-comment"># TOC structure or null for no TOC</span>
   toc = <span class="hljs-literal">null</span>
   <span class="hljs-comment"># The theme, which also determines the output format</span>
   theme = default
-}
-</code></pre>
+  <span class="hljs-comment"># The syntax highlighter</span>
+  highlight = highlightjs
+}</code></pre>
 </div>
 <h2 id="table-of-contents" class="a_section" data-magellan-target="table-of-contents">Table of Contents<a class="a_hlink" href="#table-of-contents"></a></h2>
 <p><code class="hljs">global.toc</code> is a list of pages. Is is necessary to list them explicitly so that they can be included in the desired order. Any page not listed in <code class="hljs">global.toc</code> will still be processed as part of the site but it will not contribute TOC entries.</p>
@@ -129,6 +133,13 @@ All `inline code` on this page gets Scala highlighting!
   <li >
     
       <a href="highlighting.html">Code Highlighting</a>
+    
+    
+  </li>
+  
+  <li >
+    
+      <a href="default-theme.html">Default Theme</a>
     
     
   </li>

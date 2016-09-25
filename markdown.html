@@ -35,18 +35,16 @@
                 <h1 id="markdown-extensions" class="a_section" data-magellan-target="markdown-extensions">Markdown Extensions<a class="a_hlink" href="#markdown-extensions"></a></h1>
 <p>The following extensions are provided out of the box. Except for <code class="hljs">autolink</code> they are all enabled by default.</p>
 <div class="row">
-<pre class="hljs small-expand columns a_xscroll"><code class="language-yaml">extensionAliases = {
-  autolink             = org.commonmark.ext.autolink.AutolinkExtension
-  strikethrough        = org.commonmark.ext.gfm.strikethrough.StrikethroughExtension
-  tables               = org.commonmark.ext.gfm.tables.TablesExtension
-  headerAttributes     = com.novocode.ornate.commonmark.HeaderAttributesExtension
-  blockQuoteAttributes = com.novocode.ornate.commonmark.BlockQuoteAttributesExtension
-  autoIdentifiers      = com.novocode.ornate.commonmark.AutoIdentifiersExtension
-  mergeTabs            = com.novocode.ornate.commonmark.MergeTabsExtension
-  includeCode          = com.novocode.ornate.IncludeCodeExtension
-  emoji                = com.novocode.ornate.EmojiExtension
-}
-</code></pre>
+<pre class="hljs small-expand columns a_xscroll"><code class="language-yaml">autolink             = org.commonmark.ext.autolink.AutolinkExtension
+strikethrough        = org.commonmark.ext.gfm.strikethrough.StrikethroughExtension
+tables               = org.commonmark.ext.gfm.tables.TablesExtension
+headerAttributes     = com.novocode.ornate.commonmark.HeaderAttributesExtension
+blockQuoteAttributes = com.novocode.ornate.commonmark.BlockQuoteAttributesExtension
+autoIdentifiers      = com.novocode.ornate.commonmark.AutoIdentifiersExtension
+mergeTabs            = com.novocode.ornate.commonmark.MergeTabsExtension
+includeCode          = com.novocode.ornate.IncludeCodeExtension
+expandVars           = com.novocode.ornate.ExpandVarsExtension
+emoji                = com.novocode.ornate.EmojiExtension</code></pre>
 </div>
 <h2 id="commonmark-java-extensions" class="a_section" data-magellan-target="commonmark-java-extensions">commonmark-java extensions<a class="a_hlink" href="#commonmark-java-extensions"></a></h2>
 <p>See the <a href="https://github.com/atlassian/commonmark-java#extensions">commonmark-java documentation</a> for <code class="hljs">autolink</code>, <code class="hljs">strikethrough</code> and <code class="hljs">tables</code>.</p>
@@ -123,7 +121,7 @@ public class AttributedHeading extends Heading {
 <p>If the fenced code block is not empty, its original content is discarded. It can be used to show a placeholder in Markdown processors without this <code class="hljs">includeCode</code> feature.</p>
 <p>Example source:</p>
 <div class="row">
-<pre class="hljs small-expand columns a_xscroll"><code class="language-markdown"><span class="hljs-code">```scala src=../../src/main/scala/com/novocode/ornate/Main.scala#main
+<pre class="hljs small-expand columns a_xscroll"><code class="language-markdown"><span class="hljs-code">```scala src=../../core/src/main/scala/com/novocode/ornate/Main.scala#main
   Snippet Placeholder
 ```</span>
 </code></pre>
@@ -135,6 +133,7 @@ public class AttributedHeading extends Heading {
 <span class="hljs-keyword">val</span> themePages = global.theme.synthesizePages(themePageURIs)
 <span class="hljs-keyword">val</span> pages = userPages ++ themePages
 
+logger.info(<span class="hljs-string">"Processing site"</span>)
 <span class="hljs-keyword">val</span> toc = <span class="hljs-type">TocParser</span>.parse(global.userConfig, pages)
 <span class="hljs-keyword">val</span> site = <span class="hljs-keyword">new</span> <span class="hljs-type">Site</span>(pages, toc)
 
@@ -148,8 +147,42 @@ pages.foreach { p =&gt;
 <span class="hljs-keyword">val</span> etp = <span class="hljs-keyword">new</span> <span class="hljs-type">ExpandTocProcessor</span>(toc)
 pages.foreach(etp)
 
+logger.info(<span class="hljs-string">"Rendering site"</span>)
 global.theme.render(site)</code></pre>
 </div>
+<h2 id="expandvars" class="a_section" data-magellan-target="expandvars"><code class="hljs">expandVars</code><a class="a_hlink" href="#expandvars"></a></h2>
+<p>This extension allows expansion of variables that reference configuration keys. The delimiters for variables are configurable, the default style being <code class="hljs">{{variable}}</code>. Variable substutions are performed <em>after</em> Markdown parsing, so there is no way to escape delimiters. Global expansion for different node types can also be enabled in the configuration. By default this extension is enabled but all expansion options are disabled, so expansion is only performed in fenced code blocks with an explicit <code class="hljs">expandVars=true</code> attribute. This is the default configuration:</p>
+<div class="row">
+<pre class="hljs small-expand columns a_xscroll"><code class="language-yaml">extension.expandVars {
+  <span class="hljs-comment"># Start and end delimiter for variable substitution:</span>
+  startDelimiter = <span class="hljs-string">"<span class="hljs-template-variable">{{"
+  endDelimiter   = "}}</span>"</span>
+  <span class="hljs-comment"># Whether to expand variables globally in different node types:</span>
+  text              = <span class="hljs-literal">false</span> // in plain text content
+  code              = <span class="hljs-literal">false</span> // in inline code
+  indentedCodeBlock = <span class="hljs-literal">false</span> // in indented code blocks
+  fencedCodeBlock   = <span class="hljs-literal">false</span> // in fenced code blocks
+                            // (can be overridden with expandVars=<span class="hljs-literal">true</span>|<span class="hljs-literal">false</span> attribute)
+}</code></pre>
+</div>
+<p>Example source:</p>
+<div class="row">
+<pre class="hljs small-expand columns a_xscroll"><code class="language-markdown"><span class="hljs-code">```yaml expandVars=true
+# Set the version to {{version}}:
+version = "{{version}}"
+```</span>
+</code></pre>
+</div>
+<p>This gets rendered as:</p>
+<div class="row">
+<pre class="hljs small-expand columns a_xscroll"><code class="language-yaml"><span class="hljs-comment"># Set the version to 0.1-SNAPSHOT:</span>
+version = <span class="hljs-string">"0.1-SNAPSHOT"</span>
+</code></pre>
+</div>
+<blockquote class="note">
+<p>Note: When using <code class="hljs">expandVars</code> together with <code class="hljs">includeCode</code>, the order in which the extensions are run determines whether variables in included snippets are expanded. The default configuration adds <code class="hljs">expandVars</code> <em>after</em> <code class="hljs">includeCode</code> so that snippets are processed by <code class="hljs">expandVars</code>.</p>
+</blockquote>
+<p>In plain text you can also use objects with <a href="images.html#config">config</a> URIs instead of <code class="hljs">expandVars</code> but this is not possible in code elements, which cannot contain embedded Markdown syntax.</p>
 <h2 id="emoji" class="a_section" data-magellan-target="emoji"><code class="hljs">emoji</code><a class="a_hlink" href="#emoji"></a></h2>
 <p>The <code class="hljs">emoji</code> extension translates Emoji names to the appropriate Unicode representations or images.</p>
 <p>Example source:</p>
@@ -206,6 +239,13 @@ global.theme.render(site)</code></pre>
   <li >
     
       <a href="highlighting.html">Code Highlighting</a>
+    
+    
+  </li>
+  
+  <li >
+    
+      <a href="default-theme.html">Default Theme</a>
     
     
   </li>
@@ -273,6 +313,13 @@ global.theme.render(site)</code></pre>
   <li>
     
        <a href="#includecode">includeCode</a> 
+    
+    
+  </li>
+  
+  <li>
+    
+       <a href="#expandvars">expandVars</a> 
     
     
   </li>

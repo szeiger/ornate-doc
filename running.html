@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html class="no-js" lang="eng" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Running</title>
+    <link rel="stylesheet" href="theme/css/foundation.min.css">
+    <link rel="stylesheet" href="theme/css/app.css">
+     <link rel="stylesheet" href="theme/css/highlight.js/styles/github-gist.css"> 
+  </head>
+  <body>
+    <div class="expanded row">
+      <div class="small-12 medium-12 large-12 columns align-self-top">
+        <div class="row">
+          
+          <header class="large-12 columns align-self-top a_header">
+            <div class="row">
+              <div class="large-12 columns a_limited top-bar">
+                <div class="top-bar-left">
+                  <p>Ornate 0.1 Manual</p>
+
+                </div>
+                <div class="top-bar-right">
+                  
+                </div>
+              </div>
+            </div>
+          </header>
+          
+          <div class="small-12 medium-12 large-12 columns align-self-top a_limited a_main">
+            <div class="row">
+              
+              <main class="columns large-order-2 sections" id="_sections">
+                <h1 id="running" class="a_section" data-magellan-target="running">Running<a class="a_hlink" href="#running"></a></h1>
+<p>Ornate is available in <a href="https://bintray.com/bintray/jcenter">JCenter</a> and <a href="http://search.maven.org/">Maven Central</a>. The sbt plugin is published to the standard <a href="https://bintray.com/sbt/sbt-plugin-releases">sbt plugin repository</a>.</p>
+<h2 id="sbt-plugin" class="a_section" data-magellan-target="sbt-plugin">SBT Plugin<a class="a_hlink" href="#sbt-plugin"></a></h2>
+<p>First you need to add Ornate's sbt plugin to <code class="hljs">project/plugins.sbt</code>:</p>
+<div class="row">
+<pre class="hljs small-expand columns a_xscroll"><code class="language-scala">addSbtPlugin(<span class="hljs-string">"com.novocode"</span> % <span class="hljs-string">"sbt-ornate"</span> % <span class="hljs-string">"0.1"</span>)
+</code></pre>
+</div>
+<p>A minimum project definition in <code class="hljs">build.sbt</code> which enables the plugin looks like this:</p>
+<div class="row">
+<pre class="hljs small-expand columns a_xscroll"><code class="language-scala"><span class="hljs-keyword">lazy</span> <span class="hljs-keyword">val</span> root = project.in(file(<span class="hljs-string">"."</span>))
+  .enablePlugins(<span class="hljs-type">OrnatePlugin</span>)</code></pre>
+</div>
+<p>You can run Ornate from sbt with the <code class="hljs">ornate</code> task. By default it looks for a config file <code class="hljs">src/ornate.conf</code>, source and resources under <code class="hljs">src/site</code>, and it builds the site to <code class="hljs">target/site</code>. These settings can be changed directly through the sbt configuration:</p>
+<div class="row">
+<pre class="hljs small-expand columns a_xscroll"><code class="language-scala"><span class="hljs-keyword">val</span> ornateBaseDir     = settingKey[<span class="hljs-type">Option</span>[<span class="hljs-type">File</span>]](<span class="hljs-string">"Base directory for Ornate"</span>)
+<span class="hljs-keyword">val</span> ornateSourceDir   = settingKey[<span class="hljs-type">Option</span>[<span class="hljs-type">File</span>]](<span class="hljs-string">"Source directory for Ornate"</span>)
+<span class="hljs-keyword">val</span> ornateResourceDir = settingKey[<span class="hljs-type">Option</span>[<span class="hljs-type">File</span>]](<span class="hljs-string">"Resource directory for Ornate"</span>)
+<span class="hljs-keyword">val</span> ornateTargetDir   = settingKey[<span class="hljs-type">Option</span>[<span class="hljs-type">File</span>]](<span class="hljs-string">"Target directory for the Ornate-generated site"</span>)
+<span class="hljs-keyword">val</span> ornateConfig      = settingKey[<span class="hljs-type">File</span>](<span class="hljs-string">"Config file for Ornate"</span>)
+<span class="hljs-keyword">val</span> ornateSettings    = settingKey[<span class="hljs-type">Map</span>[<span class="hljs-type">String</span>, <span class="hljs-type">String</span>]](<span class="hljs-string">"Extra settings for Ornate"</span>)
+<span class="hljs-keyword">val</span> ornate = taskKey[<span class="hljs-type">Unit</span>](<span class="hljs-string">"Run Ornate to generate the site"</span>)
+<span class="hljs-keyword">lazy</span> <span class="hljs-keyword">val</span> <span class="hljs-type">Ornate</span> = config(<span class="hljs-string">"ornate"</span>).hide <span class="hljs-comment">// provides the classpath for Ornate</span></code></pre>
+</div>
+<p>Only the location of the config file is required. The base / source / resource / target directories are set by default, in which case they override any settings made in the config file.</p>
+<h2 id="command-line" class="a_section" data-magellan-target="command-line">Command Line<a class="a_hlink" href="#command-line"></a></h2>
+<p>You need to get the Ornate core package and its dependencies in order to run Ornate from the command line. In sbt's syntax the dependency is:</p>
+<div class="row">
+<pre class="hljs small-expand columns a_xscroll"><code class="language-scala"><span class="hljs-string">"com.novocode"</span> %% <span class="hljs-string">"ornate"</span> % <span class="hljs-string">"0.1"</span>
+</code></pre>
+</div>
+<blockquote class="note">
+<p>Note: Ornate requires Scala 2.11</p>
+</blockquote>
+<p>The main class for the command line launcher is <code class="hljs">com.novocode.ornate.Main</code>. The following arguments are supported:</p>
+<ul>
+<li><code class="hljs">[--base-dir=&lt;path&gt;]</code>: Source, resource and target dirs in the config are relative to the base directory. If not specified explicitly, this is the directory that contains the config file.</li>
+<li><code class="hljs">[-D&lt;option&gt;=&lt;value&gt;...]</code>: Configuration options can be overridden with <code class="hljs">-D</code> arguments or through system properties.</li>
+<li><code class="hljs">&lt;config-file&gt;</code>: The path to the site config file, typically named <code class="hljs">ornate.conf</code>.</li>
+</ul>
+<p>All further <a href="configuration.html">configuration</a> is done through the config file.</p>
+
+              </main>
+              
+              
+                <div data-sticky-container class="small-12 medium-12 large-2 large-order-1 columns a_sitenav_container">
+                  <nav class="a_sitenav" data-sticky data-sticky-on="large" data-anchor="_sections">
+                    
+                  <ul>
+                     
+  <li >
+    
+      <a href="index.html">Introduction</a>
+    
+    
+  </li>
+  
+  <li  class="a_thispage" >
+    
+      <a href="running.html">Running</a>
+    
+    
+  </li>
+  
+  <li >
+    
+      <a href="configuration.html">Configuration</a>
+    
+    
+  </li>
+  
+  <li >
+    
+      <a href="markdown.html">Markdown Extensions</a>
+    
+    
+  </li>
+  
+  <li >
+    
+      <a href="images.html">Image Elements</a>
+    
+    
+  </li>
+  
+  <li >
+    
+      <a href="uris.html">URIs</a>
+    
+    
+  </li>
+  
+  <li >
+    
+      <a href="highlighting.html">Code Highlighting</a>
+    
+    
+  </li>
+  
+  <li >
+    
+      <a href="default-theme.html">Default Theme</a>
+    
+    
+  </li>
+  
+  <li >
+    
+      <a href="elements.html">All Elements</a>
+    
+    
+  </li>
+  
+  <li >
+    
+      <a href="test.html">Test Page</a>
+    
+    
+  </li>
+ 
+                  </ul>
+                  </nav>
+                </div>
+              
+              
+              
+                <div class="small-12 medium-12 large-2 large-order-3 columns a_show-for-xlarge" data-sticky-container>
+                  <nav class="a_pagenav" data-sticky data-sticky-on="large" data-anchor="_sections">
+                     <header><p>On This Page</p>
+</header> 
+                    <ul class="vertical menu" data-magellan>
+                       
+  <li>
+    
+       <a href="#running">Running</a> 
+    
+    
+      <ul class="vertical menu">  
+  <li>
+    
+       <a href="#sbt-plugin">SBT Plugin</a> 
+    
+    
+  </li>
+  
+  <li>
+    
+       <a href="#command-line">Command Line</a> 
+    
+    
+  </li>
+  </ul>
+    
+  </li>
+ 
+                    </ul>
+                  </nav>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer class="small-12 medium-12 large-12 columns align-self-bottom a_footer">
+        <div class="row">
+          <div class="small-12 medium-12 large-12 columns top-bar">
+            <div class="top-bar-left">
+              <p>© Copyright 2016 Stefan Zeiger</p>
+
+            </div>
+            <div class="top-bar-right">
+              <p>Generated with <a href="https://github.com/szeiger/ornate">Ornate</a>.</p>
+
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="theme/js/jquery.min.js"></script>
+    <script src="theme/js/what-input.min.js"></script>
+    <script src="theme/js/foundation.min.js"></script>
+    
+    <script src="theme/js/app.js"></script>
+  </body>
+</html>

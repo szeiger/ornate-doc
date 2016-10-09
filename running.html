@@ -18,10 +18,17 @@
             <div class="row">
               <div class="large-12 columns a_limited top-bar">
                 <div class="top-bar-left">
-                  <p>Ornate 0.1 Manual</p>
+                  <p>Ornate 0.2 Manual</p>
 
                 </div>
-                <div class="top-bar-right">
+                <div class="top-bar-right align-right row">
+                  
+                  
+                    <form action="site-search.html" method="get" class="align-right a_search">
+                      <input name="q" type="search"  placeholder="Search
+" >
+                      <button><img alt="&#1F50D;" src="theme/images/images/search.svg" /></button>
+                    </form>
                   
                 </div>
               </div>
@@ -37,7 +44,7 @@
 <h2 id="sbt-plugin" class="a_section" data-magellan-target="sbt-plugin">SBT Plugin<a class="a_hlink" href="#sbt-plugin"></a></h2>
 <p>First you need to add Ornate's sbt plugin to <code class="hljs">project/plugins.sbt</code>:</p>
 <div class="row">
-<pre class="hljs small-expand columns a_xscroll"><code class="language-scala">addSbtPlugin(<span class="hljs-string">"com.novocode"</span> % <span class="hljs-string">"sbt-ornate"</span> % <span class="hljs-string">"0.1"</span>)
+<pre class="hljs small-expand columns a_xscroll"><code class="language-scala">addSbtPlugin(<span class="hljs-string">"com.novocode"</span> % <span class="hljs-string">"sbt-ornate"</span> % <span class="hljs-string">"0.2"</span>)
 </code></pre>
 </div>
 <p>A minimum project definition in <code class="hljs">build.sbt</code> which enables the plugin looks like this:</p>
@@ -60,7 +67,7 @@
 <h2 id="command-line" class="a_section" data-magellan-target="command-line">Command Line<a class="a_hlink" href="#command-line"></a></h2>
 <p>You need to get the Ornate core package and its dependencies in order to run Ornate from the command line. In sbt's syntax the dependency is:</p>
 <div class="row">
-<pre class="hljs small-expand columns a_xscroll"><code class="language-scala"><span class="hljs-string">"com.novocode"</span> %% <span class="hljs-string">"ornate"</span> % <span class="hljs-string">"0.1"</span>
+<pre class="hljs small-expand columns a_xscroll"><code class="language-scala"><span class="hljs-string">"com.novocode"</span> %% <span class="hljs-string">"ornate"</span> % <span class="hljs-string">"0.2"</span>
 </code></pre>
 </div>
 <blockquote class="note">
@@ -216,5 +223,6 @@
     <script src="theme/js/foundation.min.js"></script>
     
     <script src="theme/js/app.js"></script>
+    
   </body>
 </html>

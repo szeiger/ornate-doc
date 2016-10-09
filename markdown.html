@@ -18,10 +18,17 @@
             <div class="row">
               <div class="large-12 columns a_limited top-bar">
                 <div class="top-bar-left">
-                  <p>Ornate 0.1 Manual</p>
+                  <p>Ornate 0.2 Manual</p>
 
                 </div>
-                <div class="top-bar-right">
+                <div class="top-bar-right align-right row">
+                  
+                  
+                    <form action="site-search.html" method="get" class="align-right a_search">
+                      <input name="q" type="search"  placeholder="Search
+" >
+                      <button><img alt="&#1F50D;" src="theme/images/images/search.svg" /></button>
+                    </form>
                   
                 </div>
               </div>
@@ -44,7 +51,8 @@ autoIdentifiers      = com.novocode.ornate.commonmark.AutoIdentifiersExtension
 mergeTabs            = com.novocode.ornate.commonmark.MergeTabsExtension
 includeCode          = com.novocode.ornate.IncludeCodeExtension
 expandVars           = com.novocode.ornate.ExpandVarsExtension
-emoji                = com.novocode.ornate.EmojiExtension</code></pre>
+emoji                = com.novocode.ornate.EmojiExtension
+globalRefs           = com.novocode.ornate.GlobalRefsExtension</code></pre>
 </div>
 <h2 id="commonmark-java-extensions" class="a_section" data-magellan-target="commonmark-java-extensions">commonmark-java extensions<a class="a_hlink" href="#commonmark-java-extensions"></a></h2>
 <p>See the <a href="https://github.com/atlassian/commonmark-java#extensions">commonmark-java documentation</a> for <code class="hljs">autolink</code>, <code class="hljs">strikethrough</code> and <code class="hljs">tables</code>.</p>
@@ -175,8 +183,8 @@ version = "{{version}}"
 </div>
 <p>This gets rendered as:</p>
 <div class="row">
-<pre class="hljs small-expand columns a_xscroll"><code class="language-yaml"><span class="hljs-comment"># Set the version to 0.1:</span>
-version = <span class="hljs-string">"0.1"</span>
+<pre class="hljs small-expand columns a_xscroll"><code class="language-yaml"><span class="hljs-comment"># Set the version to 0.2:</span>
+version = <span class="hljs-string">"0.2"</span>
 </code></pre>
 </div>
 <blockquote class="note">
@@ -192,6 +200,15 @@ version = <span class="hljs-string">"0.1"</span>
 </div>
 <p>This gets rendered as:</p>
 <p>Is this feature <img class="emoji" title="thumbsup" alt="👍" src="theme/images/emojione/assets/svg/1f44d.svg""/> or <img class="emoji" title="thumbsdown" alt="👎" src="theme/images/emojione/assets/svg/1f44e.svg""/>?</p>
+<h2 id="globalrefs" class="a_section" data-magellan-target="globalrefs"><code class="hljs">globalRefs</code><a class="a_hlink" href="#globalrefs"></a></h2>
+<p>This extension allows you to prepend reference targets that are defined in the site config or page config to every page. This is useful for targets that are either computed from other config values or used on many pages. This is the default configuration:</p>
+<div class="row">
+<pre class="hljs small-expand columns a_xscroll"><code class="language-yaml">extension.globalRefs {
+  <span class="hljs-comment"># A map of reference labels to targets</span>
+  refs = {}
+}</code></pre>
+</div>
+<p>The keys in the map are the reference labels. The values are defined in the same way as <a href="configuration.html#table-of-contents">TOC entries</a>, either as a string (containing the link target) or an object with the fields <code class="hljs">url</code> and <code class="hljs">title</code>.</p>
 
               </main>
               
@@ -337,6 +354,13 @@ version = <span class="hljs-string">"0.1"</span>
     
     
   </li>
+  
+  <li>
+    
+       <a href="#globalrefs">globalRefs</a> 
+    
+    
+  </li>
   </ul>
     
   </li>
@@ -370,5 +394,6 @@ version = <span class="hljs-string">"0.1"</span>
     <script src="theme/js/foundation.min.js"></script>
     
     <script src="theme/js/app.js"></script>
+    
   </body>
 </html>

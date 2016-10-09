@@ -18,10 +18,17 @@
             <div class="row">
               <div class="large-12 columns a_limited top-bar">
                 <div class="top-bar-left">
-                  <p>Ornate 0.1 Manual</p>
+                  <p>Ornate 0.2 Manual</p>
 
                 </div>
-                <div class="top-bar-right">
+                <div class="top-bar-right align-right row">
+                  
+                  
+                    <form action="site-search.html" method="get" class="align-right a_search">
+                      <input name="q" type="search"  placeholder="Search
+" >
+                      <button><img alt="&#1F50D;" src="theme/images/images/search.svg" /></button>
+                    </form>
                   
                 </div>
               </div>
@@ -34,6 +41,7 @@
               <main class="columns large-order-2 sections" id="_sections">
                 <h1 id="default-theme" class="a_section" data-magellan-target="default-theme">Default Theme<a class="a_hlink" href="#default-theme"></a></h1>
 <p>Ornate's default theme generates multiple HTML pages for the site, one per page. It uses <a href="http://foundation.zurb.com/">Foundation</a>'s Flexbox-based CSS layout for responsive design across different classes of devices. All assets are included in the generated site by default.</p>
+<h2 id="configuration" class="a_section" data-magellan-target="configuration">Configuration<a class="a_hlink" href="#configuration"></a></h2>
 <p>This is the theme's default configuration:</p>
 <div class="row">
 <pre class="hljs small-expand columns a_xscroll"><code class="language-yaml">theme.default {
@@ -43,19 +51,34 @@
     <span class="hljs-comment"># Source URI (relative to site:/), or null to omit a page.</span>
     pages {
       toc = <span class="hljs-string">"contents.md"</span>
+      search = <span class="hljs-string">"site-search.md"</span>
     }
-    <span class="hljs-comment"># Directories (as URIs relative to site:/) where the theme places generated resources</span>
+    <span class="hljs-comment"># Directories (as URIs relative to site:/) where the theme places resources</span>
     dirs = {
       css   = <span class="hljs-string">"_theme/css"</span>
       js    = <span class="hljs-string">"_theme/js"</span>
       image = <span class="hljs-string">"_theme/images"</span>
     }
-    <span class="hljs-comment"># If set to a file name like "index.html", generated links to this name will go the</span>
-    <span class="hljs-comment"># directory instead</span>
+    <span class="hljs-comment"># If set to a file name like "index.html", generated links to this name will</span>
+    <span class="hljs-comment"># go to the directory instead</span>
     indexPage = <span class="hljs-literal">null</span>
+    <span class="hljs-comment"># Search index file that is generated if theme.default.global.pages.search</span>
+    <span class="hljs-comment"># is defined (URI relative to site:/, or null to disable the search index)</span>
+    searchIndex = <span class="hljs-string">"search-index.js"</span>
+    <span class="hljs-comment"># List of gitignore-style patterns matching page URIs (relative to site:/)</span>
+    <span class="hljs-comment"># to exclude from the search index</span>
+    searchExcludePages = [ ${theme.default.global.pages.search} ]
+    <span class="hljs-comment"># Number of characters per page to use for excerpts in search results</span>
+    <span class="hljs-comment"># (0 to disable excerpts)</span>
+    searchExcerptLength = <span class="hljs-number">200</span>
+    <span class="hljs-comment"># Front matter for the generated search page</span>
+    searchPageConfig {
+      theme.default.template: search
+      theme.default.pageNav: <span class="hljs-literal">false</span>
+    }
   }
-  <span class="hljs-comment"># English-language default strings, referenced from theme.default.strings. All strings</span>
-  <span class="hljs-comment"># are parsed as Markdown in the context of the surrounding page.</span>
+  <span class="hljs-comment"># English-language default strings, referenced from theme.default.strings.</span>
+  <span class="hljs-comment"># Strings are usually parsed as Markdown in the context of the surrounding page.</span>
   en {
     siteNav = <span class="hljs-literal">null</span>
     pageNav = <span class="hljs-string">"On This Page"</span>
@@ -63,15 +86,28 @@
     headerRight = <span class="hljs-literal">null</span>
     footerLeft = ${meta.copyright}
     footerRight = <span class="hljs-string">"Generated with [Ornate](https://github.com/szeiger/ornate)."</span>
+    tocPage = <span class="hljs-string">"# Table of Contents\n\n![](toctree:)"</span>
+    searchPlaceholder = <span class="hljs-string">"Search"</span>
+    searchPage = <span class="hljs-string">"# Search\n\nFrom here you can search all pages. Enter the search terms below and click the search button. Note that the search function will search for a combination of *all* search terms."</span>
+    noScript = <span class="hljs-string">"&gt; {.warning}\n&gt; This feature requires JavaScript. Please enable JavaScript in your browser."</span>
+    <span class="hljs-comment"># The searchCount strings are plain text only:</span>
+    searchCount0 = <span class="hljs-string">"No matching pages found."</span>
+    searchCount1 = <span class="hljs-string">"Found one matching page:"</span>
+    searchCountN = <span class="hljs-string">"Found # matching pages:"</span>
   }
   <span class="hljs-comment"># Localized strings</span>
   strings = ${theme.default.en}
   <span class="hljs-comment"># Type of the site navigation on the left side ("toctree:" URI or null)</span>
   siteNav = <span class="hljs-string">"toctree:maxLevel=1"</span>
-  <span class="hljs-comment"># Show page navigation on the right side (true or false)</span>
-  pageNav = <span class="hljs-literal">true</span>
+  <span class="hljs-comment"># Show page navigation on the right side (true or false, or null to enable</span>
+  <span class="hljs-comment"># automatically when the page has more than one section)</span>
+  pageNav = <span class="hljs-literal">null</span>
+  <span class="hljs-comment"># The template that is used to render pages</span>
+  template = default
 }</code></pre>
 </div>
+<h2 id="search" class="a_section" data-magellan-target="search">Search<a class="a_hlink" href="#search"></a></h2>
+<p>The default theme can generate a JavaScript-based search function for the site using <a href="http://elasticlunr.com/">Elasticlunr</a>. The search index includes page titles, content and keywords. See above for configuration options.</p>
 
               </main>
               
@@ -168,6 +204,22 @@
        <a href="#default-theme">Default Theme</a> 
     
     
+      <ul class="vertical menu">  
+  <li>
+    
+       <a href="#configuration">Configuration</a> 
+    
+    
+  </li>
+  
+  <li>
+    
+       <a href="#search">Search</a> 
+    
+    
+  </li>
+  </ul>
+    
   </li>
  
                     </ul>
@@ -199,5 +251,6 @@
     <script src="theme/js/foundation.min.js"></script>
     
     <script src="theme/js/app.js"></script>
+    
   </body>
 </html>

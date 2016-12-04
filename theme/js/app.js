@@ -1,3 +1,1 @@
-Foundation.Magellan.defaults.animationDuration = 200;
-Foundation.Magellan.defaults.barOffset = -20;
-$(document).foundation()
+Foundation.Magellan.defaults.animationDuration=200;Foundation.Magellan.defaults.barOffset=-20;$(document).foundation();$(window).load(function(){"undefined"!==typeof mermaidAPI&&(mermaidAPI.initialize({startOnLoad:!1,cloneCssStyles:!1}),$(".mermaid_src").each(function(){var a=this.parentElement;mermaidAPI.render(a.id+"_svg",this.textContent,function(b,c){a.innerHTML=b;c(a)},"#"+a.id);$(".sticky").foundation("_calc",!0)}))});

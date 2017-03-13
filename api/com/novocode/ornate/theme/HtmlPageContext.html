@@ -52,7 +52,10 @@
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>The page context is available for preprocessing a page</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
-        </div></div>
+        </div><div class="toggleContainer block">
+            <span class="toggle">Known Subclasses</span>
+            <div class="subClasses hiddenContent"><a href="default/DefaultPageContext.html" class="extype" name="com.novocode.ornate.theme.default.DefaultPageContext">DefaultPageContext</a></div>
+          </div></div>
         
 
       <div id="mbrsel">
@@ -89,7 +92,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="com.novocode.ornate.theme.HtmlPageContext#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(theme:com.novocode.ornate.theme.HtmlTheme,site:com.novocode.ornate.Site,page:com.novocode.ornate.Page,slp:com.novocode.ornate.theme.SpecialLinkProcessor,res:com.novocode.ornate.theme.PageResources):com.novocode.ornate.theme.HtmlPageContext"></a>
+      <a id="&lt;init&gt;(siteContext:com.novocode.ornate.theme.HtmlSiteContext,page:com.novocode.ornate.Page):com.novocode.ornate.theme.HtmlPageContext"></a>
       <a id="&lt;init&gt;:HtmlPageContext"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -97,10 +100,10 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">HtmlPageContext</span><span class="params">(<span name="theme">theme: <a href="HtmlTheme.html" class="extype" name="com.novocode.ornate.theme.HtmlTheme">HtmlTheme</a></span>, <span name="site">site: <a href="../Site.html" class="extype" name="com.novocode.ornate.Site">Site</a></span>, <span name="page">page: <a href="../Page.html" class="extype" name="com.novocode.ornate.Page">Page</a></span>, <span name="slp">slp: <a href="SpecialLinkProcessor.html" class="extype" name="com.novocode.ornate.theme.SpecialLinkProcessor">SpecialLinkProcessor</a></span>, <span name="res">res: <a href="PageResources.html" class="extype" name="com.novocode.ornate.theme.PageResources">PageResources</a></span>)</span>
+        <span class="name">HtmlPageContext</span><span class="params">(<span name="siteContext">siteContext: <a href="HtmlSiteContext.html" class="extype" name="com.novocode.ornate.theme.HtmlSiteContext">HtmlSiteContext</a></span>, <span name="page">page: <a href="../Page.html" class="extype" name="com.novocode.ornate.Page">Page</a></span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlPageContext@&lt;init&gt;(theme:com.novocode.ornate.theme.HtmlTheme,site:com.novocode.ornate.Site,page:com.novocode.ornate.Page,slp:com.novocode.ornate.theme.SpecialLinkProcessor,res:com.novocode.ornate.theme.PageResources):com.novocode.ornate.theme.HtmlPageContext" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlPageContext@&lt;init&gt;(siteContext:com.novocode.ornate.theme.HtmlSiteContext,page:com.novocode.ornate.Page):com.novocode.ornate.theme.HtmlPageContext" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -239,6 +242,23 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="com.novocode.ornate.theme.HtmlPageContext#features" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="features:com.novocode.ornate.theme.HtmlFeatures"></a>
+      <a id="features:HtmlFeatures"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">features</span><span class="result">: <a href="HtmlFeatures.html" class="extype" name="com.novocode.ornate.theme.HtmlFeatures">HtmlFeatures</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlPageContext@features:com.novocode.ornate.theme.HtmlFeatures" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -330,40 +350,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="com.novocode.ornate.theme.HtmlPageContext#needsJavaScript" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="needsJavaScript:Boolean"></a>
-      <a id="needsJavaScript:Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">needsJavaScript</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlPageContext@needsJavaScript:Boolean" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="com.novocode.ornate.theme.HtmlPageContext#needsMathJax" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="needsMathJax:Boolean"></a>
-      <a id="needsMathJax:Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">needsMathJax</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlPageContext@needsMathJax:Boolean" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="com.novocode.ornate.theme.HtmlPageContext#newID" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="newID():String"></a>
       <a id="newID():String"></a>
@@ -445,40 +431,6 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#com.novocode.ornate.theme.HtmlPageContext@pageConfig(path:String):Option[String]" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="com.novocode.ornate.theme.HtmlPageContext#requireJavaScript" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="requireJavaScript():Unit"></a>
-      <a id="requireJavaScript():Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">requireJavaScript</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlPageContext@requireJavaScript():Unit" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="com.novocode.ornate.theme.HtmlPageContext#requireMathJax" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="requireMathJax():Unit"></a>
-      <a id="requireMathJax():Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">requireMathJax</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlPageContext@requireMathJax():Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -568,8 +520,25 @@
       </a>
     </span>
       
+    </li><li name="com.novocode.ornate.theme.HtmlPageContext#siteContext" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="siteContext:com.novocode.ornate.theme.HtmlSiteContext"></a>
+      <a id="siteContext:HtmlSiteContext"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">siteContext</span><span class="result">: <a href="HtmlSiteContext.html" class="extype" name="com.novocode.ornate.theme.HtmlSiteContext">HtmlSiteContext</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlPageContext@siteContext:com.novocode.ornate.theme.HtmlSiteContext" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="com.novocode.ornate.theme.HtmlPageContext#siteNav" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="siteNav:Option[Vector[com.novocode.ornate.commonmark.ExpandTocProcessor.TocItem]]"></a>
+      <a id="siteNav:Option[Vector[com.novocode.ornate.ExpandTocProcessor.TocItem]]"></a>
       <a id="siteNav:Option[Vector[TocItem]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -577,10 +546,10 @@
         <span class="kind">lazy val</span>
       </span>
       <span class="symbol">
-        <span class="name">siteNav</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Vector">Vector</span>[<a href="../commonmark/ExpandTocProcessor$$TocItem.html" class="extype" name="com.novocode.ornate.commonmark.ExpandTocProcessor.TocItem">TocItem</a>]]</span>
+        <span class="name">siteNav</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Vector">Vector</span>[<a href="../ExpandTocProcessor$$TocItem.html" class="extype" name="com.novocode.ornate.ExpandTocProcessor.TocItem">TocItem</a>]]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlPageContext@siteNav:Option[Vector[com.novocode.ornate.commonmark.ExpandTocProcessor.TocItem]]" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlPageContext@siteNav:Option[Vector[com.novocode.ornate.ExpandTocProcessor.TocItem]]" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -636,23 +605,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="com.novocode.ornate.theme.HtmlPageContext#theme" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="theme:com.novocode.ornate.theme.HtmlTheme"></a>
-      <a id="theme:HtmlTheme"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">theme</span><span class="result">: <a href="HtmlTheme.html" class="extype" name="com.novocode.ornate.theme.HtmlTheme">HtmlTheme</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlPageContext@theme:com.novocode.ornate.theme.HtmlTheme" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="com.novocode.ornate.theme.HtmlPageContext#themeConfig" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="themeConfig(path:String):Option[String]"></a>
       <a id="themeConfig(String):Option[String]"></a>
@@ -687,6 +639,57 @@
       </a>
     </span>
       
+    </li><li name="com.novocode.ornate.theme.HtmlPageContext#themeConfigInt" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="themeConfigInt(path:String):Option[Int]"></a>
+      <a id="themeConfigInt(String):Option[Int]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">themeConfigInt</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlPageContext@themeConfigInt(path:String):Option[Int]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.novocode.ornate.theme.HtmlPageContext#themeConfigStringList" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="themeConfigStringList(path:String):Option[Seq[String]]"></a>
+      <a id="themeConfigStringList(String):Option[Seq[String]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">themeConfigStringList</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlPageContext@themeConfigStringList(path:String):Option[Seq[String]]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.novocode.ornate.theme.HtmlPageContext#themeConfigValueList" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="themeConfigValueList(path:String):Option[Seq[com.typesafe.config.ConfigValue]]"></a>
+      <a id="themeConfigValueList(String):Option[Seq[ConfigValue]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">themeConfigValueList</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="com.typesafe.config.ConfigValue">ConfigValue</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlPageContext@themeConfigValueList(path:String):Option[Seq[com.typesafe.config.ConfigValue]]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <a id="toString():String"></a>
@@ -704,6 +707,23 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="com.novocode.ornate.theme.HtmlPageContext#tocLocation" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="tocLocation:Option[com.novocode.ornate.TocLocation]"></a>
+      <a id="tocLocation:Option[TocLocation]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tocLocation</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="../TocLocation.html" class="extype" name="com.novocode.ornate.TocLocation">TocLocation</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlPageContext@tocLocation:Option[com.novocode.ornate.TocLocation]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>

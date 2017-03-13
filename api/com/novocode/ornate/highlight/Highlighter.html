@@ -28,7 +28,7 @@
         </head>
         <body class="type">
       <div id="definition">
-        <img alt="Trait" src="../../../../lib/trait_big.png" />
+        <img alt="Class" src="../../../../lib/class_big.png" />
         <p id="owner"><a href="../../../package.html" class="extype" name="com">com</a>.<a href="../../package.html" class="extype" name="com.novocode">novocode</a>.<a href="../package.html" class="extype" name="com.novocode.ornate">ornate</a>.<a href="package.html" class="extype" name="com.novocode.ornate.highlight">highlight</a></p>
         <h1>Highlighter</h1><h3><span class="morelinks"><div>Related Doc:
             <a href="package.html" class="extype" name="com.novocode.ornate.highlight">package highlight</a>
@@ -41,20 +41,20 @@
 
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">Highlighter</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <span class="name">Highlighter</span><span class="result"> extends <a href="../PageProcessor.html" class="extype" name="com.novocode.ornate.PageProcessor">PageProcessor</a></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Base class for highlighters</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="../PageProcessor.html" class="extype" name="com.novocode.ornate.PageProcessor">PageProcessor</a>, (<a href="../Page.html" class="extype" name="com.novocode.ornate.Page">Page</a>) ⇒ <span class="extype" name="scala.Unit">Unit</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
             <span class="toggle">Known Subclasses</span>
-            <div class="subClasses hiddenContent"><a href="HighlightJSHighlighter.html" class="extype" name="com.novocode.ornate.highlight.HighlightJSHighlighter">HighlightJSHighlighter</a>, <a href="NoHighlighter.html" class="extype" name="com.novocode.ornate.highlight.NoHighlighter">NoHighlighter</a></div>
+            <div class="subClasses hiddenContent"><a href="HighlightJSHighlighter.html" class="extype" name="com.novocode.ornate.highlight.HighlightJSHighlighter">HighlightJSHighlighter</a></div>
           </div></div>
         
 
@@ -72,7 +72,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="com.novocode.ornate.highlight.Highlighter"><span>Highlighter</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="com.novocode.ornate.highlight.Highlighter"><span>Highlighter</span></li><li class="in" name="com.novocode.ornate.PageProcessor"><span>PageProcessor</span></li><li class="in" name="scala.Function1"><span>Function1</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -89,25 +89,45 @@
 
       <div id="template">
         <div id="allMembers">
-        
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="com.novocode.ornate.highlight.Highlighter#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(co:com.novocode.ornate.config.ConfiguredObject):com.novocode.ornate.highlight.Highlighter"></a>
+      <a id="&lt;init&gt;:Highlighter"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Highlighter</span><span class="params">(<span name="co">co: <a href="../config/ConfiguredObject.html" class="extype" name="com.novocode.ornate.config.ConfiguredObject">ConfiguredObject</a></span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.novocode.ornate.highlight.Highlighter@&lt;init&gt;(co:com.novocode.ornate.config.ConfiguredObject):com.novocode.ornate.highlight.Highlighter" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
 
         
 
         <div id="values" class="values members">
               <h3>Abstract Value Members</h3>
               <ol><li name="com.novocode.ornate.highlight.Highlighter#highlightTextAsHTML" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="highlightTextAsHTML(text:String,lang:Option[String],target:com.novocode.ornate.highlight.HighlightTarget,page:com.novocode.ornate.Page):com.novocode.ornate.highlight.HighlightResult"></a>
-      <a id="highlightTextAsHTML(String,Option[String],HighlightTarget,Page):HighlightResult"></a>
+      <a id="highlightTextAsHTML(text:String,lang:Option[String],node:org.commonmark.node.Node,page:com.novocode.ornate.Page):com.novocode.ornate.highlight.HighlightResult"></a>
+      <a id="highlightTextAsHTML(String,Option[String],Node,Page):HighlightResult"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">highlightTextAsHTML</span><span class="params">(<span name="text">text: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="lang">lang: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="target">target: <a href="HighlightTarget.html" class="extype" name="com.novocode.ornate.highlight.HighlightTarget">HighlightTarget</a></span>, <span name="page">page: <a href="../Page.html" class="extype" name="com.novocode.ornate.Page">Page</a></span>)</span><span class="result">: <a href="HighlightResult.html" class="extype" name="com.novocode.ornate.highlight.HighlightResult">HighlightResult</a></span>
+        <span class="name">highlightTextAsHTML</span><span class="params">(<span name="text">text: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="lang">lang: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="node">node: <span class="extype" name="org.commonmark.node.Node">Node</span></span>, <span name="page">page: <a href="../Page.html" class="extype" name="com.novocode.ornate.Page">Page</a></span>)</span><span class="result">: <a href="HighlightResult.html" class="extype" name="com.novocode.ornate.highlight.HighlightResult">HighlightResult</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.highlight.Highlighter@highlightTextAsHTML(text:String,lang:Option[String],target:com.novocode.ornate.highlight.HighlightTarget,page:com.novocode.ornate.Page):com.novocode.ornate.highlight.HighlightResult" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.novocode.ornate.highlight.Highlighter@highlightTextAsHTML(text:String,lang:Option[String],node:org.commonmark.node.Node,page:com.novocode.ornate.Page):com.novocode.ornate.highlight.HighlightResult" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -169,6 +189,43 @@ language name, if supplied, otherwise guess or format without highlighting.</p><
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Function1#andThen" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="andThen[A](g:R=&gt;A):T1=&gt;A"></a>
+      <a id="andThen[A]((Unit)⇒A):(Page)⇒A"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">andThen</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="g">g: (<span class="extype" name="scala.Unit">Unit</span>) ⇒ <span class="extype" name="scala.Function1.andThen.A">A</span></span>)</span><span class="result">: (<a href="../Page.html" class="extype" name="com.novocode.ornate.Page">Page</a>) ⇒ <span class="extype" name="scala.Function1.andThen.A">A</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.novocode.ornate.highlight.Highlighter@andThen[A](g:R=&gt;A):T1=&gt;A" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Function1</dd><dt>Annotations</dt><dd>
+                <span class="name">@unspecialized</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="com.novocode.ornate.highlight.Highlighter#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply(page:com.novocode.ornate.Page):Unit"></a>
+      <a id="apply(Page):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="params">(<span name="page">page: <a href="../Page.html" class="extype" name="com.novocode.ornate.Page">Page</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.novocode.ornate.highlight.Highlighter@apply(page:com.novocode.ornate.Page):Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.novocode.ornate.highlight.Highlighter">Highlighter</a> → Function1</dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -207,6 +264,26 @@ language name, if supplied, otherwise guess or format without highlighting.</p><
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
     </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Function1#compose" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="compose[A](g:A=&gt;T1):A=&gt;R"></a>
+      <a id="compose[A]((A)⇒Page):(A)⇒Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">compose</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="g">g: (<span class="extype" name="scala.Function1.compose.A">A</span>) ⇒ <a href="../Page.html" class="extype" name="com.novocode.ornate.Page">Page</a></span>)</span><span class="result">: (<span class="extype" name="scala.Function1.compose.A">A</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.novocode.ornate.highlight.Highlighter@compose[A](g:A=&gt;T1):A=&gt;R" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Function1</dd><dt>Annotations</dt><dd>
+                <span class="name">@unspecialized</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -368,6 +445,23 @@ language name, if supplied, otherwise guess or format without highlighting.</p><
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="com.novocode.ornate.highlight.Highlighter#runAt" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="runAt:com.novocode.ornate.Phase"></a>
+      <a id="runAt:Phase"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">runAt</span><span class="result">: <a href="../Phase.html" class="extype" name="com.novocode.ornate.Phase">Phase</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.novocode.ornate.highlight.Highlighter@runAt:com.novocode.ornate.Phase" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.novocode.ornate.highlight.Highlighter">Highlighter</a> → <a href="../PageProcessor.html" class="extype" name="com.novocode.ornate.PageProcessor">PageProcessor</a></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -385,7 +479,7 @@ language name, if supplied, otherwise guess or format without highlighting.</p><
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.Function1#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <a id="toString():String"></a>
       <h4 class="signature">
@@ -401,7 +495,7 @@ language name, if supplied, otherwise guess or format without highlighting.</p><
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Function1 → AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -480,7 +574,11 @@ language name, if supplied, otherwise guess or format without highlighting.</p><
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
+        <div class="parent" name="com.novocode.ornate.PageProcessor">
+              <h3>Inherited from <a href="../PageProcessor.html" class="extype" name="com.novocode.ornate.PageProcessor">PageProcessor</a></h3>
+            </div><div class="parent" name="scala.Function1">
+              <h3>Inherited from (<a href="../Page.html" class="extype" name="com.novocode.ornate.Page">Page</a>) ⇒ <span class="extype" name="scala.Unit">Unit</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>

@@ -45,12 +45,12 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">ResourceSpec</span><span class="params">(<span name="sourceURI">sourceURI: <span class="extype" name="java.net.URI">URI</span></span>, <span name="sourceURL">sourceURL: <span class="extype" name="java.net.URL">URL</span></span>, <span name="targetURI">targetURI: <span class="extype" name="java.net.URI">URI</span></span>, <span name="createLink">createLink: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="resources">resources: <a href="PageResources.html" class="extype" name="com.novocode.ornate.theme.PageResources">PageResources</a></span>, <span name="minified">minified: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">ResourceSpec</span><span class="params">(<span name="sourceURI">sourceURI: <span class="extype" name="java.net.URI">URI</span></span>, <span name="resolvedSourceURI">resolvedSourceURI: <span class="extype" name="java.net.URI">URI</span></span>, <span name="targetURI">targetURI: <span class="extype" name="java.net.URI">URI</span></span>, <span name="createLink">createLink: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="resources">resources: <a href="PageResources.html" class="extype" name="com.novocode.ornate.theme.PageResources">PageResources</a></span>, <span name="minified">minified: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Resource to include in the generated site.
-</p></div><dl class="paramcmts block"><dt class="param">sourceURI</dt><dd class="cmt"><p>The source URI</p></dd><dt class="param">sourceURL</dt><dd class="cmt"><p>the resolved source URL to locate the file</p></dd><dt class="param">targetURI</dt><dd class="cmt"><p>the target <code>site:</code> URI</p></dd><dt class="param">createLink</dt><dd class="cmt"><p>whether to create a link to the resource (e.g. &quot;script&quot; or &quot;style&quot; tag)</p></dd><dt class="param">resources</dt><dd class="cmt"><p>the <code>Resources</code> object which created this ResourceSpec</p></dd><dt class="param">minified</dt><dd class="cmt"><p>whether the resource is already minified. In addition, all resources whose sourceURI path ends
+</p></div><dl class="paramcmts block"><dt class="param">sourceURI</dt><dd class="cmt"><p>The source URI</p></dd><dt class="param">resolvedSourceURI</dt><dd class="cmt"><p>the resolved source URI to locate the file</p></dd><dt class="param">targetURI</dt><dd class="cmt"><p>the target <code>site:</code> URI</p></dd><dt class="param">createLink</dt><dd class="cmt"><p>whether to create a link to the resource (e.g. &quot;script&quot; or &quot;style&quot; tag)</p></dd><dt class="param">resources</dt><dd class="cmt"><p>the <code>Resources</code> object which created this ResourceSpec</p></dd><dt class="param">minified</dt><dd class="cmt"><p>whether the resource is already minified. In addition, all resources whose sourceURI path ends
                 with &quot;.min&quot; before the actual suffix are also considered minified.</p></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
@@ -91,7 +91,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="com.novocode.ornate.theme.ResourceSpec#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(sourceURI:java.net.URI,sourceURL:java.net.URL,targetURI:java.net.URI,createLink:Boolean,resources:com.novocode.ornate.theme.PageResources,minified:Boolean):com.novocode.ornate.theme.ResourceSpec"></a>
+      <a id="&lt;init&gt;(sourceURI:java.net.URI,resolvedSourceURI:java.net.URI,targetURI:java.net.URI,createLink:Boolean,resources:com.novocode.ornate.theme.PageResources,minified:Boolean):com.novocode.ornate.theme.ResourceSpec"></a>
       <a id="&lt;init&gt;:ResourceSpec"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -99,14 +99,14 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">ResourceSpec</span><span class="params">(<span name="sourceURI">sourceURI: <span class="extype" name="java.net.URI">URI</span></span>, <span name="sourceURL">sourceURL: <span class="extype" name="java.net.URL">URL</span></span>, <span name="targetURI">targetURI: <span class="extype" name="java.net.URI">URI</span></span>, <span name="createLink">createLink: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="resources">resources: <a href="PageResources.html" class="extype" name="com.novocode.ornate.theme.PageResources">PageResources</a></span>, <span name="minified">minified: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span>
+        <span class="name">ResourceSpec</span><span class="params">(<span name="sourceURI">sourceURI: <span class="extype" name="java.net.URI">URI</span></span>, <span name="resolvedSourceURI">resolvedSourceURI: <span class="extype" name="java.net.URI">URI</span></span>, <span name="targetURI">targetURI: <span class="extype" name="java.net.URI">URI</span></span>, <span name="createLink">createLink: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="resources">resources: <a href="PageResources.html" class="extype" name="com.novocode.ornate.theme.PageResources">PageResources</a></span>, <span name="minified">minified: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.theme.ResourceSpec@&lt;init&gt;(sourceURI:java.net.URI,sourceURL:java.net.URL,targetURI:java.net.URI,createLink:Boolean,resources:com.novocode.ornate.theme.PageResources,minified:Boolean):com.novocode.ornate.theme.ResourceSpec" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.novocode.ornate.theme.ResourceSpec@&lt;init&gt;(sourceURI:java.net.URI,resolvedSourceURI:java.net.URI,targetURI:java.net.URI,createLink:Boolean,resources:com.novocode.ornate.theme.PageResources,minified:Boolean):com.novocode.ornate.theme.ResourceSpec" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">sourceURI</dt><dd class="cmt"><p>The source URI</p></dd><dt class="param">sourceURL</dt><dd class="cmt"><p>the resolved source URL to locate the file</p></dd><dt class="param">targetURI</dt><dd class="cmt"><p>the target <code>site:</code> URI</p></dd><dt class="param">createLink</dt><dd class="cmt"><p>whether to create a link to the resource (e.g. &quot;script&quot; or &quot;style&quot; tag)</p></dd><dt class="param">resources</dt><dd class="cmt"><p>the <code>Resources</code> object which created this ResourceSpec</p></dd><dt class="param">minified</dt><dd class="cmt"><p>whether the resource is already minified. In addition, all resources whose sourceURI path ends
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">sourceURI</dt><dd class="cmt"><p>The source URI</p></dd><dt class="param">resolvedSourceURI</dt><dd class="cmt"><p>the resolved source URI to locate the file</p></dd><dt class="param">targetURI</dt><dd class="cmt"><p>the target <code>site:</code> URI</p></dd><dt class="param">createLink</dt><dd class="cmt"><p>whether to create a link to the resource (e.g. &quot;script&quot; or &quot;style&quot; tag)</p></dd><dt class="param">resources</dt><dd class="cmt"><p>the <code>Resources</code> object which created this ResourceSpec</p></dd><dt class="param">minified</dt><dd class="cmt"><p>whether the resource is already minified. In addition, all resources whose sourceURI path ends
                 with &quot;.min&quot; before the actual suffix are also considered minified.</p></dd></dl></div>
     </li></ol>
             </div>
@@ -385,6 +385,23 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="com.novocode.ornate.theme.ResourceSpec#resolvedSourceURI" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="resolvedSourceURI:java.net.URI"></a>
+      <a id="resolvedSourceURI:URI"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">resolvedSourceURI</span><span class="result">: <span class="extype" name="java.net.URI">URI</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.novocode.ornate.theme.ResourceSpec@resolvedSourceURI:java.net.URI" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">the resolved source URI to locate the file</p>
     </li><li name="com.novocode.ornate.theme.ResourceSpec#resources" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="resources:com.novocode.ornate.theme.PageResources"></a>
       <a id="resources:PageResources"></a>
@@ -419,23 +436,6 @@
       </a>
     </span>
       <p class="shortcomment cmt">The source URI</p>
-    </li><li name="com.novocode.ornate.theme.ResourceSpec#sourceURL" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="sourceURL:java.net.URL"></a>
-      <a id="sourceURL:URL"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">sourceURL</span><span class="result">: <span class="extype" name="java.net.URL">URL</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.theme.ResourceSpec@sourceURL:java.net.URL" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">the resolved source URL to locate the file</p>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>

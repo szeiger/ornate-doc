@@ -54,7 +54,7 @@
           <div class="superTypes hiddenContent"><a href="Theme.html" class="extype" name="com.novocode.ornate.theme.Theme">Theme</a>, <a href="../Logging.html" class="extype" name="com.novocode.ornate.Logging">Logging</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
             <span class="toggle">Known Subclasses</span>
-            <div class="subClasses hiddenContent"><a href="default/html/Theme.html" class="extype" name="com.novocode.ornate.theme.default.html.Theme">Theme</a></div>
+            <div class="subClasses hiddenContent"><a href="default/DefaultTheme.html" class="extype" name="com.novocode.ornate.theme.default.DefaultTheme">DefaultTheme</a>, <a href="pdf/PdfTheme.html" class="extype" name="com.novocode.ornate.theme.pdf.PdfTheme">PdfTheme</a></div>
           </div></div>
         
 
@@ -113,7 +113,24 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="com.novocode.ornate.theme.HtmlTheme.Template" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="com.novocode.ornate.theme.HtmlTheme.ResourceTemplate" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ResourceTemplate=play.twirl.api.Template1[com.novocode.ornate.theme.HtmlSiteModel,play.twirl.api.TxtFormat.Appendable]"></a>
+      <a id="ResourceTemplate:ResourceTemplate"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ResourceTemplate</span><span class="result"> = <span class="extype" name="play.twirl.api.Template1">Template1</span>[<a href="HtmlSiteModel.html" class="extype" name="com.novocode.ornate.theme.HtmlSiteModel">HtmlSiteModel</a>, <span class="extype" name="play.twirl.api.Format.Appendable">play.twirl.api.TxtFormat.Appendable</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@ResourceTemplate=play.twirl.api.Template1[com.novocode.ornate.theme.HtmlSiteModel,play.twirl.api.TxtFormat.Appendable]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.novocode.ornate.theme.HtmlTheme.Template" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Template=play.twirl.api.Template1[com.novocode.ornate.theme.HtmlPageModel,play.twirl.api.HtmlFormat.Appendable]"></a>
       <a id="Template:Template"></a>
       <h4 class="signature">
@@ -204,7 +221,7 @@
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">If MathJAX is needed by the page, add all resources and return the resolved main script URI and inline config.</p>
+      <p class="shortcomment cmt">If MathJax is needed by the page, add all resources and return the resolved main script URI and inline config.</p>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -279,6 +296,40 @@
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="com.novocode.ornate.theme.HtmlTheme#createPageContext" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="createPageContext(siteContext:com.novocode.ornate.theme.HtmlSiteContext,page:com.novocode.ornate.Page):com.novocode.ornate.theme.HtmlPageContext"></a>
+      <a id="createPageContext(HtmlSiteContext,Page):HtmlPageContext"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">createPageContext</span><span class="params">(<span name="siteContext">siteContext: <a href="HtmlSiteContext.html" class="extype" name="com.novocode.ornate.theme.HtmlSiteContext">HtmlSiteContext</a></span>, <span name="page">page: <a href="../Page.html" class="extype" name="com.novocode.ornate.Page">Page</a></span>)</span><span class="result">: <a href="HtmlPageContext.html" class="extype" name="com.novocode.ornate.theme.HtmlPageContext">HtmlPageContext</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@createPageContext(siteContext:com.novocode.ornate.theme.HtmlSiteContext,page:com.novocode.ornate.Page):com.novocode.ornate.theme.HtmlPageContext" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.novocode.ornate.theme.HtmlTheme#createPageModel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="createPageModel(pc:com.novocode.ornate.theme.HtmlPageContext,renderer:org.commonmark.renderer.html.HtmlRenderer):com.novocode.ornate.theme.HtmlPageModel"></a>
+      <a id="createPageModel(HtmlPageContext,HtmlRenderer):HtmlPageModel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">createPageModel</span><span class="params">(<span name="pc">pc: <a href="HtmlPageContext.html" class="extype" name="com.novocode.ornate.theme.HtmlPageContext">HtmlPageContext</a></span>, <span name="renderer">renderer: <span class="extype" name="org.commonmark.renderer.html.HtmlRenderer">HtmlRenderer</span></span>)</span><span class="result">: <a href="HtmlPageModel.html" class="extype" name="com.novocode.ornate.theme.HtmlPageModel">HtmlPageModel</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@createPageModel(pc:com.novocode.ornate.theme.HtmlPageContext,renderer:org.commonmark.renderer.html.HtmlRenderer):com.novocode.ornate.theme.HtmlPageModel" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="com.novocode.ornate.theme.HtmlTheme#createSearchIndex" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="createSearchIndex(site:com.novocode.ornate.Site):Unit"></a>
       <a id="createSearchIndex(Site):Unit"></a>
@@ -296,19 +347,53 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
-    </li><li name="com.novocode.ornate.theme.HtmlTheme#emojiRenderer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="emojiRenderer(pc:com.novocode.ornate.theme.HtmlPageContext):com.novocode.ornate.commonmark.SimpleHtmlNodeRenderer[com.novocode.ornate.Emoji,Unit]"></a>
-      <a id="emojiRenderer(HtmlPageContext):SimpleHtmlNodeRenderer[Emoji,Unit]"></a>
+    </li><li name="com.novocode.ornate.theme.HtmlTheme#createSiteContext" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="createSiteContext(site:com.novocode.ornate.Site):com.novocode.ornate.theme.HtmlSiteContext"></a>
+      <a id="createSiteContext(Site):HtmlSiteContext"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">emojiRenderer</span><span class="params">(<span name="pc">pc: <a href="HtmlPageContext.html" class="extype" name="com.novocode.ornate.theme.HtmlPageContext">HtmlPageContext</a></span>)</span><span class="result">: <a href="../commonmark/SimpleHtmlNodeRenderer.html" class="extype" name="com.novocode.ornate.commonmark.SimpleHtmlNodeRenderer">SimpleHtmlNodeRenderer</a>[<a href="../Emoji.html" class="extype" name="com.novocode.ornate.Emoji">Emoji</a>, <span class="extype" name="scala.Unit">Unit</span>]</span>
+        <span class="name">createSiteContext</span><span class="params">(<span name="site">site: <a href="../Site.html" class="extype" name="com.novocode.ornate.Site">Site</a></span>)</span><span class="result">: <a href="HtmlSiteContext.html" class="extype" name="com.novocode.ornate.theme.HtmlSiteContext">HtmlSiteContext</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@emojiRenderer(pc:com.novocode.ornate.theme.HtmlPageContext):com.novocode.ornate.commonmark.SimpleHtmlNodeRenderer[com.novocode.ornate.Emoji,Unit]" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@createSiteContext(site:com.novocode.ornate.Site):com.novocode.ornate.theme.HtmlSiteContext" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.novocode.ornate.theme.HtmlTheme#createSiteModel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="createSiteModel(pms:Vector[com.novocode.ornate.theme.HtmlPageModel]):com.novocode.ornate.theme.HtmlSiteModel"></a>
+      <a id="createSiteModel(Vector[HtmlPageModel]):HtmlSiteModel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">createSiteModel</span><span class="params">(<span name="pms">pms: <span class="extype" name="scala.Vector">Vector</span>[<a href="HtmlPageModel.html" class="extype" name="com.novocode.ornate.theme.HtmlPageModel">HtmlPageModel</a>]</span>)</span><span class="result">: <a href="HtmlSiteModel.html" class="extype" name="com.novocode.ornate.theme.HtmlSiteModel">HtmlSiteModel</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@createSiteModel(pms:Vector[com.novocode.ornate.theme.HtmlPageModel]):com.novocode.ornate.theme.HtmlSiteModel" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.novocode.ornate.theme.HtmlTheme#defaultNoHighlightLanguages" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="defaultNoHighlightLanguages:Set[String]"></a>
+      <a id="defaultNoHighlightLanguages:Set[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">defaultNoHighlightLanguages</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@defaultNoHighlightLanguages:Set[String]" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -347,23 +432,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="com.novocode.ornate.theme.HtmlTheme#fencedCodeBlockRenderer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="fencedCodeBlockRenderer(pc:com.novocode.ornate.theme.HtmlPageContext):com.novocode.ornate.commonmark.SimpleHtmlNodeRenderer[com.novocode.ornate.commonmark.AttributedFencedCodeBlock,Unit]"></a>
-      <a id="fencedCodeBlockRenderer(HtmlPageContext):SimpleHtmlNodeRenderer[AttributedFencedCodeBlock,Unit]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">fencedCodeBlockRenderer</span><span class="params">(<span name="pc">pc: <a href="HtmlPageContext.html" class="extype" name="com.novocode.ornate.theme.HtmlPageContext">HtmlPageContext</a></span>)</span><span class="result">: <a href="../commonmark/SimpleHtmlNodeRenderer.html" class="extype" name="com.novocode.ornate.commonmark.SimpleHtmlNodeRenderer">SimpleHtmlNodeRenderer</a>[<a href="../commonmark/AttributedFencedCodeBlock.html" class="extype" name="com.novocode.ornate.commonmark.AttributedFencedCodeBlock">AttributedFencedCodeBlock</a>, <span class="extype" name="scala.Unit">Unit</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@fencedCodeBlockRenderer(pc:com.novocode.ornate.theme.HtmlPageContext):com.novocode.ornate.commonmark.SimpleHtmlNodeRenderer[com.novocode.ornate.commonmark.AttributedFencedCodeBlock,Unit]" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -404,6 +472,23 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="com.novocode.ornate.theme.HtmlTheme#getResourceTemplate" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getResourceTemplate(name:String):HtmlTheme.this.ResourceTemplate"></a>
+      <a id="getResourceTemplate(String):ResourceTemplate"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getResourceTemplate</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="#ResourceTemplate=play.twirl.api.Template1[com.novocode.ornate.theme.HtmlSiteModel,play.twirl.api.TxtFormat.Appendable]" class="extmbr" name="com.novocode.ornate.theme.HtmlTheme.ResourceTemplate">ResourceTemplate</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@getResourceTemplate(name:String):HtmlTheme.this.ResourceTemplate" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="com.novocode.ornate.theme.HtmlTheme#getTemplate" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="getTemplate(name:String):HtmlTheme.this.Template"></a>
       <a id="getTemplate(String):Template"></a>
@@ -455,23 +540,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="com.novocode.ornate.theme.HtmlTheme#indentedCodeBlockRenderer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="indentedCodeBlockRenderer(pc:com.novocode.ornate.theme.HtmlPageContext):com.novocode.ornate.commonmark.SimpleHtmlNodeRenderer[org.commonmark.node.IndentedCodeBlock,Unit]"></a>
-      <a id="indentedCodeBlockRenderer(HtmlPageContext):SimpleHtmlNodeRenderer[IndentedCodeBlock,Unit]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">indentedCodeBlockRenderer</span><span class="params">(<span name="pc">pc: <a href="HtmlPageContext.html" class="extype" name="com.novocode.ornate.theme.HtmlPageContext">HtmlPageContext</a></span>)</span><span class="result">: <a href="../commonmark/SimpleHtmlNodeRenderer.html" class="extype" name="com.novocode.ornate.commonmark.SimpleHtmlNodeRenderer">SimpleHtmlNodeRenderer</a>[<span class="extype" name="org.commonmark.node.IndentedCodeBlock">IndentedCodeBlock</span>, <span class="extype" name="scala.Unit">Unit</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@indentedCodeBlockRenderer(pc:com.novocode.ornate.theme.HtmlPageContext):com.novocode.ornate.commonmark.SimpleHtmlNodeRenderer[org.commonmark.node.IndentedCodeBlock,Unit]" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="com.novocode.ornate.theme.HtmlTheme#indexPage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="indexPage:Option[String]"></a>
       <a id="indexPage:Option[String]"></a>
@@ -485,23 +553,6 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@indexPage:Option[String]" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="com.novocode.ornate.theme.HtmlTheme#inlineCodeRenderer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="inlineCodeRenderer(pc:com.novocode.ornate.theme.HtmlPageContext):com.novocode.ornate.commonmark.SimpleHtmlNodeRenderer[org.commonmark.node.Code,Unit]"></a>
-      <a id="inlineCodeRenderer(HtmlPageContext):SimpleHtmlNodeRenderer[Code,Unit]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">inlineCodeRenderer</span><span class="params">(<span name="pc">pc: <a href="HtmlPageContext.html" class="extype" name="com.novocode.ornate.theme.HtmlPageContext">HtmlPageContext</a></span>)</span><span class="result">: <a href="../commonmark/SimpleHtmlNodeRenderer.html" class="extype" name="com.novocode.ornate.commonmark.SimpleHtmlNodeRenderer">SimpleHtmlNodeRenderer</a>[<span class="extype" name="org.commonmark.node.Code">Code</span>, <span class="extype" name="scala.Unit">Unit</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@inlineCodeRenderer(pc:com.novocode.ornate.theme.HtmlPageContext):com.novocode.ornate.commonmark.SimpleHtmlNodeRenderer[org.commonmark.node.Code,Unit]" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -523,6 +574,23 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="com.novocode.ornate.Logging#logTime" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logTime[T](msg:String)(f:=&gt;T):T"></a>
+      <a id="logTime[T](String)(⇒T):T"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logTime</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="msg">msg: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="params">(<span name="f">f: ⇒ <span class="extype" name="com.novocode.ornate.Logging.logTime.T">T</span></span>)</span><span class="result">: <span class="extype" name="com.novocode.ornate.Logging.logTime.T">T</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@logTime[T](msg:String)(f:=&gt;T):T" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Logging.html" class="extype" name="com.novocode.ornate.Logging">Logging</a></dd></dl></div>
     </li><li name="com.novocode.ornate.Logging#logger" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="logger:org.slf4j.Logger"></a>
       <a id="logger:Logger"></a>
@@ -553,6 +621,23 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@mathJaxExclude:com.novocode.ornate.FileMatcher" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.novocode.ornate.theme.HtmlTheme#mermaidJS" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="mermaidJS:String"></a>
+      <a id="mermaidJS:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mermaidJS</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@mermaidJS:String" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -625,6 +710,23 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="com.novocode.ornate.theme.HtmlTheme#noHighlightLanguages" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="noHighlightLanguages(p:com.novocode.ornate.Page):Set[String]"></a>
+      <a id="noHighlightLanguages(Page):Set[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">noHighlightLanguages</span><span class="params">(<span name="p">p: <a href="../Page.html" class="extype" name="com.novocode.ornate.Page">Page</a></span>)</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@noHighlightLanguages(p:com.novocode.ornate.Page):Set[String]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The language codes that should not be processed by a highlighter.</p><div class="fullcomment"><div class="comment cmt"><p>The language codes that should not be processed by a highlighter.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.novocode.ornate.theme.HtmlTheme">HtmlTheme</a> → <a href="Theme.html" class="extype" name="com.novocode.ornate.theme.Theme">Theme</a></dd></dl></div>
     </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <a id="notify():Unit"></a>
@@ -694,53 +796,155 @@
     </span>
       
     </li><li name="com.novocode.ornate.theme.HtmlTheme#renderAttributedHeading" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="renderAttributedHeading(n:com.novocode.ornate.commonmark.AttributedHeading,c:org.commonmark.renderer.html.HtmlNodeRendererContext):Unit"></a>
-      <a id="renderAttributedHeading(AttributedHeading,HtmlNodeRendererContext):Unit"></a>
+      <a id="renderAttributedHeading(pc:com.novocode.ornate.theme.HtmlPageContext)(n:com.novocode.ornate.commonmark.AttributedHeading,c:org.commonmark.renderer.html.HtmlNodeRendererContext):Unit"></a>
+      <a id="renderAttributedHeading(HtmlPageContext)(AttributedHeading,HtmlNodeRendererContext):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">renderAttributedHeading</span><span class="params">(<span name="n">n: <a href="../commonmark/AttributedHeading.html" class="extype" name="com.novocode.ornate.commonmark.AttributedHeading">AttributedHeading</a></span>, <span name="c">c: <span class="extype" name="org.commonmark.renderer.html.HtmlNodeRendererContext">HtmlNodeRendererContext</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">renderAttributedHeading</span><span class="params">(<span name="pc">pc: <a href="HtmlPageContext.html" class="extype" name="com.novocode.ornate.theme.HtmlPageContext">HtmlPageContext</a></span>)</span><span class="params">(<span name="n">n: <a href="../commonmark/AttributedHeading.html" class="extype" name="com.novocode.ornate.commonmark.AttributedHeading">AttributedHeading</a></span>, <span name="c">c: <span class="extype" name="org.commonmark.renderer.html.HtmlNodeRendererContext">HtmlNodeRendererContext</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@renderAttributedHeading(n:com.novocode.ornate.commonmark.AttributedHeading,c:org.commonmark.renderer.html.HtmlNodeRendererContext):Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@renderAttributedHeading(pc:com.novocode.ornate.theme.HtmlPageContext)(n:com.novocode.ornate.commonmark.AttributedHeading,c:org.commonmark.renderer.html.HtmlNodeRendererContext):Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <p class="shortcomment cmt">Render a heading with an ID.</p><div class="fullcomment"><div class="comment cmt"><p>Render a heading with an ID. It can be overridden in subclasses as needed.</p></div></div>
     </li><li name="com.novocode.ornate.theme.HtmlTheme#renderCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="renderCode(n:org.commonmark.node.Node,hlr:com.novocode.ornate.highlight.HighlightResult,c:org.commonmark.renderer.html.HtmlNodeRendererContext,block:Boolean):Unit"></a>
-      <a id="renderCode(Node,HighlightResult,HtmlNodeRendererContext,Boolean):Unit"></a>
+      <a id="renderCode(hlr:com.novocode.ornate.highlight.HighlightResult,code:org.commonmark.node.Node,c:org.commonmark.renderer.html.HtmlNodeRendererContext,pc:com.novocode.ornate.theme.HtmlPageContext):Unit"></a>
+      <a id="renderCode(HighlightResult,Node,HtmlNodeRendererContext,HtmlPageContext):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">renderCode</span><span class="params">(<span name="n">n: <span class="extype" name="org.commonmark.node.Node">Node</span></span>, <span name="hlr">hlr: <a href="../highlight/HighlightResult.html" class="extype" name="com.novocode.ornate.highlight.HighlightResult">HighlightResult</a></span>, <span name="c">c: <span class="extype" name="org.commonmark.renderer.html.HtmlNodeRendererContext">HtmlNodeRendererContext</span></span>, <span name="block">block: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">renderCode</span><span class="params">(<span name="hlr">hlr: <a href="../highlight/HighlightResult.html" class="extype" name="com.novocode.ornate.highlight.HighlightResult">HighlightResult</a></span>, <span name="code">code: <span class="extype" name="org.commonmark.node.Node">Node</span></span>, <span name="c">c: <span class="extype" name="org.commonmark.renderer.html.HtmlNodeRendererContext">HtmlNodeRendererContext</span></span>, <span name="pc">pc: <a href="HtmlPageContext.html" class="extype" name="com.novocode.ornate.theme.HtmlPageContext">HtmlPageContext</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@renderCode(n:org.commonmark.node.Node,hlr:com.novocode.ornate.highlight.HighlightResult,c:org.commonmark.renderer.html.HtmlNodeRendererContext,block:Boolean):Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@renderCode(hlr:com.novocode.ornate.highlight.HighlightResult,code:org.commonmark.node.Node,c:org.commonmark.renderer.html.HtmlNodeRendererContext,pc:com.novocode.ornate.theme.HtmlPageContext):Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <p class="shortcomment cmt">Render code that was run through the highlighter.</p><div class="fullcomment"><div class="comment cmt"><p>Render code that was run through the highlighter. This method is called for all fenced code blocks,
 indented code blocks and inline code. It can be overridden in subclasses as needed.</p></div></div>
-    </li><li name="com.novocode.ornate.theme.HtmlTheme#renderFencedCodeBlock" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="renderFencedCodeBlock(n:com.novocode.ornate.commonmark.AttributedFencedCodeBlock,c:org.commonmark.renderer.html.HtmlNodeRendererContext,pc:com.novocode.ornate.theme.HtmlPageContext,lang:Option[String]):Unit"></a>
-      <a id="renderFencedCodeBlock(AttributedFencedCodeBlock,HtmlNodeRendererContext,HtmlPageContext,Option[String]):Unit"></a>
+    </li><li name="com.novocode.ornate.theme.HtmlTheme#renderEmoji" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="renderEmoji(pc:com.novocode.ornate.theme.HtmlPageContext)(n:com.novocode.ornate.Emoji,c:org.commonmark.renderer.html.HtmlNodeRendererContext):Unit"></a>
+      <a id="renderEmoji(HtmlPageContext)(Emoji,HtmlNodeRendererContext):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">renderFencedCodeBlock</span><span class="params">(<span name="n">n: <a href="../commonmark/AttributedFencedCodeBlock.html" class="extype" name="com.novocode.ornate.commonmark.AttributedFencedCodeBlock">AttributedFencedCodeBlock</a></span>, <span name="c">c: <span class="extype" name="org.commonmark.renderer.html.HtmlNodeRendererContext">HtmlNodeRendererContext</span></span>, <span name="pc">pc: <a href="HtmlPageContext.html" class="extype" name="com.novocode.ornate.theme.HtmlPageContext">HtmlPageContext</a></span>, <span name="lang">lang: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">renderEmoji</span><span class="params">(<span name="pc">pc: <a href="HtmlPageContext.html" class="extype" name="com.novocode.ornate.theme.HtmlPageContext">HtmlPageContext</a></span>)</span><span class="params">(<span name="n">n: <a href="../Emoji.html" class="extype" name="com.novocode.ornate.Emoji">Emoji</a></span>, <span name="c">c: <span class="extype" name="org.commonmark.renderer.html.HtmlNodeRendererContext">HtmlNodeRendererContext</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@renderFencedCodeBlock(n:com.novocode.ornate.commonmark.AttributedFencedCodeBlock,c:org.commonmark.renderer.html.HtmlNodeRendererContext,pc:com.novocode.ornate.theme.HtmlPageContext,lang:Option[String]):Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@renderEmoji(pc:com.novocode.ornate.theme.HtmlPageContext)(n:com.novocode.ornate.Emoji,c:org.commonmark.renderer.html.HtmlNodeRendererContext):Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.novocode.ornate.theme.HtmlTheme#renderFencedCodeBlock" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="renderFencedCodeBlock(pc:com.novocode.ornate.theme.HtmlPageContext)(n:com.novocode.ornate.commonmark.AttributedFencedCodeBlock,c:org.commonmark.renderer.html.HtmlNodeRendererContext):Unit"></a>
+      <a id="renderFencedCodeBlock(HtmlPageContext)(AttributedFencedCodeBlock,HtmlNodeRendererContext):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">renderFencedCodeBlock</span><span class="params">(<span name="pc">pc: <a href="HtmlPageContext.html" class="extype" name="com.novocode.ornate.theme.HtmlPageContext">HtmlPageContext</a></span>)</span><span class="params">(<span name="n">n: <a href="../commonmark/AttributedFencedCodeBlock.html" class="extype" name="com.novocode.ornate.commonmark.AttributedFencedCodeBlock">AttributedFencedCodeBlock</a></span>, <span name="c">c: <span class="extype" name="org.commonmark.renderer.html.HtmlNodeRendererContext">HtmlNodeRendererContext</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@renderFencedCodeBlock(pc:com.novocode.ornate.theme.HtmlPageContext)(n:com.novocode.ornate.commonmark.AttributedFencedCodeBlock,c:org.commonmark.renderer.html.HtmlNodeRendererContext):Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.novocode.ornate.theme.HtmlTheme#renderHighlitBlock" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="renderHighlitBlock(pc:com.novocode.ornate.theme.HtmlPageContext)(n:com.novocode.ornate.highlight.HighlitBlock,c:org.commonmark.renderer.html.HtmlNodeRendererContext):Unit"></a>
+      <a id="renderHighlitBlock(HtmlPageContext)(HighlitBlock,HtmlNodeRendererContext):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">renderHighlitBlock</span><span class="params">(<span name="pc">pc: <a href="HtmlPageContext.html" class="extype" name="com.novocode.ornate.theme.HtmlPageContext">HtmlPageContext</a></span>)</span><span class="params">(<span name="n">n: <a href="../highlight/HighlitBlock.html" class="extype" name="com.novocode.ornate.highlight.HighlitBlock">HighlitBlock</a></span>, <span name="c">c: <span class="extype" name="org.commonmark.renderer.html.HtmlNodeRendererContext">HtmlNodeRendererContext</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@renderHighlitBlock(pc:com.novocode.ornate.theme.HtmlPageContext)(n:com.novocode.ornate.highlight.HighlitBlock,c:org.commonmark.renderer.html.HtmlNodeRendererContext):Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.novocode.ornate.theme.HtmlTheme#renderHighlitInline" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="renderHighlitInline(pc:com.novocode.ornate.theme.HtmlPageContext)(n:com.novocode.ornate.highlight.HighlitInline,c:org.commonmark.renderer.html.HtmlNodeRendererContext):Unit"></a>
+      <a id="renderHighlitInline(HtmlPageContext)(HighlitInline,HtmlNodeRendererContext):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">renderHighlitInline</span><span class="params">(<span name="pc">pc: <a href="HtmlPageContext.html" class="extype" name="com.novocode.ornate.theme.HtmlPageContext">HtmlPageContext</a></span>)</span><span class="params">(<span name="n">n: <a href="../highlight/HighlitInline.html" class="extype" name="com.novocode.ornate.highlight.HighlitInline">HighlitInline</a></span>, <span name="c">c: <span class="extype" name="org.commonmark.renderer.html.HtmlNodeRendererContext">HtmlNodeRendererContext</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@renderHighlitInline(pc:com.novocode.ornate.theme.HtmlPageContext)(n:com.novocode.ornate.highlight.HighlitInline,c:org.commonmark.renderer.html.HtmlNodeRendererContext):Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.novocode.ornate.theme.HtmlTheme#renderIndentedCodeBlock" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="renderIndentedCodeBlock(pc:com.novocode.ornate.theme.HtmlPageContext)(n:org.commonmark.node.IndentedCodeBlock,c:org.commonmark.renderer.html.HtmlNodeRendererContext):Unit"></a>
+      <a id="renderIndentedCodeBlock(HtmlPageContext)(IndentedCodeBlock,HtmlNodeRendererContext):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">renderIndentedCodeBlock</span><span class="params">(<span name="pc">pc: <a href="HtmlPageContext.html" class="extype" name="com.novocode.ornate.theme.HtmlPageContext">HtmlPageContext</a></span>)</span><span class="params">(<span name="n">n: <span class="extype" name="org.commonmark.node.IndentedCodeBlock">IndentedCodeBlock</span></span>, <span name="c">c: <span class="extype" name="org.commonmark.renderer.html.HtmlNodeRendererContext">HtmlNodeRendererContext</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@renderIndentedCodeBlock(pc:com.novocode.ornate.theme.HtmlPageContext)(n:org.commonmark.node.IndentedCodeBlock,c:org.commonmark.renderer.html.HtmlNodeRendererContext):Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.novocode.ornate.theme.HtmlTheme#renderIndexBlock" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="renderIndexBlock(pc:com.novocode.ornate.theme.HtmlPageContext)(n:com.novocode.ornate.commonmark.IndexBlock,c:org.commonmark.renderer.html.HtmlNodeRendererContext):Unit"></a>
+      <a id="renderIndexBlock(HtmlPageContext)(IndexBlock,HtmlNodeRendererContext):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">renderIndexBlock</span><span class="params">(<span name="pc">pc: <a href="HtmlPageContext.html" class="extype" name="com.novocode.ornate.theme.HtmlPageContext">HtmlPageContext</a></span>)</span><span class="params">(<span name="n">n: <a href="../commonmark/IndexBlock.html" class="extype" name="com.novocode.ornate.commonmark.IndexBlock">IndexBlock</a></span>, <span name="c">c: <span class="extype" name="org.commonmark.renderer.html.HtmlNodeRendererContext">HtmlNodeRendererContext</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@renderIndexBlock(pc:com.novocode.ornate.theme.HtmlPageContext)(n:com.novocode.ornate.commonmark.IndexBlock,c:org.commonmark.renderer.html.HtmlNodeRendererContext):Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.novocode.ornate.theme.HtmlTheme#renderInlineCode" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="renderInlineCode(pc:com.novocode.ornate.theme.HtmlPageContext)(n:org.commonmark.node.Code,c:org.commonmark.renderer.html.HtmlNodeRendererContext):Unit"></a>
+      <a id="renderInlineCode(HtmlPageContext)(Code,HtmlNodeRendererContext):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">renderInlineCode</span><span class="params">(<span name="pc">pc: <a href="HtmlPageContext.html" class="extype" name="com.novocode.ornate.theme.HtmlPageContext">HtmlPageContext</a></span>)</span><span class="params">(<span name="n">n: <span class="extype" name="org.commonmark.node.Code">Code</span></span>, <span name="c">c: <span class="extype" name="org.commonmark.renderer.html.HtmlNodeRendererContext">HtmlNodeRendererContext</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@renderInlineCode(pc:com.novocode.ornate.theme.HtmlPageContext)(n:org.commonmark.node.Code,c:org.commonmark.renderer.html.HtmlNodeRendererContext):Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -817,23 +1021,40 @@ a &quot;mode=display&quot; annotation is added to the script.</p></div></div>
     </span>
       <p class="shortcomment cmt">Render a Mermaid diagram block.</p><div class="fullcomment"><div class="comment cmt"><p>Render a Mermaid diagram block. This does not add any dependency on Mermaid to the generated site.
 The method should be overwritten accordingly (unless a theme always adds it anyway).</p></div></div>
-    </li><li name="com.novocode.ornate.theme.HtmlTheme#renderRegularFencedCodeBlock" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="renderRegularFencedCodeBlock(n:com.novocode.ornate.commonmark.AttributedFencedCodeBlock,c:org.commonmark.renderer.html.HtmlNodeRendererContext,pc:com.novocode.ornate.theme.HtmlPageContext,lang:Option[String]):Unit"></a>
-      <a id="renderRegularFencedCodeBlock(AttributedFencedCodeBlock,HtmlNodeRendererContext,HtmlPageContext,Option[String]):Unit"></a>
+    </li><li name="com.novocode.ornate.theme.HtmlTheme#renderSpecialImageBlock" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="renderSpecialImageBlock(pc:com.novocode.ornate.theme.HtmlPageContext)(n:com.novocode.ornate.commonmark.SpecialImageBlock,c:org.commonmark.renderer.html.HtmlNodeRendererContext):Unit"></a>
+      <a id="renderSpecialImageBlock(HtmlPageContext)(SpecialImageBlock,HtmlNodeRendererContext):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">renderRegularFencedCodeBlock</span><span class="params">(<span name="n">n: <a href="../commonmark/AttributedFencedCodeBlock.html" class="extype" name="com.novocode.ornate.commonmark.AttributedFencedCodeBlock">AttributedFencedCodeBlock</a></span>, <span name="c">c: <span class="extype" name="org.commonmark.renderer.html.HtmlNodeRendererContext">HtmlNodeRendererContext</span></span>, <span name="pc">pc: <a href="HtmlPageContext.html" class="extype" name="com.novocode.ornate.theme.HtmlPageContext">HtmlPageContext</a></span>, <span name="lang">lang: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">renderSpecialImageBlock</span><span class="params">(<span name="pc">pc: <a href="HtmlPageContext.html" class="extype" name="com.novocode.ornate.theme.HtmlPageContext">HtmlPageContext</a></span>)</span><span class="params">(<span name="n">n: <a href="../commonmark/SpecialImageBlock.html" class="extype" name="com.novocode.ornate.commonmark.SpecialImageBlock">SpecialImageBlock</a></span>, <span name="c">c: <span class="extype" name="org.commonmark.renderer.html.HtmlNodeRendererContext">HtmlNodeRendererContext</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@renderRegularFencedCodeBlock(n:com.novocode.ornate.commonmark.AttributedFencedCodeBlock,c:org.commonmark.renderer.html.HtmlNodeRendererContext,pc:com.novocode.ornate.theme.HtmlPageContext,lang:Option[String]):Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@renderSpecialImageBlock(pc:com.novocode.ornate.theme.HtmlPageContext)(n:com.novocode.ornate.commonmark.SpecialImageBlock,c:org.commonmark.renderer.html.HtmlNodeRendererContext):Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">This method should be overridden if <code>specialImageSchemesBlock</code> is used.</p>
+    </li><li name="com.novocode.ornate.theme.HtmlTheme#renderSpecialImageInline" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="renderSpecialImageInline(pc:com.novocode.ornate.theme.HtmlPageContext)(n:com.novocode.ornate.commonmark.SpecialImageInline,c:org.commonmark.renderer.html.HtmlNodeRendererContext):Unit"></a>
+      <a id="renderSpecialImageInline(HtmlPageContext)(SpecialImageInline,HtmlNodeRendererContext):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">renderSpecialImageInline</span><span class="params">(<span name="pc">pc: <a href="HtmlPageContext.html" class="extype" name="com.novocode.ornate.theme.HtmlPageContext">HtmlPageContext</a></span>)</span><span class="params">(<span name="n">n: <a href="../commonmark/SpecialImageInline.html" class="extype" name="com.novocode.ornate.commonmark.SpecialImageInline">SpecialImageInline</a></span>, <span name="c">c: <span class="extype" name="org.commonmark.renderer.html.HtmlNodeRendererContext">HtmlNodeRendererContext</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@renderSpecialImageInline(pc:com.novocode.ornate.theme.HtmlPageContext)(n:com.novocode.ornate.commonmark.SpecialImageInline,c:org.commonmark.renderer.html.HtmlNodeRendererContext):Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This method should be overridden if <code>specialImageSchemesInline</code> is used.</p>
     </li><li name="com.novocode.ornate.theme.HtmlTheme#renderTabView" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="renderTabView(pc:com.novocode.ornate.theme.HtmlPageContext)(n:com.novocode.ornate.commonmark.TabView,c:org.commonmark.renderer.html.HtmlNodeRendererContext):Unit"></a>
       <a id="renderTabView(HtmlPageContext)(TabView,HtmlNodeRendererContext):Unit"></a>
@@ -871,24 +1092,58 @@ tab view.</p></div></div>
     </span>
       
     </li><li name="com.novocode.ornate.theme.Theme#resolveResource" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="resolveResource(uri:java.net.URI):java.net.URL"></a>
-      <a id="resolveResource(URI):URL"></a>
+      <a id="resolveResource(uri:java.net.URI):java.net.URI"></a>
+      <a id="resolveResource(URI):URI"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">resolveResource</span><span class="params">(<span name="uri">uri: <span class="extype" name="java.net.URI">URI</span></span>)</span><span class="result">: <span class="extype" name="java.net.URL">URL</span></span>
+        <span class="name">resolveResource</span><span class="params">(<span name="uri">uri: <span class="extype" name="java.net.URI">URI</span></span>)</span><span class="result">: <span class="extype" name="java.net.URI">URI</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@resolveResource(uri:java.net.URI):java.net.URL" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@resolveResource(uri:java.net.URI):java.net.URI" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Resolve a resource URI to a URL.</p><div class="fullcomment"><div class="comment cmt"><p>Resolve a resource URI to a URL. Resource URIs can use use the following protocols:
-file, site (static site resources), webjar (absolute WebJar resource), theme (relative
-to theme class), classpath (relative to classpath root)</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Theme.html" class="extype" name="com.novocode.ornate.theme.Theme">Theme</a></dd></dl></div>
+      <p class="shortcomment cmt">Resolve a resource URI to a source file location.</p><div class="fullcomment"><div class="comment cmt"><p>Resolve a resource URI to a source file location. Resource URIs can use use the following protocols:
+file, site (static site resources), webjar (absolute WebJar resource), theme (relative to theme class),
+classpath (relative to classpath root), template (generated from template)</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Theme.html" class="extype" name="com.novocode.ornate.theme.Theme">Theme</a></dd></dl></div>
+    </li><li name="com.novocode.ornate.theme.Theme#specialImageSchemesBlock" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="specialImageSchemesBlock:Set[String]"></a>
+      <a id="specialImageSchemesBlock:Set[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">specialImageSchemesBlock</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@specialImageSchemesBlock:Set[String]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Extra image URI schemes to turn into <code>SpecialImage</code> nodes for rendering in block contexts</p><div class="fullcomment"><div class="comment cmt"><p>Extra image URI schemes to turn into <code>SpecialImage</code> nodes for rendering in block contexts</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Theme.html" class="extype" name="com.novocode.ornate.theme.Theme">Theme</a></dd></dl></div>
+    </li><li name="com.novocode.ornate.theme.Theme#specialImageSchemesInline" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="specialImageSchemesInline:Set[String]"></a>
+      <a id="specialImageSchemesInline:Set[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">specialImageSchemesInline</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@specialImageSchemesInline:Set[String]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Extra image URI schemes to turn into <code>SpecialImage</code> nodes for rendering in inline contexts</p><div class="fullcomment"><div class="comment cmt"><p>Extra image URI schemes to turn into <code>SpecialImage</code> nodes for rendering in inline contexts</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Theme.html" class="extype" name="com.novocode.ornate.theme.Theme">Theme</a></dd></dl></div>
     </li><li name="com.novocode.ornate.theme.HtmlTheme#suffix" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="suffix:String"></a>
       <a id="suffix:String"></a>
@@ -941,18 +1196,18 @@ to theme class), classpath (relative to classpath root)</p></div><dl class="attr
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="com.novocode.ornate.theme.Theme#synthesizePages" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="synthesizePages:Vector[com.novocode.ornate.Page]"></a>
-      <a id="synthesizePages:Vector[Page]"></a>
+      <a id="synthesizePages(missingSyntheticPages:Vector[(String,java.net.URI)]):Vector[com.novocode.ornate.Page]"></a>
+      <a id="synthesizePages(Vector[(String,URI)]):Vector[Page]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">synthesizePages</span><span class="result">: <span class="extype" name="scala.Vector">Vector</span>[<a href="../Page.html" class="extype" name="com.novocode.ornate.Page">Page</a>]</span>
+        <span class="name">synthesizePages</span><span class="params">(<span name="missingSyntheticPages">missingSyntheticPages: <span class="extype" name="scala.Vector">Vector</span>[(<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="java.net.URI">URI</span>)]</span>)</span><span class="result">: <span class="extype" name="scala.Vector">Vector</span>[<a href="../Page.html" class="extype" name="com.novocode.ornate.Page">Page</a>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@synthesizePages:Vector[com.novocode.ornate.Page]" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@synthesizePages(missingSyntheticPages:Vector[(String,java.net.URI)]):Vector[com.novocode.ornate.Page]" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -976,19 +1231,36 @@ created but only the ones that are returned will be available for resolving the 
     </span>
       <p class="shortcomment cmt">Get synthetic page names and the mapped URIs for pages that should be created by the theme.</p><div class="fullcomment"><div class="comment cmt"><p>Get synthetic page names and the mapped URIs for pages that should be created by the theme.
 Any pages that have to be created before resolving the TOC should be part of this.</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="Theme.html" class="extype" name="com.novocode.ornate.theme.Theme">Theme</a></dd></dl></div>
-    </li><li name="com.novocode.ornate.theme.HtmlTheme#targetFile" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="targetFile(uri:java.net.URI,base:better.files.File):better.files.File"></a>
-      <a id="targetFile(URI,File):File"></a>
+    </li><li name="com.novocode.ornate.theme.HtmlTheme#targetDir" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="targetDir:better.files.File"></a>
+      <a id="targetDir:File"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">targetFile</span><span class="params">(<span name="uri">uri: <span class="extype" name="java.net.URI">URI</span></span>, <span name="base">base: <span class="extype" name="better.files.File">File</span></span>)</span><span class="result">: <span class="extype" name="better.files.File">File</span></span>
+        <span class="name">targetDir</span><span class="result">: <span class="extype" name="better.files.File">File</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@targetFile(uri:java.net.URI,base:better.files.File):better.files.File" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@targetDir:better.files.File" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.novocode.ornate.theme.HtmlTheme#targetFile" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="targetFile(uri:java.net.URI):better.files.File"></a>
+      <a id="targetFile(URI):File"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">targetFile</span><span class="params">(<span name="uri">uri: <span class="extype" name="java.net.URI">URI</span></span>)</span><span class="result">: <span class="extype" name="better.files.File">File</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.novocode.ornate.theme.HtmlTheme@targetFile(uri:java.net.URI):better.files.File" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>

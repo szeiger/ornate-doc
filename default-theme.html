@@ -1,11 +1,84 @@
-<!DOCTYPE html> <html class=no-js lang=eng dir=ltr> <head> <meta charset=utf-8> <meta http-equiv=x-ua-compatible content="ie=edge"> <meta name=viewport content="width=device-width, initial-scale=1.0"> <title>Default Theme</title> <link rel=stylesheet href="theme/css/foundation.min.css"> <link rel=stylesheet href="theme/css/app.css"> <link rel=stylesheet href="theme/highlight.js/styles/github-gist.css"> </head> <body> <div class="expanded row"> <div class="small-12 medium-12 large-12 columns align-self-top"> <div class=row> <header class="large-12 columns align-self-top a_header"> <div class=row> <div class="large-12 columns a_limited top-bar"> <div class=top-bar-left> <p>Ornate 0.3 Manual</p> </div> <div class="top-bar-right align-right row"> <form action="site-search.html" method=get class="align-right a_search"> <input name=q type=search placeholder="Search "> <button><img alt="&#1F50D;" src="theme/images/search.svg"/></button> </form> </div> </div> </div> </header> <div class="small-12 medium-12 large-12 columns align-self-top a_limited a_main"> <div class=row> <main class="columns large-order-2 sections" id=_sections> <h1 id=default-theme class=a_section data-magellan-target=default-theme>Default Theme<a class=a_hlink href="#default-theme"></a></h1> <p>Ornate's default theme generates multiple HTML pages for the site, one per page. It uses <a href="http://foundation.zurb.com/">Foundation</a>'s Flexbox-based CSS layout for responsive design across different classes of devices. All assets are included in the generated site by default.</p> <h2 id=configuration class=a_section data-magellan-target=configuration>Configuration<a class=a_hlink href="#configuration"></a></h2> <p>This is the theme's default configuration:</p> <div class=row><div class="a_linked small-expand columns a_xscroll a_codeblock"> <pre class=hljs><code class="language-yaml"><span class="hljs-comment"># Theme-specific settings for the default theme.</span>
+<!DOCTYPE html>
+<html class="no-js" lang="eng" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default Theme</title>
+    <link rel="stylesheet" href="theme/css/foundation.min.css">
+    <link rel="stylesheet" href="theme/css/app.css">
+    
+     <link rel="stylesheet" href="theme/highlight.js/styles/github-gist.css">  <link rel="stylesheet" href="theme/css/foundation-icons.custom.css"> 
+    
+     <link rel="prev" href="math.html"  title="Math"  />  <link rel="edit" href="https://github.com/szeiger/ornate/blob/master/doc/src/default-theme.md"  />  <link rel="next" href="elements.html"  title="All Elements"  />  <link rel="start" href="index.html"  title="Introduction"  />  <link rel="toc" href="site-contents.html"  title="Table of Contents"  /> 
+  </head>
+  <body>
+    <div class="expanded row">
+      <div class="small-12 medium-12 large-12 columns align-self-top">
+        <div class="row">
+          
+          <header class="large-12 columns align-self-top a_header">
+            <div class="row">
+              <div class="large-12 columns a_limited top-bar">
+                <div class="top-bar-left">
+                  <p>Ornate <a class="a_vnav2" data-toggle="_id0">0.4</a><span class="dropdown-pane a_vnav2_pane" id="_id0"><span>Loading…</span></span> Manual</p>
+
+                </div>
+                <div class="top-bar-right align-right row">
+                  
+                  
+                    <form action="site-search.html" method="get" class="align-right a_search">
+                      <input name="q" type="search"  placeholder="Search
+" >
+                      <button><img alt="&#1F50D;" src="theme/images/search.svg" /></button>
+                    </form>
+                  
+                </div>
+              </div>
+            </div>
+          </header>
+          
+          <div class="small-12 medium-12 large-12 columns align-self-top a_limited a_main">
+            <div class="row">
+              
+              <main class="columns large-order-2 sections" id="_sections">
+                 
+  <ul class="menu align-right simple a_navbar a_navbar_top">
+    
+      
+        <li><a href="math.html"  title="Math" ><span class="a_foundation_icon"></span>  Previous</a></li>
+      
+    
+      
+        <li><a href="elements.html"  title="All Elements" ><span class="a_foundation_icon"></span>  Next</a></li>
+      
+    
+      
+        <li><a href="https://github.com/szeiger/ornate/blob/master/doc/src/default-theme.md" ><span class="a_foundation_icon"></span>  Edit on GitHub</a></li>
+      
+    
+      
+        <li><a href="site-contents.html"  title="Table of Contents" ><span class="a_foundation_icon"></span>  Contents</a></li>
+      
+    
+  </ul>
+ 
+                
+                <h1 id="default-theme" class="a_section" data-magellan-target="default-theme">Default Theme<a class="a_hlink" href="#default-theme"></a></h1>
+<p>Ornate‘s default theme generates multiple HTML pages for the site, one per page. It uses <a href="http://foundation.zurb.com/">Foundation</a>’s Flexbox-based CSS layout for responsive design across different classes of devices. All assets are included in the generated site by default.</p>
+<h2 id="configuration" class="a_section" data-magellan-target="configuration">Configuration<a class="a_hlink" href="#configuration"></a></h2>
+<p>This is the theme’s default configuration:</p>
+<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
+<pre class="hljs"><code class="language-yaml"><span class="hljs-comment"># Theme-specific settings for the default theme.</span>
 theme.default {
   <span class="hljs-comment"># Settings which are only accessed globally</span>
   global {
     <span class="hljs-comment"># Synthetic pages to be generated without matching source files.</span>
     <span class="hljs-comment"># Source URI (relative to site:/), or null to omit a page.</span>
+    <span class="hljs-comment"># If a matching source file exists, it is used instead of generating a page.</span>
     pages {
-      toc = <span class="hljs-string">"contents.md"</span>
+      toc = <span class="hljs-string">"site-contents.md"</span>
+      <span class="hljs-comment">#index = "site-index.md"</span>
       search = <span class="hljs-string">"site-search.md"</span>
     }
     <span class="hljs-comment"># Directory (as URI relative to site:/) where the theme places resources</span>
@@ -16,7 +89,7 @@ theme.default {
     <span class="hljs-comment"># Search index file that is generated if theme.default.global.pages.search</span>
     <span class="hljs-comment"># is defined (URI relative to site:/, or null to disable the search index)</span>
     searchIndex = <span class="hljs-string">"search-index.js"</span>
-    <span class="hljs-comment"># List of gitignore-style patterns matching page URIs (relative to site:/)</span>
+    <span class="hljs-comment"># Array of gitignore-style patterns matching page URIs (relative to site:/)</span>
     <span class="hljs-comment"># to exclude from the search index</span>
     searchExcludePages = [ ${theme.default.global.pages.search} ]
     <span class="hljs-comment"># Number of characters per page to use for excerpts in search results</span>
@@ -49,6 +122,21 @@ theme.default {
 <span class="hljs-attr">        skipStartupTypeset:</span> <span class="hljs-literal">true</span>
       }
     }
+    <span class="hljs-comment"># Configurable colors for the global stylesheet</span>
+    color {
+      <span class="hljs-comment"># The main accent color, used for links and active navigation markers</span>
+      accent = <span class="hljs-string">"rgb(0,120,215)"</span>
+      <span class="hljs-comment"># A light accent color for backgrounds. If unset, use `accent` with 0.15 alpha</span>
+      accentBackground = <span class="hljs-literal">null</span>
+      <span class="hljs-comment"># Text color for page headers and footers</span>
+      headerFooter = <span class="hljs-string">"white"</span>
+      <span class="hljs-comment"># Background color for page headers and footers</span>
+      headerFooterBackground = <span class="hljs-string">"#444"</span>
+    }
+    <span class="hljs-comment"># Extra CSS settings to append to the generated app.css file</span>
+    css  = <span class="hljs-literal">null</span>
+    <span class="hljs-comment"># A file (relative to the base directory) containing extra CSS settings</span>
+    cssFile = <span class="hljs-literal">null</span>
   }
   <span class="hljs-comment"># English-language default strings, referenced from theme.default.strings.</span>
   <span class="hljs-comment"># Strings are usually parsed as Markdown in the context of the surrounding page.</span>
@@ -59,7 +147,18 @@ theme.default {
     headerRight = <span class="hljs-literal">null</span>
     footerLeft = ${meta.copyright}
     footerRight = <span class="hljs-string">"Generated with [Ornate](https://github.com/szeiger/ornate)."</span>
+    navFirst = <span class="hljs-string">"![](foundation-icon:previous) First"</span>
+    navPrev = <span class="hljs-string">"![](foundation-icon:arrow-left) Previous"</span>
+    navNext = <span class="hljs-string">"![](foundation-icon:arrow-right) Next"</span>
+    navLast = <span class="hljs-string">"![](foundation-icon:next) Last"</span>
+    navToc = <span class="hljs-string">"![](foundation-icon:list-thumbnails) Contents"</span>
+    navIndex = <span class="hljs-string">"![](foundation-icon:list) Index"</span>
+    navEdit = <span class="hljs-string">"![](foundation-icon:page-edit) Edit Page"</span>
+    versionNavPrefix = <span class="hljs-string">"Version:"</span>
+    versionNavLoading = <span class="hljs-string">"Loading..."</span>
     tocPage = <span class="hljs-string">"# Table of Contents\n\n![](toctree:)"</span>
+    indexPage = <span class="hljs-string">"# Index\n\n![](index:)"</span>
+    indexSymbols = <span class="hljs-string">"Symbols"</span>
     searchPlaceholder = <span class="hljs-string">"Search"</span>
     searchPage = <span class="hljs-string">"# Search\n\nFrom here you can search all pages. Enter the search terms below and click the search button. Note that the search function will search for a combination of *all* search terms."</span>
     noScript = <span class="hljs-string">"&gt; {.warning}\n&gt; This page requires JavaScript. Please enable JavaScript in your browser."</span>
@@ -72,12 +171,54 @@ theme.default {
   strings = ${theme.default.en}
   <span class="hljs-comment"># Type of the site navigation on the left side ("toctree:" URI or null)</span>
   siteNav = <span class="hljs-string">"toctree:maxLevel=1"</span>
+  <span class="hljs-comment"># Show multi-version site navigation on the left side below siteNav</span>
+  versionNav = <span class="hljs-literal">false</span>
+  <span class="hljs-comment"># Show multi-version dropdowns for "versions:/" URIs</span>
+  versionNavDropdown = <span class="hljs-literal">true</span>
+  <span class="hljs-comment"># Index page from which to determine the available versions for the multi-version</span>
+  <span class="hljs-comment"># site navigation, relative to the site root's target URI</span>
+  versionIndex = <span class="hljs-string">"../"</span>
   <span class="hljs-comment"># Show page navigation on the right side (true or false, or null to enable</span>
   <span class="hljs-comment"># automatically when the page has more than one section)</span>
   pageNav = <span class="hljs-literal">null</span>
+  <span class="hljs-comment"># Max depth for page navigation (or null to use global.tocMaxLevel)</span>
+  pageNavMaxLevel = <span class="hljs-literal">null</span>
+  <span class="hljs-comment"># Content of navigation bars above and below the content. Possible contents are</span>
+  <span class="hljs-comment"># first, prev, next, last, toc, index, edit. If none of the configured links are</span>
+  <span class="hljs-comment"># available, the bar is not shown.</span>
+  topNavBar = [prev, next, edit, toc]
+  bottomNavBar = ${theme.default.topNavBar}
+  <span class="hljs-comment"># The target for the "Edit Page" link on all non-synthetic pages. The string `[page]`</span>
+  <span class="hljs-comment"># is replaced by the source page URI relative to global.sourceDir. Set to null to</span>
+  <span class="hljs-comment"># disable "edit page" links.</span>
+  editPage = <span class="hljs-literal">null</span>
   <span class="hljs-comment"># The template that is used to render pages</span>
   template = default
-}</code></pre> <a href="https://github.com/szeiger/ornate/blob/v0.3/core/src/main/resources/ornate-reference.conf#L144-L227" class=a_sourcelink>ornate-reference.conf</a></div></div> <h2 id=third-party-content class=a_section data-magellan-target=third-party-content>Third-Party Content<a class=a_hlink href="#third-party-content"></a></h2> <p>Sites that are generated by the default theme contain <a href="http://foundation.zurb.com/">Foundation 6</a> and its dependencies (<a href="https://jquery.com/">JQuery</a>, <a href="https://github.com/ten1seven/what-input">what-input</a>), all of which are available under the <a href="https://github.com/zurb/foundation-sites/blob/v6.2.2/LICENSE">MIT License</a>.</p> <p>When using <a href="http://knsv.github.io/mermaid/">Mermaid</a> diagrams, the generated site includes Mermaid which is available under the <a href="https://github.com/knsv/mermaid/blob/0.5.8/LICENSE">MIT License</a>.</p> <p>When using <a href="https://www.mathjax.org/">MathJax</a> for math notation, the generated site includes MathJax which is available under the <a href="https://github.com/mathjax/MathJax/blob/2.7.0/LICENSE">Apache License</a>.</p> <p>When using the <a href="markdown.html#emoji">Emoji extension</a>, the generated sites can contain images from the <a href="https://github.com/Ranks/emojione">EmojiOne project</a> which <a href="http://emojione.com/licensing/">require attribution when used in commercial projects</a>.</p> <h2 id=search class=a_section data-magellan-target=search>Search<a class=a_hlink href="#search"></a></h2> <p>The default theme can generate a JavaScript-based search function for the site using <a href="http://elasticlunr.com/">Elasticlunr</a> (available under the <a href="https://github.com/weixsong/elasticlunr.js/blob/v0.9.5/LICENSE">MIT License</a>). The search index includes page titles, content and keywords. See above for configuration options.</p> <h2 id=minification class=a_section data-magellan-target=minification>Minification<a class=a_hlink href="#minification"></a></h2> <p>Ornate can minify generated HTML files, JavaScript assets and CSS using the following libraries:</p> <ul> <li><a href="https://github.com/css/csso">CSSO</a> (running on Nashorn) for CSS</li> <li><a href="https://developers.google.com/closure/compiler/">Closure Compiler</a> for JavaScript</li> <li><a href="https://code.google.com/archive/p/htmlcompressor/">HtmlCompressor</a> for HTML</li> </ul> <p>Minification is turned off by default for better performance when building the site. It can be enabled with the following settings under <code class=hljs>theme.default.global</code>:</p> <div class=row><div class="a_linked small-expand columns a_xscroll a_codeblock"> <pre class=hljs><code class="language-yaml">minify {
+  <span class="hljs-comment"># A list of extra "link" elements for the HTML header. Each entry is an object whose</span>
+  <span class="hljs-comment"># fields are HTML attributes. The "href" attribute is resolved relative to the current</span>
+  <span class="hljs-comment"># page's "site:" URI, all other attributes are copied verbatim.</span>
+  links = []
+}</code></pre>
+<a href="https://github.com/szeiger/ornate/blob/v0.4/core/src/main/resources/ornate-reference.conf#L181-L324" class="a_sourcelink">ornate-reference.conf</a></div></div>
+<h2 id="third-party-content" class="a_section" data-magellan-target="third-party-content">Third-Party Content<a class="a_hlink" href="#third-party-content"></a></h2>
+<p>Sites that are generated by the default theme contain <a href="http://foundation.zurb.com/">Foundation 6</a> and its dependencies (<a href="https://jquery.com/">JQuery</a>, <a href="https://github.com/ten1seven/what-input">what-input</a>), all of which are available under the <a href="https://github.com/zurb/foundation-sites/blob/v6.2.2/LICENSE">MIT License</a>.</p>
+<p>Sites that are generated by the default theme may contain <a href="http://zurb.com/playground/foundation-icon-fonts-3">Foundation Icon Fonts 3</a> which is available under the <a href="https://github.com/zurb/foundation-icons/blob/74f63dc35d569a8b796e86add76a0a535f96f734/README.markdown">MIT License</a>.</p>
+<p>Sites that are generated by the default theme may contain fonts from <a href="http://fontawesome.io/">Font Awesome</a> which are available under the <a href="http://fontawesome.io/license/">SIL OFL 1.1</a>.</p>
+<p>When using <a href="http://knsv.github.io/mermaid/">Mermaid</a> diagrams, the generated site includes Mermaid which is available under the <a href="https://github.com/knsv/mermaid/blob/0.5.8/LICENSE">MIT License</a>.</p>
+<p>When using <a href="https://www.mathjax.org/">MathJax</a> for math notation, the generated site includes MathJax which is available under the <a href="https://github.com/mathjax/MathJax/blob/2.7.0/LICENSE">Apache License</a>.</p>
+<p>When using the <a href="markdown.html#emoji">Emoji extension</a>, the generated sites can contain images from the <a href="https://github.com/Ranks/emojione">EmojiOne project</a> which <a href="http://emojione.com/licensing/">require attribution when used in commercial projects</a>.</p>
+<h2 id="search" class="a_section" data-magellan-target="search">Search<a class="a_hlink" href="#search"></a></h2>
+<p>The default theme can generate a JavaScript-based search function for the site using <a href="http://elasticlunr.com/">Elasticlunr</a> (available under the <a href="https://github.com/weixsong/elasticlunr.js/blob/v0.9.5/LICENSE">MIT License</a>). The search index includes page titles, content and keywords. See above for configuration options.</p>
+<h2 id="minification" class="a_section" data-magellan-target="minification">Minification<a class="a_hlink" href="#minification"></a></h2>
+<p>Ornate can minify generated HTML files, JavaScript assets and CSS using the following libraries:</p>
+<ul>
+<li><a href="https://github.com/css/csso">CSSO</a> (running on Nashorn) for CSS</li>
+<li><a href="https://developers.google.com/closure/compiler/">Closure Compiler</a> for JavaScript</li>
+<li><a href="https://code.google.com/archive/p/htmlcompressor/">HtmlCompressor</a> for HTML</li>
+</ul>
+<p>Minification is turned off by default for better performance when building the site. It can be enabled with the following settings under <code class="hljs">theme.default.global</code>:</p>
+<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
+<pre class="hljs"><code class="language-yaml">minify {
   all = <span class="hljs-literal">false</span>
   <span class="hljs-comment"># Minify CSS files with CSSO</span>
   css = ${theme.default.global.minify.all}
@@ -85,8 +226,364 @@ theme.default {
   js = ${theme.default.global.minify.all}
   <span class="hljs-comment"># Minify generated HTML files with HtmlCompressor</span>
   html = ${theme.default.global.minify.all}
-}</code></pre> <a href="https://github.com/szeiger/ornate/blob/v0.3/core/src/main/resources/ornate-reference.conf#L174-L182" class=a_sourcelink>ornate-reference.conf</a></div></div> <h2 id=snippet-source-links class=a_section data-magellan-target=snippet-source-links>Snippet Source Links<a class=a_hlink href="#snippet-source-links"></a></h2> <p>Snippets from fenced code blocks can show links to an appropriate source file by setting the <code class=hljs>sourceLinkURI</code> attribute. If <code class=hljs>sourceLinkText</code> is also set, it is used as the link text, otherwise the file name from the URI is used.</p> <p>Example:</p> <div class=row><div class="a_linked small-expand columns a_xscroll a_codeblock"> <pre class=hljs><code class="language-markdown"><span class="hljs-code">```text sourceLinkURI=https://github.com/szeiger/ornate/blob/v0.2/README.md
+}</code></pre>
+<a href="https://github.com/szeiger/ornate/blob/v0.4/core/src/main/resources/ornate-reference.conf#L213-L221" class="a_sourcelink">ornate-reference.conf</a></div></div>
+<h2 id="snippet-source-links" class="a_section" data-magellan-target="snippet-source-links">Snippet Source Links<a class="a_hlink" href="#snippet-source-links"></a></h2>
+<p>Snippets from fenced code blocks can show links to an appropriate source file by setting the <code class="hljs">sourceLinkURI</code> attribute. If <code class="hljs">sourceLinkText</code> is also set, it is used as the link text, otherwise the file name from the URI is used.</p>
+<p>Example:</p>
+<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
+<pre class="hljs"><code class="language-markdown"><span class="hljs-code">```text sourceLinkURI=https://github.com/szeiger/ornate/blob/v0.2/README.md
 *Ornate* is a tool for building multi-page HTML sites from Markdown sources.
 ```</span>
-</code></pre> </div></div> <p>This gets rendered as (link shown on mouse-over):</p> <div class=row><div class="a_linked small-expand columns a_xscroll a_codeblock"> <pre class=hljs><code class="language-text">*Ornate* is a tool for building multi-page HTML sites from Markdown sources.
-</code></pre> <a href="https://github.com/szeiger/ornate/blob/v0.2/README.md" class=a_sourcelink>README.md</a></div></div> <p>The <a href="markdown.html#includecode">includeCode</a> extension can generate link targets for included snippets automatically.</p> </main> <div data-sticky-container class="small-12 medium-12 large-2 large-order-1 columns a_sitenav_container"> <nav class=a_sitenav data-sticky data-sticky-on=large data-anchor=_sections> <ul> <li> <a href="index.html">Introduction</a> </li> <li> <a href="running.html">Running</a> </li> <li> <a href="configuration.html">Configuration</a> </li> <li> <a href="markdown.html">Markdown Extensions</a> </li> <li> <a href="images.html">Image Elements</a> </li> <li> <a href="uris.html">URIs</a> </li> <li> <a href="highlighting.html">Code Highlighting</a> </li> <li> <a href="diagrams.html">Diagrams</a> </li> <li> <a href="math.html">Math</a> </li> <li class=a_thispage> <a href="default-theme.html">Default Theme</a> </li> <li> <a href="elements.html">All Elements</a> </li> </ul> </nav> </div> <div class="small-12 medium-12 large-2 large-order-3 columns a_show-for-xlarge" data-sticky-container> <nav class=a_pagenav data-sticky data-sticky-on=large data-anchor=_sections> <header><p>On This Page</p> </header> <ul class="vertical menu" data-magellan> <li> <a href="#default-theme">Default Theme</a> <ul class="vertical menu"> <li> <a href="#configuration">Configuration</a> </li> <li> <a href="#third-party-content">Third-Party Content</a> </li> <li> <a href="#search">Search</a> </li> <li> <a href="#minification">Minification</a> </li> <li> <a href="#snippet-source-links">Snippet Source Links</a> </li> </ul> </li> </ul> </nav> </div> </div> </div> </div> </div> <footer class="small-12 medium-12 large-12 columns align-self-bottom a_footer"> <div class=row> <div class="small-12 medium-12 large-12 columns top-bar"> <div class=top-bar-left> <p>© Copyright 2016 Stefan Zeiger</p> </div> <div class=top-bar-right> <p>Generated with <a href="https://github.com/szeiger/ornate">Ornate</a>.</p> </div> </div> </div> </footer> </div> <script src="theme/js/jquery.min.js"></script> <script src="theme/js/what-input.min.js"></script> <script src="theme/js/foundation.min.js"></script> <script src="theme/js/app.js"></script> </body> </html>
+</code></pre>
+</div></div>
+<p>This gets rendered as (link shown on mouse-over):</p>
+<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
+<pre class="hljs"><code>*Ornate* is a tool for building multi-page HTML sites from Markdown sources.
+</code></pre>
+<a href="https://github.com/szeiger/ornate/blob/v0.2/README.md" class="a_sourcelink">README.md</a></div></div>
+<p>The <a href="markdown.html#includecode">includeCode</a> extension can generate link targets for included snippets automatically.</p>
+<h2 id="shortcut-icons" class="a_section" data-magellan-target="shortcut-icons">Shortcut Icons<a class="a_hlink" href="#shortcut-icons"></a></h2>
+<p>Shortcut icons can be defined through custom <code class="hljs">link</code> elements with appropriate <code class="hljs">rel</code> and <code class="hljs">href</code> values under <code class="hljs">theme.default</code>:</p>
+<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
+<pre class="hljs"><code class="language-yaml"><span class="hljs-comment"># A list of extra "link" elements for the HTML header. Each entry is an object whose</span>
+<span class="hljs-comment"># fields are HTML attributes. The "href" attribute is resolved relative to the current</span>
+<span class="hljs-comment"># page's "site:" URI, all other attributes are copied verbatim.</span>
+links = []</code></pre>
+<a href="https://github.com/szeiger/ornate/blob/v0.4/core/src/main/resources/ornate-reference.conf#L319-L322" class="a_sourcelink">ornate-reference.conf</a></div></div>
+<p>For example, this is how you add a standard <code class="hljs">favicon.ico</code> located under <code class="hljs">global.resourceDir</code>:</p>
+<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
+<pre class="hljs"><code class="language-yaml">theme.default.links = [
+  { rel: <span class="hljs-string">"icon"</span>, href: <span class="hljs-string">"/favicon.ico"</span> }
+]
+</code></pre>
+</div></div>
+<h2 id="customization" class="a_section" data-magellan-target="customization">Customization<a class="a_hlink" href="#customization"></a></h2>
+<p>Some of the default theme’s colors can be changed under <code class="hljs">theme.default.global.color</code>. These are the default values:</p>
+<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
+<pre class="hljs"><code class="language-yaml"><span class="hljs-comment"># Configurable colors for the global stylesheet</span>
+color {
+  <span class="hljs-comment"># The main accent color, used for links and active navigation markers</span>
+  accent = <span class="hljs-string">"rgb(0,120,215)"</span>
+  <span class="hljs-comment"># A light accent color for backgrounds. If unset, use `accent` with 0.15 alpha</span>
+  accentBackground = <span class="hljs-literal">null</span>
+  <span class="hljs-comment"># Text color for page headers and footers</span>
+  headerFooter = <span class="hljs-string">"white"</span>
+  <span class="hljs-comment"># Background color for page headers and footers</span>
+  headerFooterBackground = <span class="hljs-string">"#444"</span>
+}</code></pre>
+<a href="https://github.com/szeiger/ornate/blob/v0.4/core/src/main/resources/ornate-reference.conf#L239-L249" class="a_sourcelink">ornate-reference.conf</a></div></div>
+<p>Other styles can be changed by appending custom CSS code to the generated <code class="hljs">app.css</code> file. These are the defaults (under <code class="hljs">theme.default.global</code>):</p>
+<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
+<pre class="hljs"><code class="language-yaml"><span class="hljs-comment"># Extra CSS settings to append to the generated app.css file</span>
+css  = <span class="hljs-literal">null</span>
+<span class="hljs-comment"># A file (relative to the base directory) containing extra CSS settings</span>
+cssFile = <span class="hljs-literal">null</span></code></pre>
+<a href="https://github.com/szeiger/ornate/blob/v0.4/core/src/main/resources/ornate-reference.conf#L252-L255" class="a_sourcelink">ornate-reference.conf</a></div></div>
+<h2 id="index" class="a_section" data-magellan-target="index">Index<a class="a_hlink" href="#index"></a></h2>
+<p>The default theme can generate an index page from user-defined keywords. Using the <a href="markdown.html#header_attributes">headerAttributes</a> extension, you can define the keywords with the <code class="hljs">index</code> key. Nested keywords are separated by commas, multiple independent keywords are separated by semicolons. For example, the following header definition contributes two index entries “Bar” and “Foo, Bar” that link to the header:</p>
+<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
+<pre class="hljs"><code class="language-markdown"><span class="hljs-section">## Foo Bar {index="Bar;Foo,Bar"}</span>
+</code></pre>
+</div></div>
+<h2 id="multi-version-sites" class="a_section" data-magellan-target="multi-version-sites">Multi-Version Sites<a class="a_hlink" href="#multi-version-sites"></a></h2>
+<p>The default theme can add code for an automatic client-side multi-version navigation that allows users to switch between different versions of the site, going to the same page if it exists in the selected version or the root of the site otherwise. This works by reading an existing HTML index page (either auto-generated by the web server or maintained manually). Due to security restrictions and the way browsers handle directory listings this does not work (and is in fact automatically disabled) when loading a generated site from a <code class="hljs">file:</code> URL. You have to put it on a web server to make it work.</p>
+<p>The feature can be enabled under <code class="hljs">theme.default</code>. Here is the default configuration:</p>
+<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
+<pre class="hljs"><code class="language-yaml"><span class="hljs-comment"># Show multi-version site navigation on the left side below siteNav</span>
+versionNav = <span class="hljs-literal">false</span>
+<span class="hljs-comment"># Show multi-version dropdowns for "versions:/" URIs</span>
+versionNavDropdown = <span class="hljs-literal">true</span>
+<span class="hljs-comment"># Index page from which to determine the available versions for the multi-version</span>
+<span class="hljs-comment"># site navigation, relative to the site root's target URI</span>
+versionIndex = <span class="hljs-string">"../"</span></code></pre>
+<a href="https://github.com/szeiger/ornate/blob/v0.4/core/src/main/resources/ornate-reference.conf#L294-L300" class="a_sourcelink">ornate-reference.conf</a></div></div>
+<p>Example: A typical directory layout looks like this:</p>
+<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
+<pre class="hljs"><code>/
+  docs/
+    0.1/
+      index.html
+      foo.html
+    0.2/
+      index.html
+</code></pre>
+</div></div>
+<p>Here <code class="hljs">/docs/0.1/</code> and <code class="hljs">/docs/0.2/</code> are two versions of a site that have been generated independently with Ornate. All HTML pages load <code class="hljs">../</code> (the auto-generated directory listing of <code class="hljs">/docs/</code>) as the index page and detect the versions <code class="hljs">0.1</code> and <code class="hljs">0.2</code> from it. For example, on <code class="hljs">/docs/0.1/foo.html</code> you get a link to <code class="hljs">/docs/0.2/foo.html</code>. When you click on it the navigation script first checks if the page exists and since it doesn’t in this case, it loads <code class="hljs">/docs/0.2/</code> instead.</p>
+<p>Instead of a separate navigation section below the page navigation the version switcher can be integrated into a version number that is shown in the title bar by embedding an image with the special <code class="hljs">versions:/</code> URI. Here is the definition used by this manual:</p>
+<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
+<pre class="hljs"><code class="language-yaml">meta.siteTitle = <span class="hljs-string">"Ornate !["</span>${version}<span class="hljs-string">"](versions:/) Manual"</span></code></pre>
+<a href="https://github.com/szeiger/ornate/blob/v0.4/doc/ornate.conf#L16" class="a_sourcelink">ornate.conf</a></div></div>
+
+                 
+  <ul class="menu align-right simple a_navbar a_navbar_bottom">
+    
+      
+        <li><a href="math.html"  title="Math" ><span class="a_foundation_icon"></span>  Previous</a></li>
+      
+    
+      
+        <li><a href="elements.html"  title="All Elements" ><span class="a_foundation_icon"></span>  Next</a></li>
+      
+    
+      
+        <li><a href="https://github.com/szeiger/ornate/blob/master/doc/src/default-theme.md" ><span class="a_foundation_icon"></span>  Edit on GitHub</a></li>
+      
+    
+      
+        <li><a href="site-contents.html"  title="Table of Contents" ><span class="a_foundation_icon"></span>  Contents</a></li>
+      
+    
+  </ul>
+ 
+              </main>
+              
+              
+                <div data-sticky-container class="small-12 medium-12 large-2 large-order-1 columns a_sitenav_container">
+                  <nav class="a_sitenav" data-sticky data-sticky-on="large" data-anchor="_sections">
+                    
+                    <ul>
+                       
+  <li >
+    
+      
+        <a href="index.html">Introduction</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="running.html">Running</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="configuration.html">Configuration</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="markdown.html">Markdown Extensions</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="images.html">Image Elements</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="uris.html">URIs</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="highlighting.html">Code Highlighting</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="diagrams.html">Diagrams</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="math.html">Math</a>
+      
+    
+    
+  </li>
+  
+  <li  class="a_thispage" >
+    
+      
+        <a href="default-theme.html">Default Theme</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="elements.html">All Elements</a>
+      
+    
+    
+  </li>
+ 
+                    </ul>
+                    
+                    
+                  </nav>
+                </div>
+              
+              
+              
+                <div class="small-12 medium-12 large-2 large-order-3 columns a_show-for-xlarge" data-sticky-container>
+                  <nav class="a_pagenav" data-sticky data-sticky-on="large" data-anchor="_sections">
+                     <header><p>On This Page</p>
+</header> 
+                    <ul class="vertical menu" data-magellan>
+                       
+  
+    <li>
+      
+         <a href="#default-theme">Default Theme</a> 
+      
+      
+        <ul class="vertical menu">  
+  
+    <li>
+      
+         <a href="#configuration">Configuration</a> 
+      
+      
+    </li>
+  
+  
+  
+    <li>
+      
+         <a href="#third-party-content">Third-Party Content</a> 
+      
+      
+    </li>
+  
+  
+  
+    <li>
+      
+         <a href="#search">Search</a> 
+      
+      
+    </li>
+  
+  
+  
+    <li>
+      
+         <a href="#minification">Minification</a> 
+      
+      
+    </li>
+  
+  
+  
+    <li>
+      
+         <a href="#snippet-source-links">Snippet Source Links</a> 
+      
+      
+    </li>
+  
+  
+  
+    <li>
+      
+         <a href="#shortcut-icons">Shortcut Icons</a> 
+      
+      
+    </li>
+  
+  
+  
+    <li>
+      
+         <a href="#customization">Customization</a> 
+      
+      
+    </li>
+  
+  
+  
+    <li>
+      
+         <a href="#index">Index</a> 
+      
+      
+    </li>
+  
+  
+  
+    <li>
+      
+         <a href="#multi-version-sites">Multi-Version Sites</a> 
+      
+      
+    </li>
+  
+  </ul>
+      
+    </li>
+  
+ 
+                    </ul>
+                  </nav>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer class="small-12 medium-12 large-12 columns align-self-bottom a_footer">
+        <div class="row">
+          <div class="small-12 medium-12 large-12 columns top-bar">
+            <div class="top-bar-left">
+              <p>© Copyright 2016-2017 Stefan Zeiger</p>
+
+            </div>
+            <div class="top-bar-right">
+              <p>Generated with <a href="https://github.com/szeiger/ornate">Ornate</a>.</p>
+
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+      <div style="display: none">
+        <a href="../" id="_version_idx"></a>
+        <a href="./" id="_site_root"></a>
+      </div>
+    
+    <script src="theme/js/jquery.min.js"></script>
+    <script src="theme/js/what-input.min.js"></script>
+    <script src="theme/js/foundation.min.js"></script>
+    
+    <script src="theme/js/app.js"></script>
+    
+  </body>
+</html>

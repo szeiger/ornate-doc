@@ -1,18 +1,265 @@
-<!DOCTYPE html> <html class=no-js lang=eng dir=ltr> <head> <meta charset=utf-8> <meta http-equiv=x-ua-compatible content="ie=edge"> <meta name=viewport content="width=device-width, initial-scale=1.0"> <title>Code Highlighting</title> <link rel=stylesheet href="theme/css/foundation.min.css"> <link rel=stylesheet href="theme/css/app.css"> <link rel=stylesheet href="theme/highlight.js/styles/github-gist.css"> </head> <body> <div class="expanded row"> <div class="small-12 medium-12 large-12 columns align-self-top"> <div class=row> <header class="large-12 columns align-self-top a_header"> <div class=row> <div class="large-12 columns a_limited top-bar"> <div class=top-bar-left> <p>Ornate 0.3 Manual</p> </div> <div class="top-bar-right align-right row"> <form action="site-search.html" method=get class="align-right a_search"> <input name=q type=search placeholder="Search "> <button><img alt="&#1F50D;" src="theme/images/search.svg"/></button> </form> </div> </div> </div> </header> <div class="small-12 medium-12 large-12 columns align-self-top a_limited a_main"> <div class=row> <main class="columns large-order-2 sections" id=_sections> <h1 id=code-highlighting class=a_section data-magellan-target=code-highlighting>Code Highlighting<a class=a_hlink href="#code-highlighting"></a></h1> <p>A highlighter is a class that implements the <a href="api/index.html#com.novocode.ornate.highlight.Highlighter">Highlighter</a> trait. It can be set in the site configuration in <code class=hljs>global.highlight</code>.</p> <p>The default highlighter runs <a href="https://highlightjs.org/">highlight.js</a> at build time in Nashorn. All languages from the highlight.js distribution are supported but only a few of them are enabled by default to improve startup times. This and other settings can be changed in the page or site configuration. These are the defaults:</p> <div class=row><div class="a_linked small-expand columns a_xscroll a_codeblock"> <pre class=hljs><code class="language-yaml"><span class="hljs-comment"># Settings for the highlight.js-based syntax highlighter</span>
-highlight.highlightjs {
+<!DOCTYPE html>
+<html class="no-js" lang="eng" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Highlighting</title>
+    <link rel="stylesheet" href="theme/css/foundation.min.css">
+    <link rel="stylesheet" href="theme/css/app.css">
+    
+     <link rel="stylesheet" href="theme/highlight.js/styles/github-gist.css">  <link rel="stylesheet" href="theme/css/foundation-icons.custom.css"> 
+    
+     <link rel="prev" href="uris.html"  title="URIs"  />  <link rel="edit" href="https://github.com/szeiger/ornate/blob/master/doc/src/highlighting.md"  />  <link rel="next" href="diagrams.html"  title="Diagrams"  />  <link rel="start" href="index.html"  title="Introduction"  />  <link rel="toc" href="site-contents.html"  title="Table of Contents"  /> 
+  </head>
+  <body>
+    <div class="expanded row">
+      <div class="small-12 medium-12 large-12 columns align-self-top">
+        <div class="row">
+          
+          <header class="large-12 columns align-self-top a_header">
+            <div class="row">
+              <div class="large-12 columns a_limited top-bar">
+                <div class="top-bar-left">
+                  <p>Ornate <a class="a_vnav2" data-toggle="_id0">0.4</a><span class="dropdown-pane a_vnav2_pane" id="_id0"><span>Loading…</span></span> Manual</p>
+
+                </div>
+                <div class="top-bar-right align-right row">
+                  
+                  
+                    <form action="site-search.html" method="get" class="align-right a_search">
+                      <input name="q" type="search"  placeholder="Search
+" >
+                      <button><img alt="&#1F50D;" src="theme/images/search.svg" /></button>
+                    </form>
+                  
+                </div>
+              </div>
+            </div>
+          </header>
+          
+          <div class="small-12 medium-12 large-12 columns align-self-top a_limited a_main">
+            <div class="row">
+              
+              <main class="columns large-order-2 sections" id="_sections">
+                 
+  <ul class="menu align-right simple a_navbar a_navbar_top">
+    
+      
+        <li><a href="uris.html"  title="URIs" ><span class="a_foundation_icon"></span>  Previous</a></li>
+      
+    
+      
+        <li><a href="diagrams.html"  title="Diagrams" ><span class="a_foundation_icon"></span>  Next</a></li>
+      
+    
+      
+        <li><a href="https://github.com/szeiger/ornate/blob/master/doc/src/highlighting.md" ><span class="a_foundation_icon"></span>  Edit on GitHub</a></li>
+      
+    
+      
+        <li><a href="site-contents.html"  title="Table of Contents" ><span class="a_foundation_icon"></span>  Contents</a></li>
+      
+    
+  </ul>
+ 
+                
+                <h1 id="code-highlighting" class="a_section" data-magellan-target="code-highlighting">Code Highlighting<a class="a_hlink" href="#code-highlighting"></a></h1>
+<p>Code highlighting is provided through the <code class="hljs">higlightjs</code> extension which runs <a href="https://highlightjs.org/">highlight.js</a> at build time in Nashorn. All languages from the highlight.js distribution are supported but only a few of them are enabled by default to improve startup time. This and other settings can be changed in the page or site configuration. These are the defaults:</p>
+<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
+<pre class="hljs"><code class="language-yaml"><span class="hljs-comment"># Settings for the highlight.js-based syntax highlighter</span>
+extension.highlightjs {
   <span class="hljs-comment"># Preloaded languages. Any language that you want to access via an alias</span>
   <span class="hljs-comment"># should be listed here.</span>
   preload = [scala, java, json, yaml, sql, ini, diff, bash, xml, markdown]
 
   <span class="hljs-comment"># Default language when none is specified. Can be one of the supported languages,</span>
-  <span class="hljs-comment"># an array of languages from which to pick automatically, or null or an empty list</span>
+  <span class="hljs-comment"># an array of languages from which to pick automatically, or null or an empty array</span>
   <span class="hljs-comment"># for plain text. There are separate defaults for fenced code blocks, indented</span>
   <span class="hljs-comment"># code blocks and inline code.</span>
-  fenced    = ${highlight.highlightjs.preload}
-  indented  = ${highlight.highlightjs.preload}
+  fenced    = ${extension.highlightjs.preload}
+  indented  = ${extension.highlightjs.preload}
   inline    = <span class="hljs-literal">null</span>
 
   <span class="hljs-comment"># URIs of CSS files and assorted resources required for the style</span>
   <span class="hljs-comment"># (relative to webjar:/highlight.js/styles/)</span>
   styleResources = [ github-gist.css ]
-}</code></pre> <a href="https://github.com/szeiger/ornate/blob/v0.3/core/src/main/resources/ornate-reference.conf#L231-L248" class=a_sourcelink>ornate-reference.conf</a></div></div> <p>Note that the default theme overrides any background color set by the highlight.js style.</p> </main> <div data-sticky-container class="small-12 medium-12 large-2 large-order-1 columns a_sitenav_container"> <nav class=a_sitenav data-sticky data-sticky-on=large data-anchor=_sections> <ul> <li> <a href="index.html">Introduction</a> </li> <li> <a href="running.html">Running</a> </li> <li> <a href="configuration.html">Configuration</a> </li> <li> <a href="markdown.html">Markdown Extensions</a> </li> <li> <a href="images.html">Image Elements</a> </li> <li> <a href="uris.html">URIs</a> </li> <li class=a_thispage> <a href="highlighting.html">Code Highlighting</a> </li> <li> <a href="diagrams.html">Diagrams</a> </li> <li> <a href="math.html">Math</a> </li> <li> <a href="default-theme.html">Default Theme</a> </li> <li> <a href="elements.html">All Elements</a> </li> </ul> </nav> </div> </div> </div> </div> </div> <footer class="small-12 medium-12 large-12 columns align-self-bottom a_footer"> <div class=row> <div class="small-12 medium-12 large-12 columns top-bar"> <div class=top-bar-left> <p>© Copyright 2016 Stefan Zeiger</p> </div> <div class=top-bar-right> <p>Generated with <a href="https://github.com/szeiger/ornate">Ornate</a>.</p> </div> </div> </div> </footer> </div> <script src="theme/js/jquery.min.js"></script> <script src="theme/js/what-input.min.js"></script> <script src="theme/js/foundation.min.js"></script> <script src="theme/js/app.js"></script> </body> </html>
+
+  <span class="hljs-comment"># Language codes that should not be processed by the highlighter</span>
+  ignore = []
+}</code></pre>
+<a href="https://github.com/szeiger/ornate/blob/v0.4/core/src/main/resources/ornate-reference.conf#L157-L177" class="a_sourcelink">ornate-reference.conf</a></div></div>
+<blockquote class="note">
+<p>Note: The default theme overrides any background color set by the highlight.js style.</p>
+</blockquote>
+
+                 
+  <ul class="menu align-right simple a_navbar a_navbar_bottom">
+    
+      
+        <li><a href="uris.html"  title="URIs" ><span class="a_foundation_icon"></span>  Previous</a></li>
+      
+    
+      
+        <li><a href="diagrams.html"  title="Diagrams" ><span class="a_foundation_icon"></span>  Next</a></li>
+      
+    
+      
+        <li><a href="https://github.com/szeiger/ornate/blob/master/doc/src/highlighting.md" ><span class="a_foundation_icon"></span>  Edit on GitHub</a></li>
+      
+    
+      
+        <li><a href="site-contents.html"  title="Table of Contents" ><span class="a_foundation_icon"></span>  Contents</a></li>
+      
+    
+  </ul>
+ 
+              </main>
+              
+              
+                <div data-sticky-container class="small-12 medium-12 large-2 large-order-1 columns a_sitenav_container">
+                  <nav class="a_sitenav" data-sticky data-sticky-on="large" data-anchor="_sections">
+                    
+                    <ul>
+                       
+  <li >
+    
+      
+        <a href="index.html">Introduction</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="running.html">Running</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="configuration.html">Configuration</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="markdown.html">Markdown Extensions</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="images.html">Image Elements</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="uris.html">URIs</a>
+      
+    
+    
+  </li>
+  
+  <li  class="a_thispage" >
+    
+      
+        <a href="highlighting.html">Code Highlighting</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="diagrams.html">Diagrams</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="math.html">Math</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="default-theme.html">Default Theme</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="elements.html">All Elements</a>
+      
+    
+    
+  </li>
+ 
+                    </ul>
+                    
+                    
+                  </nav>
+                </div>
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer class="small-12 medium-12 large-12 columns align-self-bottom a_footer">
+        <div class="row">
+          <div class="small-12 medium-12 large-12 columns top-bar">
+            <div class="top-bar-left">
+              <p>© Copyright 2016-2017 Stefan Zeiger</p>
+
+            </div>
+            <div class="top-bar-right">
+              <p>Generated with <a href="https://github.com/szeiger/ornate">Ornate</a>.</p>
+
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+      <div style="display: none">
+        <a href="../" id="_version_idx"></a>
+        <a href="./" id="_site_root"></a>
+      </div>
+    
+    <script src="theme/js/jquery.min.js"></script>
+    <script src="theme/js/what-input.min.js"></script>
+    <script src="theme/js/foundation.min.js"></script>
+    
+    <script src="theme/js/app.js"></script>
+    
+  </body>
+</html>

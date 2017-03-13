@@ -89,7 +89,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="com.novocode.ornate.Page#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(sourceFileURI:Option[java.net.URI],uri:java.net.URI,suffix:String,doc:org.commonmark.node.Node,config:com.typesafe.config.Config,section:com.novocode.ornate.PageSection,extensions:com.novocode.ornate.Extensions,parser:com.novocode.ornate.commonmark.CustomParser):com.novocode.ornate.Page"></a>
+      <a id="&lt;init&gt;(sourceFileURI:Option[java.net.URI],syntheticName:Option[String],uri:java.net.URI,suffix:String,doc:org.commonmark.node.Node,config:com.typesafe.config.Config,section:com.novocode.ornate.PageSection,extensions:com.novocode.ornate.Extensions,parser:com.novocode.ornate.commonmark.CustomParser):com.novocode.ornate.Page"></a>
       <a id="&lt;init&gt;:Page"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -97,10 +97,10 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Page</span><span class="params">(<span name="sourceFileURI">sourceFileURI: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="java.net.URI">URI</span>]</span>, <span name="uri">uri: <span class="extype" name="java.net.URI">URI</span></span>, <span name="suffix">suffix: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="doc">doc: <span class="extype" name="org.commonmark.node.Node">Node</span></span>, <span name="config">config: <span class="extype" name="com.typesafe.config.Config">Config</span></span>, <span name="section">section: <a href="PageSection.html" class="extype" name="com.novocode.ornate.PageSection">PageSection</a></span>, <span name="extensions">extensions: <a href="Extensions.html" class="extype" name="com.novocode.ornate.Extensions">Extensions</a></span>, <span name="parser">parser: <a href="commonmark/CustomParser.html" class="extype" name="com.novocode.ornate.commonmark.CustomParser">CustomParser</a></span>)</span>
+        <span class="name">Page</span><span class="params">(<span name="sourceFileURI">sourceFileURI: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="java.net.URI">URI</span>]</span>, <span name="syntheticName">syntheticName: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="uri">uri: <span class="extype" name="java.net.URI">URI</span></span>, <span name="suffix">suffix: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="doc">doc: <span class="extype" name="org.commonmark.node.Node">Node</span></span>, <span name="config">config: <span class="extype" name="com.typesafe.config.Config">Config</span></span>, <span name="section">section: <a href="PageSection.html" class="extype" name="com.novocode.ornate.PageSection">PageSection</a></span>, <span name="extensions">extensions: <a href="Extensions.html" class="extype" name="com.novocode.ornate.Extensions">Extensions</a></span>, <span name="parser">parser: <a href="commonmark/CustomParser.html" class="extype" name="com.novocode.ornate.commonmark.CustomParser">CustomParser</a></span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#com.novocode.ornate.Page@&lt;init&gt;(sourceFileURI:Option[java.net.URI],uri:java.net.URI,suffix:String,doc:org.commonmark.node.Node,config:com.typesafe.config.Config,section:com.novocode.ornate.PageSection,extensions:com.novocode.ornate.Extensions,parser:com.novocode.ornate.commonmark.CustomParser):com.novocode.ornate.Page" title="Permalink" target="_top">
+      <a href="../../../index.html#com.novocode.ornate.Page@&lt;init&gt;(sourceFileURI:Option[java.net.URI],syntheticName:Option[String],uri:java.net.URI,suffix:String,doc:org.commonmark.node.Node,config:com.typesafe.config.Config,section:com.novocode.ornate.PageSection,extensions:com.novocode.ornate.Extensions,parser:com.novocode.ornate.commonmark.CustomParser):com.novocode.ornate.Page" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -364,19 +364,19 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="com.novocode.ornate.Page#headingIDs" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="headingIDs:Set[String]"></a>
-      <a id="headingIDs:Set[String]"></a>
+    </li><li name="com.novocode.ornate.Page#headingTitles" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="headingTitles:Map[String,String]"></a>
+      <a id="headingTitles:Map[String,String]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">lazy val</span>
       </span>
       <span class="symbol">
-        <span class="name">headingIDs</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+        <span class="name">headingTitles</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#com.novocode.ornate.Page@headingIDs:Set[String]" title="Permalink" target="_top">
+      <a href="../../../index.html#com.novocode.ornate.Page@headingTitles:Map[String,String]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -449,25 +449,28 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="com.novocode.ornate.Page#parseAndProcessSnippet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="parseAndProcessSnippet(content:String):com.novocode.ornate.Page"></a>
-      <a id="parseAndProcessSnippet(String):Page"></a>
+    </li><li name="com.novocode.ornate.Page#parseAndProcessSnippet" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="parseAndProcessSnippet(content:String,stopBefore:com.novocode.ornate.PageProcessor):com.novocode.ornate.Page"></a>
+      <a id="parseAndProcessSnippet(String,PageProcessor):Page"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">parseAndProcessSnippet</span><span class="params">(<span name="content">content: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="" class="extype" name="com.novocode.ornate.Page">Page</a></span>
+        <span class="name">parseAndProcessSnippet</span><span class="params">(<span name="content">content: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="stopBefore">stopBefore: <a href="PageProcessor.html" class="extype" name="com.novocode.ornate.PageProcessor">PageProcessor</a> = <span class="symbol">null</span></span>)</span><span class="result">: <a href="" class="extype" name="com.novocode.ornate.Page">Page</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#com.novocode.ornate.Page@parseAndProcessSnippet(content:String):com.novocode.ornate.Page" title="Permalink" target="_top">
+      <a href="../../../index.html#com.novocode.ornate.Page@parseAndProcessSnippet(content:String,stopBefore:com.novocode.ornate.PageProcessor):com.novocode.ornate.Page" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Parse a Markdown snippet and run the PageProcessors on it.</p><div class="fullcomment"><div class="comment cmt"><p>Parse a Markdown snippet and run the PageProcessors on it.
+</p></div><dl class="paramcmts block"><dt class="param">content</dt><dd class="cmt"><p>The Markdown content to parse.</p></dd><dt class="param">stopBefore</dt><dd class="cmt"><p>When a <code>PageProcessor</code> calls this method to parse a snippet for inclusion into the main
+                  document tree, it should pass itself as <code>stopBefore</code> to prevent any later PageProcessors
+                  from being applied.</p></dd></dl></div>
     </li><li name="com.novocode.ornate.Page#processors" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="processors:Seq[com.novocode.ornate.commonmark.PageProcessor]"></a>
+      <a id="processors:Seq[com.novocode.ornate.PageProcessor]"></a>
       <a id="processors:Seq[PageProcessor]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -475,10 +478,10 @@
         <span class="kind">var</span>
       </span>
       <span class="symbol">
-        <span class="name">processors</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="commonmark/PageProcessor.html" class="extype" name="com.novocode.ornate.commonmark.PageProcessor">PageProcessor</a>]</span>
+        <span class="name">processors</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="PageProcessor.html" class="extype" name="com.novocode.ornate.PageProcessor">PageProcessor</a>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#com.novocode.ornate.Page@processors:Seq[com.novocode.ornate.commonmark.PageProcessor]" title="Permalink" target="_top">
+      <a href="../../../index.html#com.novocode.ornate.Page@processors:Seq[com.novocode.ornate.PageProcessor]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -551,6 +554,23 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="com.novocode.ornate.Page#syntheticName" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="syntheticName:Option[String]"></a>
+      <a id="syntheticName:Option[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">syntheticName</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.novocode.ornate.Page@syntheticName:Option[String]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="com.novocode.ornate.Page#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <a id="toString():String"></a>

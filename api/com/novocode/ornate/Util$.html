@@ -447,6 +447,23 @@ https://www.w3.org/TR/html5/scripting-1.html#restrictions-for-contents-of-script
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="com.novocode.ornate.Util#readLines" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="readLines(source:java.net.URL):Vector[String]"></a>
+      <a id="readLines(URL):Vector[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">readLines</span><span class="params">(<span name="source">source: <span class="extype" name="java.net.URL">URL</span></span>)</span><span class="result">: <span class="extype" name="scala.Vector">Vector</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.novocode.ornate.Util$@readLines(source:java.net.URL):Vector[String]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="com.novocode.ornate.Util#relativeSiteURI" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="relativeSiteURI(from:java.net.URI,to:java.net.URI):java.net.URI"></a>
       <a id="relativeSiteURI(URI,URI):URI"></a>
@@ -464,24 +481,8 @@ https://www.w3.org/TR/html5/scripting-1.html#restrictions-for-contents-of-script
       </a>
     </span>
       <p class="shortcomment cmt">Create a relative link from one page to another.</p><div class="fullcomment"><div class="comment cmt"><p>Create a relative link from one page to another. Both URIs must be absolute &quot;site:&quot; URIs
-without &quot;.&quot; or &quot;..&quot; path segments, ending in file names (i.e. no tailing &quot;/&quot;).</p></div></div>
-    </li><li name="com.novocode.ornate.Util#replaceSuffix" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="replaceSuffix(u:java.net.URI,suffix:String,newSuffix:String):java.net.URI"></a>
-      <a id="replaceSuffix(URI,String,String):URI"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">replaceSuffix</span><span class="params">(<span name="u">u: <span class="extype" name="java.net.URI">URI</span></span>, <span name="suffix">suffix: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="newSuffix">newSuffix: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="java.net.URI">URI</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#com.novocode.ornate.Util$@replaceSuffix(u:java.net.URI,suffix:String,newSuffix:String):java.net.URI" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
+without &quot;.&quot; or &quot;..&quot; path segments, ending in file names (i.e. no tailing &quot;/&quot;).
+For the <code>to</code> URI, the site root (&quot;/&quot;) is also allowed.</p></div></div>
     </li><li name="com.novocode.ornate.Util#rewriteIndexPageLink" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="rewriteIndexPageLink(rel:java.net.URI,indexPage:Option[String]):java.net.URI"></a>
       <a id="rewriteIndexPageLink(URI,Option[String]):URI"></a>

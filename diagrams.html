@@ -1,4 +1,82 @@
-<!DOCTYPE html> <html class=no-js lang=eng dir=ltr> <head> <meta charset=utf-8> <meta http-equiv=x-ua-compatible content="ie=edge"> <meta name=viewport content="width=device-width, initial-scale=1.0"> <title>Diagrams</title> <link rel=stylesheet href="theme/css/foundation.min.css"> <link rel=stylesheet href="theme/css/app.css"> <link rel=stylesheet href="theme/highlight.js/styles/github-gist.css"> <link rel=stylesheet href="theme/css/mermaid.custom.css"> </head> <body> <div class="expanded row"> <div class="small-12 medium-12 large-12 columns align-self-top"> <div class=row> <header class="large-12 columns align-self-top a_header"> <div class=row> <div class="large-12 columns a_limited top-bar"> <div class=top-bar-left> <p>Ornate 0.3 Manual</p> </div> <div class="top-bar-right align-right row"> <form action="site-search.html" method=get class="align-right a_search"> <input name=q type=search placeholder="Search "> <button><img alt="&#1F50D;" src="theme/images/search.svg"/></button> </form> </div> </div> </div> </header> <div class="small-12 medium-12 large-12 columns align-self-top a_limited a_main"> <div class=row> <main class="columns large-order-2 sections" id=_sections> <noscript> <blockquote class=warning> <p>This page requires JavaScript. Please enable JavaScript in your browser.</p> </blockquote> </noscript> <h1 id=diagrams class=a_section data-magellan-target=diagrams>Diagrams<a class=a_hlink href="#diagrams"></a></h1> <p>The <a href="default-theme.html">default theme</a> can embed <a href="http://knsv.github.io/mermaid/">Mermaid</a> to render diagrams. It recognizes fenced code blocks whose info string starts with the language code <code class=hljs>mermaid</code> and treats them specially instead of calling the standard <a href="highlighting.html">highlighter</a>.</p> <blockquote class=note> <p>Note that diagrams are rendered on the client side with JavaScript. The generated site contains the source code for the diagrams.</p> </blockquote> <p>Example:</p> <div class=row><div class="a_linked small-expand columns a_xscroll a_codeblock"> <pre class=hljs><code class="language-markdown"><span class="hljs-code">```mermaid
+<!DOCTYPE html>
+<html class="no-js" lang="eng" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagrams</title>
+    <link rel="stylesheet" href="theme/css/foundation.min.css">
+    <link rel="stylesheet" href="theme/css/app.css">
+    
+     <link rel="stylesheet" href="theme/highlight.js/styles/github-gist.css">  <link rel="stylesheet" href="theme/css/mermaid.custom.css">  <link rel="stylesheet" href="theme/css/foundation-icons.custom.css"> 
+    
+     <link rel="prev" href="highlighting.html"  title="Code Highlighting"  />  <link rel="edit" href="https://github.com/szeiger/ornate/blob/master/doc/src/diagrams.md"  />  <link rel="next" href="math.html"  title="Math"  />  <link rel="start" href="index.html"  title="Introduction"  />  <link rel="toc" href="site-contents.html"  title="Table of Contents"  /> 
+  </head>
+  <body>
+    <div class="expanded row">
+      <div class="small-12 medium-12 large-12 columns align-self-top">
+        <div class="row">
+          
+          <header class="large-12 columns align-self-top a_header">
+            <div class="row">
+              <div class="large-12 columns a_limited top-bar">
+                <div class="top-bar-left">
+                  <p>Ornate <a class="a_vnav2" data-toggle="_id1">0.4</a><span class="dropdown-pane a_vnav2_pane" id="_id1"><span>Loading…</span></span> Manual</p>
+
+                </div>
+                <div class="top-bar-right align-right row">
+                  
+                  
+                    <form action="site-search.html" method="get" class="align-right a_search">
+                      <input name="q" type="search"  placeholder="Search
+" >
+                      <button><img alt="&#1F50D;" src="theme/images/search.svg" /></button>
+                    </form>
+                  
+                </div>
+              </div>
+            </div>
+          </header>
+          
+          <div class="small-12 medium-12 large-12 columns align-self-top a_limited a_main">
+            <div class="row">
+              
+              <main class="columns large-order-2 sections" id="_sections">
+                 
+  <ul class="menu align-right simple a_navbar a_navbar_top">
+    
+      
+        <li><a href="highlighting.html"  title="Code Highlighting" ><span class="a_foundation_icon"></span>  Previous</a></li>
+      
+    
+      
+        <li><a href="math.html"  title="Math" ><span class="a_foundation_icon"></span>  Next</a></li>
+      
+    
+      
+        <li><a href="https://github.com/szeiger/ornate/blob/master/doc/src/diagrams.md" ><span class="a_foundation_icon"></span>  Edit on GitHub</a></li>
+      
+    
+      
+        <li><a href="site-contents.html"  title="Table of Contents" ><span class="a_foundation_icon"></span>  Contents</a></li>
+      
+    
+  </ul>
+ 
+                
+                   <noscript> <blockquote class="warning">
+<p>This page requires JavaScript. Please enable JavaScript in your browser.</p>
+</blockquote>
+ </noscript> 
+                
+                <h1 id="diagrams" class="a_section" data-magellan-target="diagrams">Diagrams<a class="a_hlink" href="#diagrams"></a></h1>
+<p>The <a href="default-theme.html">default theme</a> can embed <a href="http://knsv.github.io/mermaid/">Mermaid</a> to render diagrams. It recognizes fenced code blocks whose info string starts with the language code <code class="hljs">mermaid</code> and treats them specially instead of calling the standard <a href="highlighting.html">highlighter</a>.</p>
+<blockquote class="note">
+<p>Note that diagrams are rendered on the client side with JavaScript. The generated site contains the source code for the diagrams.</p>
+</blockquote>
+<p>Example:</p>
+<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
+<pre class="hljs"><code class="language-markdown"><span class="hljs-code">```mermaid
 graph LR
   s((Start)) --&gt; Parse
   Parse --&gt; toc[Compute TOC]
@@ -6,10 +84,183 @@ graph LR
   Process --&gt; Render
   Render --&gt; e((End))
 ```</span>
-</code></pre> </div></div> <p>This is rendered as:</p> <div class=mermaid id=_id0><pre class=mermaid_src style="display: none">graph LR
+</code></pre>
+</div></div>
+<p>This is rendered as:</p>
+<div class="mermaid" id="_id0"><pre class="mermaid_src" style="display: none">graph LR
   s((Start)) --&gt; Parse
   Parse --&gt; toc[Compute TOC]
   toc --&gt; Process
   Process --&gt; Render
   Render --&gt; e((End))
-</pre></div> </main> <div data-sticky-container class="small-12 medium-12 large-2 large-order-1 columns a_sitenav_container"> <nav class=a_sitenav data-sticky data-sticky-on=large data-anchor=_sections> <ul> <li> <a href="index.html">Introduction</a> </li> <li> <a href="running.html">Running</a> </li> <li> <a href="configuration.html">Configuration</a> </li> <li> <a href="markdown.html">Markdown Extensions</a> </li> <li> <a href="images.html">Image Elements</a> </li> <li> <a href="uris.html">URIs</a> </li> <li> <a href="highlighting.html">Code Highlighting</a> </li> <li class=a_thispage> <a href="diagrams.html">Diagrams</a> </li> <li> <a href="math.html">Math</a> </li> <li> <a href="default-theme.html">Default Theme</a> </li> <li> <a href="elements.html">All Elements</a> </li> </ul> </nav> </div> </div> </div> </div> </div> <footer class="small-12 medium-12 large-12 columns align-self-bottom a_footer"> <div class=row> <div class="small-12 medium-12 large-12 columns top-bar"> <div class=top-bar-left> <p>© Copyright 2016 Stefan Zeiger</p> </div> <div class=top-bar-right> <p>Generated with <a href="https://github.com/szeiger/ornate">Ornate</a>.</p> </div> </div> </div> </footer> </div> <script src="theme/js/jquery.min.js"></script> <script src="theme/js/what-input.min.js"></script> <script src="theme/js/foundation.min.js"></script> <script src="theme/js/mermaidAPI-0.5.8.min.js"></script> <script src="theme/js/app.js"></script> </body> </html>
+</pre></div>
+                 
+  <ul class="menu align-right simple a_navbar a_navbar_bottom">
+    
+      
+        <li><a href="highlighting.html"  title="Code Highlighting" ><span class="a_foundation_icon"></span>  Previous</a></li>
+      
+    
+      
+        <li><a href="math.html"  title="Math" ><span class="a_foundation_icon"></span>  Next</a></li>
+      
+    
+      
+        <li><a href="https://github.com/szeiger/ornate/blob/master/doc/src/diagrams.md" ><span class="a_foundation_icon"></span>  Edit on GitHub</a></li>
+      
+    
+      
+        <li><a href="site-contents.html"  title="Table of Contents" ><span class="a_foundation_icon"></span>  Contents</a></li>
+      
+    
+  </ul>
+ 
+              </main>
+              
+              
+                <div data-sticky-container class="small-12 medium-12 large-2 large-order-1 columns a_sitenav_container">
+                  <nav class="a_sitenav" data-sticky data-sticky-on="large" data-anchor="_sections">
+                    
+                    <ul>
+                       
+  <li >
+    
+      
+        <a href="index.html">Introduction</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="running.html">Running</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="configuration.html">Configuration</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="markdown.html">Markdown Extensions</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="images.html">Image Elements</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="uris.html">URIs</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="highlighting.html">Code Highlighting</a>
+      
+    
+    
+  </li>
+  
+  <li  class="a_thispage" >
+    
+      
+        <a href="diagrams.html">Diagrams</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="math.html">Math</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="default-theme.html">Default Theme</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="elements.html">All Elements</a>
+      
+    
+    
+  </li>
+ 
+                    </ul>
+                    
+                    
+                  </nav>
+                </div>
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer class="small-12 medium-12 large-12 columns align-self-bottom a_footer">
+        <div class="row">
+          <div class="small-12 medium-12 large-12 columns top-bar">
+            <div class="top-bar-left">
+              <p>© Copyright 2016-2017 Stefan Zeiger</p>
+
+            </div>
+            <div class="top-bar-right">
+              <p>Generated with <a href="https://github.com/szeiger/ornate">Ornate</a>.</p>
+
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+      <div style="display: none">
+        <a href="../" id="_version_idx"></a>
+        <a href="./" id="_site_root"></a>
+      </div>
+    
+    <script src="theme/js/jquery.min.js"></script>
+    <script src="theme/js/what-input.min.js"></script>
+    <script src="theme/js/foundation.min.js"></script>
+     <script src="theme/js/mermaidAPI-0.5.8.min.js"></script> 
+    <script src="theme/js/app.js"></script>
+    
+  </body>
+</html>

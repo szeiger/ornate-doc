@@ -66,7 +66,24 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="com.novocode.ornate.highlight.HighlightJSHighlighter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="com.novocode.ornate.highlight.HighlightJSExtension" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="HighlightJSExtensionextendsExtension"></a>
+      <a id="HighlightJSExtension:HighlightJSExtension"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="HighlightJSExtension.html"><span class="name">HighlightJSExtension</span></a><span class="result"> extends <a href="../Extension.html" class="extype" name="com.novocode.ornate.Extension">Extension</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.novocode.ornate.highlight.package@HighlightJSExtensionextendsExtension" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.novocode.ornate.highlight.HighlightJSHighlighter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="HighlightJSHighlighterextendsHighlighterwithNashornSupportwithLogging"></a>
       <a id="HighlightJSHighlighter:HighlightJSHighlighter"></a>
       <h4 class="signature">
@@ -92,7 +109,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="HighlightResult.html"><span class="name">HighlightResult</span></a><span class="params">(<span name="html">html: <span class="extype" name="play.twirl.api.Html">Html</span></span>, <span name="language">language: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="css">css: <span class="extype" name="scala.Iterable">Iterable</span>[<span class="extype" name="java.net.URI">URI</span>] = <span class="symbol">Seq.empty</span></span>, <span name="preClasses">preClasses: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>, <span name="preCodeClasses">preCodeClasses: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>, <span name="codeClasses">codeClasses: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="HighlightResult.html"><span class="name">HighlightResult</span></a><span class="params">(<span name="html">html: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="language">language: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="css">css: <span class="extype" name="scala.Iterable">Iterable</span>[<span class="extype" name="java.net.URI">URI</span>] = <span class="symbol">Seq.empty</span></span>, <span name="preClasses">preClasses: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>, <span name="preCodeClasses">preCodeClasses: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>, <span name="codeClasses">codeClasses: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#com.novocode.ornate.highlight.package@HighlightResultextendsProductwithSerializable" title="Permalink" target="_top">
@@ -100,53 +117,70 @@
       </a>
     </span>
       
-    </li><li name="com.novocode.ornate.highlight.HighlightTarget" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="HighlightTargetextendsAnyRef"></a>
-      <a id="HighlightTarget:HighlightTarget"></a>
+    </li><li name="com.novocode.ornate.highlight.Highlighter" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="HighlighterextendsPageProcessor"></a>
+      <a id="Highlighter:Highlighter"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier">sealed </span>
-        <span class="kind">trait</span>
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="HighlightTarget.html"><span class="name">HighlightTarget</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a href="Highlighter.html"><span class="name">Highlighter</span></a><span class="result"> extends <a href="../PageProcessor.html" class="extype" name="com.novocode.ornate.PageProcessor">PageProcessor</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.highlight.package@HighlightTargetextendsAnyRef" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.novocode.ornate.highlight.package@HighlighterextendsPageProcessor" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
-    </li><li name="com.novocode.ornate.highlight.Highlighter" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="HighlighterextendsAnyRef"></a>
-      <a id="Highlighter:Highlighter"></a>
+      <p class="shortcomment cmt">Base class for highlighters</p>
+    </li><li name="com.novocode.ornate.highlight.Highlit" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="HighlitextendsAnyRef"></a>
+      <a id="Highlit:Highlit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="Highlighter.html"><span class="name">Highlighter</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a href="Highlit.html"><span class="name">Highlit</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.highlight.package@HighlighterextendsAnyRef" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.novocode.ornate.highlight.package@HighlitextendsAnyRef" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
-    </li><li name="com.novocode.ornate.highlight.NoHighlighter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="NoHighlighterextendsHighlighter"></a>
-      <a id="NoHighlighter:NoHighlighter"></a>
+    </li><li name="com.novocode.ornate.highlight.HighlitBlock" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="HighlitBlockextendsCustomBlockwithHighlit"></a>
+      <a id="HighlitBlock:HighlitBlock"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="NoHighlighter.html"><span class="name">NoHighlighter</span></a><span class="result"> extends <a href="Highlighter.html" class="extype" name="com.novocode.ornate.highlight.Highlighter">Highlighter</a></span>
+        <a href="HighlitBlock.html"><span class="name">HighlitBlock</span></a><span class="result"> extends <span class="extype" name="org.commonmark.node.CustomBlock">CustomBlock</span> with <a href="Highlit.html" class="extype" name="com.novocode.ornate.highlight.Highlit">Highlit</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.highlight.package@NoHighlighterextendsHighlighter" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.novocode.ornate.highlight.package@HighlitBlockextendsCustomBlockwithHighlit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.novocode.ornate.highlight.HighlitInline" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="HighlitInlineextendsCustomNodewithHighlit"></a>
+      <a id="HighlitInline:HighlitInline"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="HighlitInline.html"><span class="name">HighlitInline</span></a><span class="result"> extends <span class="extype" name="org.commonmark.node.CustomNode">CustomNode</span> with <a href="Highlit.html" class="extype" name="com.novocode.ornate.highlight.Highlit">Highlit</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.novocode.ornate.highlight.package@HighlitInlineextendsCustomNodewithHighlit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -158,19 +192,19 @@
 
         <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li name="com.novocode.ornate.highlight.HighlightTarget" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="HighlightTarget"></a>
-      <a id="HighlightTarget:HighlightTarget"></a>
+              <ol><li name="com.novocode.ornate.highlight.HighlightResult" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="HighlightResult"></a>
+      <a id="HighlightResult:HighlightResult"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="HighlightTarget$.html"><span class="name">HighlightTarget</span></a>
+        <a href="HighlightResult$.html"><span class="name">HighlightResult</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.highlight.package@HighlightTarget" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.novocode.ornate.highlight.package@HighlightResult" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>

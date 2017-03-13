@@ -1,1 +1,342 @@
-<!DOCTYPE html> <html class=no-js lang=eng dir=ltr> <head> <meta charset=utf-8> <meta http-equiv=x-ua-compatible content="ie=edge"> <meta name=viewport content="width=device-width, initial-scale=1.0"> <title>URIs</title> <link rel=stylesheet href="theme/css/foundation.min.css"> <link rel=stylesheet href="theme/css/app.css"> <link rel=stylesheet href="theme/highlight.js/styles/github-gist.css"> </head> <body> <div class="expanded row"> <div class="small-12 medium-12 large-12 columns align-self-top"> <div class=row> <header class="large-12 columns align-self-top a_header"> <div class=row> <div class="large-12 columns a_limited top-bar"> <div class=top-bar-left> <p>Ornate 0.3 Manual</p> </div> <div class="top-bar-right align-right row"> <form action="site-search.html" method=get class="align-right a_search"> <input name=q type=search placeholder="Search "> <button><img alt="&#1F50D;" src="theme/images/search.svg"/></button> </form> </div> </div> </div> </header> <div class="small-12 medium-12 large-12 columns align-self-top a_limited a_main"> <div class=row> <main class="columns large-order-2 sections" id=_sections> <h1 id=uris class=a_section data-magellan-target=uris>URIs<a class=a_hlink href="#uris"></a></h1> <p>URIs are used pervasively throughout Ornate for referencing different kinds of content. The following schemes (including several custom schemes) are supported:</p> <h2 id=site class=a_section data-magellan-target=site><code class=hljs>site</code><a class=a_hlink href="#site"></a></h2> <p>All pages and resources have a <code class=hljs>site</code> URI. For example, if the source directory is <code class=hljs>./doc/src</code>, the page located at <code class=hljs>./doc/src/foo/bar.md</code> gets the <code class=hljs>site</code> URI <code class=hljs>site:/foo/bar.md</code>. All links and images on a page are resolved against the page's <code class=hljs>site</code> URI. This makes it easy to use relative links that are identical to the corresponding <code class=hljs>file</code> source URI links (for compatibility with other Markdown processors) or, alternatively, to use absolute links on deeply nested sites.</p> <blockquote class=note> <p>Note that rendered sites always use relative links for pages and resources. They can be placed anywhere in a filesystem or on an HTTP server.</p> </blockquote> <h2 id=webjar-theme-classpath class=a_section data-magellan-target=webjar-theme-classpath><code class=hljs>webjar</code>, <code class=hljs>theme</code>, <code class=hljs>classpath</code><a class=a_hlink href="#webjar-theme-classpath"></a></h2> <p>These protocols reference resources on the classpath. They differ only in the lookup location. <code class=hljs>classpath:/</code> points to the classpath root, <code class=hljs>theme:/</code> points to the package containing the theme class and <code class=hljs>webjar:/name/path</code> points to a path in the named webjar. They can be used for referencing CSS, JS and image resources in themes and image markup elements. These files are copied into the generated site as resources.</p> <h2 id=abs class=a_section data-magellan-target=abs><code class=hljs>abs</code><a class=a_hlink href="#abs"></a></h2> <p>This is a special prefix for using arbitrary link destinations for links and images. The <code class=hljs>abs:</code> prefix is stripped off and the remainder inserted verbatim into the generated site. This can be used to link to resources outside of the generated site. For example, <code class=hljs>abs:/</code> links to the root of whatever filesystem or HTTP server the generated site is placed into. It is generally advisable to use <code class=hljs>https:</code> links in these cases.</p> <h2 id=unchecked class=a_section data-magellan-target=unchecked><code class=hljs>unchecked</code><a class=a_hlink href="#unchecked"></a></h2> <p>This is a special prefix that can be used with relative or absolute <code class=hljs>site</code> URIs in links and image elements for referencing resources that are expected to be in the site's target location but are not present at build time. Links to <code class=hljs>&lt;path&gt;</code> and <code class=hljs>unchecked:&lt;path&gt;</code> are resolved in exactly the same way, except that the latter does not emit an error message when the resource is not found.</p> <h2 id=file class=a_section data-magellan-target=file><code class=hljs>file</code><a class=a_hlink href="#file"></a></h2> <p>Standard <code class=hljs>file</code> URIs. They can be used for referencing CSS, JS and image resources in themes and image markup elements. These files are copied into the generated site as resources.</p> <h2 id=toctree-and-config class=a_section data-magellan-target=toctree-and-config><code class=hljs>toctree</code> and <code class=hljs>config</code><a class=a_hlink href="#toctree-and-config"></a></h2> <p>These protocols are used to include TOCs and config values in a document. See <a href="images.html">Image Elements</a> for more details.</p> </main> <div data-sticky-container class="small-12 medium-12 large-2 large-order-1 columns a_sitenav_container"> <nav class=a_sitenav data-sticky data-sticky-on=large data-anchor=_sections> <ul> <li> <a href="index.html">Introduction</a> </li> <li> <a href="running.html">Running</a> </li> <li> <a href="configuration.html">Configuration</a> </li> <li> <a href="markdown.html">Markdown Extensions</a> </li> <li> <a href="images.html">Image Elements</a> </li> <li class=a_thispage> <a href="uris.html">URIs</a> </li> <li> <a href="highlighting.html">Code Highlighting</a> </li> <li> <a href="diagrams.html">Diagrams</a> </li> <li> <a href="math.html">Math</a> </li> <li> <a href="default-theme.html">Default Theme</a> </li> <li> <a href="elements.html">All Elements</a> </li> </ul> </nav> </div> <div class="small-12 medium-12 large-2 large-order-3 columns a_show-for-xlarge" data-sticky-container> <nav class=a_pagenav data-sticky data-sticky-on=large data-anchor=_sections> <header><p>On This Page</p> </header> <ul class="vertical menu" data-magellan> <li> <a href="#uris">URIs</a> <ul class="vertical menu"> <li> <a href="#site">site</a> </li> <li> <a href="#webjar-theme-classpath">webjar, theme, classpath</a> </li> <li> <a href="#abs">abs</a> </li> <li> <a href="#unchecked">unchecked</a> </li> <li> <a href="#file">file</a> </li> <li> <a href="#toctree-and-config">toctree and config</a> </li> </ul> </li> </ul> </nav> </div> </div> </div> </div> </div> <footer class="small-12 medium-12 large-12 columns align-self-bottom a_footer"> <div class=row> <div class="small-12 medium-12 large-12 columns top-bar"> <div class=top-bar-left> <p>© Copyright 2016 Stefan Zeiger</p> </div> <div class=top-bar-right> <p>Generated with <a href="https://github.com/szeiger/ornate">Ornate</a>.</p> </div> </div> </div> </footer> </div> <script src="theme/js/jquery.min.js"></script> <script src="theme/js/what-input.min.js"></script> <script src="theme/js/foundation.min.js"></script> <script src="theme/js/app.js"></script> </body> </html>
+<!DOCTYPE html>
+<html class="no-js" lang="eng" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URIs</title>
+    <link rel="stylesheet" href="theme/css/foundation.min.css">
+    <link rel="stylesheet" href="theme/css/app.css">
+    
+     <link rel="stylesheet" href="theme/highlight.js/styles/github-gist.css">  <link rel="stylesheet" href="theme/css/foundation-icons.custom.css"> 
+    
+     <link rel="prev" href="images.html"  title="Image Elements"  />  <link rel="edit" href="https://github.com/szeiger/ornate/blob/master/doc/src/uris.md"  />  <link rel="next" href="highlighting.html"  title="Code Highlighting"  />  <link rel="start" href="index.html"  title="Introduction"  />  <link rel="toc" href="site-contents.html"  title="Table of Contents"  /> 
+  </head>
+  <body>
+    <div class="expanded row">
+      <div class="small-12 medium-12 large-12 columns align-self-top">
+        <div class="row">
+          
+          <header class="large-12 columns align-self-top a_header">
+            <div class="row">
+              <div class="large-12 columns a_limited top-bar">
+                <div class="top-bar-left">
+                  <p>Ornate <a class="a_vnav2" data-toggle="_id0">0.4</a><span class="dropdown-pane a_vnav2_pane" id="_id0"><span>Loading…</span></span> Manual</p>
+
+                </div>
+                <div class="top-bar-right align-right row">
+                  
+                  
+                    <form action="site-search.html" method="get" class="align-right a_search">
+                      <input name="q" type="search"  placeholder="Search
+" >
+                      <button><img alt="&#1F50D;" src="theme/images/search.svg" /></button>
+                    </form>
+                  
+                </div>
+              </div>
+            </div>
+          </header>
+          
+          <div class="small-12 medium-12 large-12 columns align-self-top a_limited a_main">
+            <div class="row">
+              
+              <main class="columns large-order-2 sections" id="_sections">
+                 
+  <ul class="menu align-right simple a_navbar a_navbar_top">
+    
+      
+        <li><a href="images.html"  title="Image Elements" ><span class="a_foundation_icon"></span>  Previous</a></li>
+      
+    
+      
+        <li><a href="highlighting.html"  title="Code Highlighting" ><span class="a_foundation_icon"></span>  Next</a></li>
+      
+    
+      
+        <li><a href="https://github.com/szeiger/ornate/blob/master/doc/src/uris.md" ><span class="a_foundation_icon"></span>  Edit on GitHub</a></li>
+      
+    
+      
+        <li><a href="site-contents.html"  title="Table of Contents" ><span class="a_foundation_icon"></span>  Contents</a></li>
+      
+    
+  </ul>
+ 
+                
+                <h1 id="uris" class="a_section" data-magellan-target="uris">URIs<a class="a_hlink" href="#uris"></a></h1>
+<p>URIs are used pervasively throughout Ornate for referencing different kinds of content. The following schemes (including several custom schemes) are supported:</p>
+<h2 id="site" class="a_section" data-magellan-target="site"><code class="hljs">site</code><a class="a_hlink" href="#site"></a></h2>
+<p>All pages and resources have a <code class="hljs">site</code> URI. For example, if the source directory is <code class="hljs">./doc/src</code>, the page located at <code class="hljs">./doc/src/foo/bar.md</code> gets the <code class="hljs">site</code> URI <code class="hljs">site:/foo/bar.md</code>. All links and images on a page are resolved against the page’s <code class="hljs">site</code> URI. This makes it easy to use relative links that are identical to the corresponding <code class="hljs">file</code> source URI links (for compatibility with other Markdown processors) or, alternatively, to use absolute links on deeply nested sites.</p>
+<p>When a <code class="hljs">site</code> URI link has no link text, the title of the link target (page or section) is used as the link text.</p>
+<blockquote class="note">
+<p>Note that rendered sites always use relative links for pages and resources. They can be placed anywhere in a filesystem or on an HTTP server.</p>
+</blockquote>
+<p>If <code class="hljs">global.allowTargetLinks</code> is set to <code class="hljs">true</code>, links may also use the target suffix instead of the source suffix (e.g. <code class="hljs">foo.html</code> instead of <code class="hljs">foo.md</code>). This option is provided for compatibility with other site generator tools. It is turned off by default.</p>
+<h2 id="webjar-theme-classpath" class="a_section" data-magellan-target="webjar-theme-classpath"><code class="hljs">webjar</code>, <code class="hljs">theme</code>, <code class="hljs">classpath</code><a class="a_hlink" href="#webjar-theme-classpath"></a></h2>
+<p>These schemes reference resources on the classpath. They differ only in the lookup location. <code class="hljs">classpath:/</code> points to the classpath root, <code class="hljs">theme:/</code> points to the package containing the theme class and <code class="hljs">webjar:/name/path</code> points to a path in the named webjar. They can be used for referencing CSS, JS and image resources in themes and image markup elements. These files are copied into the generated site as resources.</p>
+<h2 id="abs" class="a_section" data-magellan-target="abs"><code class="hljs">abs</code><a class="a_hlink" href="#abs"></a></h2>
+<p>This is a special prefix for using arbitrary link destinations for links and images. The <code class="hljs">abs:</code> prefix is stripped off and the remainder inserted verbatim into the generated site. This can be used to link to resources outside of the generated site. For example, <code class="hljs">abs:/</code> links to the root of whatever filesystem or HTTP server the generated site is placed into. It is generally advisable to use <code class="hljs">https:</code> links in these cases.</p>
+<h2 id="unchecked" class="a_section" data-magellan-target="unchecked"><code class="hljs">unchecked</code><a class="a_hlink" href="#unchecked"></a></h2>
+<p>This is a special prefix that can be used with relative or absolute <code class="hljs">site</code> URIs in links and image elements for referencing resources that are expected to be in the site’s target location but are not present at build time. Links to <code class="hljs">&lt;path&gt;</code> and <code class="hljs">unchecked:&lt;path&gt;</code> are resolved in exactly the same way, except that the latter does not emit an error message when the resource is not found.</p>
+<h2 id="file" class="a_section" data-magellan-target="file"><code class="hljs">file</code><a class="a_hlink" href="#file"></a></h2>
+<p>Standard <code class="hljs">file</code> URIs. They can be used for referencing CSS, JS and image resources in themes and image markup elements. These files are copied into the generated site as resources.</p>
+<h2 id="toctree-and-config" class="a_section" data-magellan-target="toctree-and-config"><code class="hljs">toctree</code> and <code class="hljs">config</code><a class="a_hlink" href="#toctree-and-config"></a></h2>
+<p>These schemes are used to include TOCs and config values in a document. See <a href="images.html">Image Elements</a> for more details.</p>
+<h2 id="template" class="a_section" data-magellan-target="template"><code class="hljs">template</code><a class="a_hlink" href="#template"></a></h2>
+<p>This scheme is used by Twirl-based themes (<a href="api/index.html#com.novocode.ornate.theme.HtmlTheme">HtmlTheme</a>) to reference resources that are generated by templates. For example, <code class="hljs">template:/app.css</code> generates a file <code class="hljs">app.css</code> from the template defined as <code class="hljs">app_css.scala.txt</code> in the theme’s package.</p>
+
+                 
+  <ul class="menu align-right simple a_navbar a_navbar_bottom">
+    
+      
+        <li><a href="images.html"  title="Image Elements" ><span class="a_foundation_icon"></span>  Previous</a></li>
+      
+    
+      
+        <li><a href="highlighting.html"  title="Code Highlighting" ><span class="a_foundation_icon"></span>  Next</a></li>
+      
+    
+      
+        <li><a href="https://github.com/szeiger/ornate/blob/master/doc/src/uris.md" ><span class="a_foundation_icon"></span>  Edit on GitHub</a></li>
+      
+    
+      
+        <li><a href="site-contents.html"  title="Table of Contents" ><span class="a_foundation_icon"></span>  Contents</a></li>
+      
+    
+  </ul>
+ 
+              </main>
+              
+              
+                <div data-sticky-container class="small-12 medium-12 large-2 large-order-1 columns a_sitenav_container">
+                  <nav class="a_sitenav" data-sticky data-sticky-on="large" data-anchor="_sections">
+                    
+                    <ul>
+                       
+  <li >
+    
+      
+        <a href="index.html">Introduction</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="running.html">Running</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="configuration.html">Configuration</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="markdown.html">Markdown Extensions</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="images.html">Image Elements</a>
+      
+    
+    
+  </li>
+  
+  <li  class="a_thispage" >
+    
+      
+        <a href="uris.html">URIs</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="highlighting.html">Code Highlighting</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="diagrams.html">Diagrams</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="math.html">Math</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="default-theme.html">Default Theme</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="elements.html">All Elements</a>
+      
+    
+    
+  </li>
+ 
+                    </ul>
+                    
+                    
+                  </nav>
+                </div>
+              
+              
+              
+                <div class="small-12 medium-12 large-2 large-order-3 columns a_show-for-xlarge" data-sticky-container>
+                  <nav class="a_pagenav" data-sticky data-sticky-on="large" data-anchor="_sections">
+                     <header><p>On This Page</p>
+</header> 
+                    <ul class="vertical menu" data-magellan>
+                       
+  
+    <li>
+      
+         <a href="#uris">URIs</a> 
+      
+      
+        <ul class="vertical menu">  
+  
+    <li>
+      
+         <a href="#site">site</a> 
+      
+      
+    </li>
+  
+  
+  
+    <li>
+      
+         <a href="#webjar-theme-classpath">webjar, theme, classpath</a> 
+      
+      
+    </li>
+  
+  
+  
+    <li>
+      
+         <a href="#abs">abs</a> 
+      
+      
+    </li>
+  
+  
+  
+    <li>
+      
+         <a href="#unchecked">unchecked</a> 
+      
+      
+    </li>
+  
+  
+  
+    <li>
+      
+         <a href="#file">file</a> 
+      
+      
+    </li>
+  
+  
+  
+    <li>
+      
+         <a href="#toctree-and-config">toctree and config</a> 
+      
+      
+    </li>
+  
+  
+  
+    <li>
+      
+         <a href="#template">template</a> 
+      
+      
+    </li>
+  
+  </ul>
+      
+    </li>
+  
+ 
+                    </ul>
+                  </nav>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer class="small-12 medium-12 large-12 columns align-self-bottom a_footer">
+        <div class="row">
+          <div class="small-12 medium-12 large-12 columns top-bar">
+            <div class="top-bar-left">
+              <p>© Copyright 2016-2017 Stefan Zeiger</p>
+
+            </div>
+            <div class="top-bar-right">
+              <p>Generated with <a href="https://github.com/szeiger/ornate">Ornate</a>.</p>
+
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+      <div style="display: none">
+        <a href="../" id="_version_idx"></a>
+        <a href="./" id="_site_root"></a>
+      </div>
+    
+    <script src="theme/js/jquery.min.js"></script>
+    <script src="theme/js/what-input.min.js"></script>
+    <script src="theme/js/foundation.min.js"></script>
+    
+    <script src="theme/js/app.js"></script>
+    
+  </body>
+</html>

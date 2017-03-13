@@ -398,6 +398,23 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="com.novocode.ornate.Logging#logTime" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logTime[T](msg:String)(f:=&gt;T):T"></a>
+      <a id="logTime[T](String)(⇒T):T"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logTime</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="msg">msg: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="params">(<span name="f">f: ⇒ <span class="extype" name="com.novocode.ornate.Logging.logTime.T">T</span></span>)</span><span class="result">: <span class="extype" name="com.novocode.ornate.Logging.logTime.T">T</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.novocode.ornate.theme.Clean@logTime[T](msg:String)(f:=&gt;T):T" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Logging.html" class="extype" name="com.novocode.ornate.Logging">Logging</a></dd></dl></div>
     </li><li name="com.novocode.ornate.Logging#logger" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="logger:org.slf4j.Logger"></a>
       <a id="logger:Logger"></a>
@@ -432,6 +449,23 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="com.novocode.ornate.theme.Theme#noHighlightLanguages" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="noHighlightLanguages(p:com.novocode.ornate.Page):Set[String]"></a>
+      <a id="noHighlightLanguages(Page):Set[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">noHighlightLanguages</span><span class="params">(<span name="p">p: <a href="../Page.html" class="extype" name="com.novocode.ornate.Page">Page</a></span>)</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.novocode.ornate.theme.Clean@noHighlightLanguages(p:com.novocode.ornate.Page):Set[String]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The language codes that should not be processed by a highlighter.</p><div class="fullcomment"><div class="comment cmt"><p>The language codes that should not be processed by a highlighter.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Theme.html" class="extype" name="com.novocode.ornate.theme.Theme">Theme</a></dd></dl></div>
     </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <a id="notify():Unit"></a>
@@ -484,24 +518,58 @@
     </span>
       <p class="shortcomment cmt">Render the site.</p><div class="fullcomment"><div class="comment cmt"><p>Render the site. May create additional synthetic pages and copy resources on demand.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.novocode.ornate.theme.Clean">Clean</a> → <a href="Theme.html" class="extype" name="com.novocode.ornate.theme.Theme">Theme</a></dd></dl></div>
     </li><li name="com.novocode.ornate.theme.Theme#resolveResource" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="resolveResource(uri:java.net.URI):java.net.URL"></a>
-      <a id="resolveResource(URI):URL"></a>
+      <a id="resolveResource(uri:java.net.URI):java.net.URI"></a>
+      <a id="resolveResource(URI):URI"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">resolveResource</span><span class="params">(<span name="uri">uri: <span class="extype" name="java.net.URI">URI</span></span>)</span><span class="result">: <span class="extype" name="java.net.URL">URL</span></span>
+        <span class="name">resolveResource</span><span class="params">(<span name="uri">uri: <span class="extype" name="java.net.URI">URI</span></span>)</span><span class="result">: <span class="extype" name="java.net.URI">URI</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.theme.Clean@resolveResource(uri:java.net.URI):java.net.URL" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.novocode.ornate.theme.Clean@resolveResource(uri:java.net.URI):java.net.URI" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Resolve a resource URI to a URL.</p><div class="fullcomment"><div class="comment cmt"><p>Resolve a resource URI to a URL. Resource URIs can use use the following protocols:
-file, site (static site resources), webjar (absolute WebJar resource), theme (relative
-to theme class), classpath (relative to classpath root)</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Theme.html" class="extype" name="com.novocode.ornate.theme.Theme">Theme</a></dd></dl></div>
+      <p class="shortcomment cmt">Resolve a resource URI to a source file location.</p><div class="fullcomment"><div class="comment cmt"><p>Resolve a resource URI to a source file location. Resource URIs can use use the following protocols:
+file, site (static site resources), webjar (absolute WebJar resource), theme (relative to theme class),
+classpath (relative to classpath root), template (generated from template)</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Theme.html" class="extype" name="com.novocode.ornate.theme.Theme">Theme</a></dd></dl></div>
+    </li><li name="com.novocode.ornate.theme.Theme#specialImageSchemesBlock" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="specialImageSchemesBlock:Set[String]"></a>
+      <a id="specialImageSchemesBlock:Set[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">specialImageSchemesBlock</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.novocode.ornate.theme.Clean@specialImageSchemesBlock:Set[String]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Extra image URI schemes to turn into <code>SpecialImage</code> nodes for rendering in block contexts</p><div class="fullcomment"><div class="comment cmt"><p>Extra image URI schemes to turn into <code>SpecialImage</code> nodes for rendering in block contexts</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Theme.html" class="extype" name="com.novocode.ornate.theme.Theme">Theme</a></dd></dl></div>
+    </li><li name="com.novocode.ornate.theme.Theme#specialImageSchemesInline" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="specialImageSchemesInline:Set[String]"></a>
+      <a id="specialImageSchemesInline:Set[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">specialImageSchemesInline</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.novocode.ornate.theme.Clean@specialImageSchemesInline:Set[String]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Extra image URI schemes to turn into <code>SpecialImage</code> nodes for rendering in inline contexts</p><div class="fullcomment"><div class="comment cmt"><p>Extra image URI schemes to turn into <code>SpecialImage</code> nodes for rendering in inline contexts</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Theme.html" class="extype" name="com.novocode.ornate.theme.Theme">Theme</a></dd></dl></div>
     </li><li name="com.novocode.ornate.theme.Theme#suggestRelativePath" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="suggestRelativePath(uri:java.net.URI):String"></a>
       <a id="suggestRelativePath(URI):String"></a>
@@ -537,18 +605,18 @@ to theme class), classpath (relative to classpath root)</p></div><dl class="attr
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="com.novocode.ornate.theme.Theme#synthesizePages" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="synthesizePages:Vector[com.novocode.ornate.Page]"></a>
-      <a id="synthesizePages:Vector[Page]"></a>
+      <a id="synthesizePages(missingSyntheticPages:Vector[(String,java.net.URI)]):Vector[com.novocode.ornate.Page]"></a>
+      <a id="synthesizePages(Vector[(String,URI)]):Vector[Page]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">synthesizePages</span><span class="result">: <span class="extype" name="scala.Vector">Vector</span>[<a href="../Page.html" class="extype" name="com.novocode.ornate.Page">Page</a>]</span>
+        <span class="name">synthesizePages</span><span class="params">(<span name="missingSyntheticPages">missingSyntheticPages: <span class="extype" name="scala.Vector">Vector</span>[(<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="java.net.URI">URI</span>)]</span>)</span><span class="result">: <span class="extype" name="scala.Vector">Vector</span>[<a href="../Page.html" class="extype" name="com.novocode.ornate.Page">Page</a>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.theme.Clean@synthesizePages:Vector[com.novocode.ornate.Page]" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.novocode.ornate.theme.Clean@synthesizePages(missingSyntheticPages:Vector[(String,java.net.URI)]):Vector[com.novocode.ornate.Page]" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>

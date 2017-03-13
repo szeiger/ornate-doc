@@ -1,11 +1,91 @@
-<!DOCTYPE html> <html class=no-js lang=eng dir=ltr> <head> <meta charset=utf-8> <meta http-equiv=x-ua-compatible content="ie=edge"> <meta name=viewport content="width=device-width, initial-scale=1.0"> <title>Math</title> <link rel=stylesheet href="theme/css/foundation.min.css"> <link rel=stylesheet href="theme/css/app.css"> <link rel=stylesheet href="theme/highlight.js/styles/github-gist.css"> <script type="text/x-mathjax-config">
+<!DOCTYPE html>
+<html class="no-js" lang="eng" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math</title>
+    <link rel="stylesheet" href="theme/css/foundation.min.css">
+    <link rel="stylesheet" href="theme/css/app.css">
+    
+     <link rel="stylesheet" href="theme/highlight.js/styles/github-gist.css">  <link rel="stylesheet" href="theme/css/foundation-icons.custom.css"> 
+    
+      
+        <script type="text/x-mathjax-config">
           MathJax.Hub.Config({"skipStartupTypeset":true});
            MathJax.Hub.Queue(["Process",MathJax.Hub]); 
           MathJax.Hub.Queue(function() {
             var sticky = $('.sticky');
-            if(sticky.foundation) sticky.foundation('_calc', true); // recalculate sticky positions if Foundation is already initialized
+            if(sticky.foundation) sticky.foundation('_calc', true); 
           });
-        </script> <script type="text/javascript" async src="theme/mathjax/MathJax.js?config=TeX-MML-AM_CHTML-full"></script> </head> <body> <div class="expanded row"> <div class="small-12 medium-12 large-12 columns align-self-top"> <div class=row> <header class="large-12 columns align-self-top a_header"> <div class=row> <div class="large-12 columns a_limited top-bar"> <div class=top-bar-left> <p>Ornate 0.3 Manual</p> </div> <div class="top-bar-right align-right row"> <form action="site-search.html" method=get class="align-right a_search"> <input name=q type=search placeholder="Search "> <button><img alt="&#1F50D;" src="theme/images/search.svg"/></button> </form> </div> </div> </div> </header> <div class="small-12 medium-12 large-12 columns align-self-top a_limited a_main"> <div class=row> <main class="columns large-order-2 sections" id=_sections> <h1 id=math class=a_section data-magellan-target=math>Math<a class=a_hlink href="#math"></a></h1> <p>The <a href="default-theme.html">default theme</a> can use <a href="https://www.mathjax.org/">MathJax</a> to render math notation. All required resources are embedded in the generated site but the rendering is done on the client side with JavaScript. Only a <code class=hljs>[math]</code> placeholder will be visible if JavaScript is disabled.</p> <p>MathJax config files and options for a <code class=hljs>MathJax.Hub.Config</code> call can be specified in the theme's global configuration (under <code class=hljs>theme.default.global</code> for the default theme):</p> <div class=row><div class="a_linked small-expand columns a_xscroll a_codeblock"> <pre class=hljs><code class="language-yaml"><span class="hljs-comment"># Configuration options for MathJax</span>
+        </script>
+      
+      <script type="text/javascript" async src="theme/mathjax/MathJax.js?config=TeX-MML-AM_CHTML-full"></script>
+    
+     <link rel="prev" href="diagrams.html"  title="Diagrams"  />  <link rel="edit" href="https://github.com/szeiger/ornate/blob/master/doc/src/math.md"  />  <link rel="next" href="default-theme.html"  title="Default Theme"  />  <link rel="start" href="index.html"  title="Introduction"  />  <link rel="toc" href="site-contents.html"  title="Table of Contents"  /> 
+  </head>
+  <body>
+    <div class="expanded row">
+      <div class="small-12 medium-12 large-12 columns align-self-top">
+        <div class="row">
+          
+          <header class="large-12 columns align-self-top a_header">
+            <div class="row">
+              <div class="large-12 columns a_limited top-bar">
+                <div class="top-bar-left">
+                  <p>Ornate <a class="a_vnav2" data-toggle="_id0">0.4</a><span class="dropdown-pane a_vnav2_pane" id="_id0"><span>Loading…</span></span> Manual</p>
+
+                </div>
+                <div class="top-bar-right align-right row">
+                  
+                  
+                    <form action="site-search.html" method="get" class="align-right a_search">
+                      <input name="q" type="search"  placeholder="Search
+" >
+                      <button><img alt="&#1F50D;" src="theme/images/search.svg" /></button>
+                    </form>
+                  
+                </div>
+              </div>
+            </div>
+          </header>
+          
+          <div class="small-12 medium-12 large-12 columns align-self-top a_limited a_main">
+            <div class="row">
+              
+              <main class="columns large-order-2 sections" id="_sections">
+                 
+  <ul class="menu align-right simple a_navbar a_navbar_top">
+    
+      
+        <li><a href="diagrams.html"  title="Diagrams" ><span class="a_foundation_icon"></span>  Previous</a></li>
+      
+    
+      
+        <li><a href="default-theme.html"  title="Default Theme" ><span class="a_foundation_icon"></span>  Next</a></li>
+      
+    
+      
+        <li><a href="https://github.com/szeiger/ornate/blob/master/doc/src/math.md" ><span class="a_foundation_icon"></span>  Edit on GitHub</a></li>
+      
+    
+      
+        <li><a href="site-contents.html"  title="Table of Contents" ><span class="a_foundation_icon"></span>  Contents</a></li>
+      
+    
+  </ul>
+ 
+                
+                   <noscript> <blockquote class="warning">
+<p>This page requires JavaScript. Please enable JavaScript in your browser.</p>
+</blockquote>
+ </noscript> 
+                
+                <h1 id="math" class="a_section" data-magellan-target="math">Math<a class="a_hlink" href="#math"></a></h1>
+<p>The <a href="default-theme.html">default theme</a> can use <a href="https://www.mathjax.org/">MathJax</a> to render math notation. All required resources are embedded in the generated site but the rendering is done on the client side with JavaScript. Only a <code class="hljs">[math]</code> placeholder will be visible if JavaScript is disabled.</p>
+<p>MathJax config files and options for a <code class="hljs">MathJax.Hub.Config</code> call can be specified in the theme’s global configuration (under <code class="hljs">theme.default.global</code> for the default theme):</p>
+<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
+<pre class="hljs"><code class="language-yaml"><span class="hljs-comment"># Configuration options for MathJax</span>
 mathJax {
   <span class="hljs-comment"># The config files to preload:</span>
   loadConfig = [<span class="hljs-string">"TeX-MML-AM_CHTML-full"</span>]
@@ -17,21 +97,42 @@ mathJax {
     <span class="hljs-comment"># main processing step).</span>
 <span class="hljs-attr">    skipStartupTypeset:</span> <span class="hljs-literal">true</span>
   }
-}</code></pre> <a href="https://github.com/szeiger/ornate/blob/v0.3/core/src/main/resources/ornate-reference.conf#L185-L197" class=a_sourcelink>ornate-reference.conf</a></div></div> <p>This default configuration disables preprocessing (which is not needed if you use Ornate's math syntax extensions) and preloads a config file with everything that is needed for rendering TeX, <a href="http://asciimath.org/">AsciiMath</a> and MathML. Since Ornate only adds MathJax to pages that actually need it, the use of a <code class=hljs>-full</code> config file is recommended. If you only need AsciiMath notation, you can use the smaller <code class=hljs>AM_CHTML-full</code> configuration.</p> <h2 id=fenced-code-blocks class=a_section data-magellan-target=fenced-code-blocks>Fenced Code Blocks<a class=a_hlink href="#fenced-code-blocks"></a></h2> <p>Fenced code blocks whose info string starts with the language codes <code class=hljs>texmath</code>, <code class=hljs>asciimath</code> (or simpy <code class=hljs>math</code>) and <code class=hljs>mathml</code> are treated as display math instead of passing them on to the standard <a href="highlighting.html">highlighter</a>.</p> <p>TeX example:</p> <div class=row><div class="a_linked small-expand columns a_xscroll a_codeblock"> <pre class=hljs><code class="language-markdown"><span class="hljs-code">```texmath
+}</code></pre>
+<a href="https://github.com/szeiger/ornate/blob/v0.4/core/src/main/resources/ornate-reference.conf#L224-L236" class="a_sourcelink">ornate-reference.conf</a></div></div>
+<p>This default configuration disables preprocessing (which is not needed if you use Ornate’s math syntax extensions) and preloads a config file with everything that is needed for rendering TeX, <a href="http://asciimath.org/">AsciiMath</a> and MathML. Since Ornate only adds MathJax to pages that actually need it, the use of a <code class="hljs">-full</code> config file is recommended. If you only need AsciiMath notation, you can use the smaller <code class="hljs">AM_CHTML-full</code> configuration.</p>
+<h2 id="fenced-code-blocks" class="a_section" data-magellan-target="fenced-code-blocks">Fenced Code Blocks<a class="a_hlink" href="#fenced-code-blocks"></a></h2>
+<p>Fenced code blocks whose info string starts with the language codes <code class="hljs">texmath</code>, <code class="hljs">asciimath</code> (or simply <code class="hljs">math</code>) and <code class="hljs">mathml</code> are
+treated as display math instead of passing them on to the standard <a href="highlighting.html">highlighter</a>.</p>
+<p>TeX example:</p>
+<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
+<pre class="hljs"><code class="language-markdown"><span class="hljs-code">```texmath
 \begin{array}{lcll}
 \{a, A\} \;\vec{+}\; B &amp;=&amp; a, (A \;\vec{+}\; B)  &amp;{\bf if} \; a \not\in B \\\\
                        &amp;=&amp; A \;\vec{+}\; B       &amp;{\bf if} \; a \in B
 \end{array}
 ```</span>
-</code></pre> </div></div> <p>This is rendered as:</p> <div class=MathJax_Preview>[math]</div><script type="math/tex; mode=display">\begin{array}{lcll}
+</code></pre>
+</div></div>
+<p>This is rendered as:</p>
+<div class="MathJax_Preview">[math]</div><script type="math/tex; mode=display">\begin{array}{lcll}
 \{a, A\} \;\vec{+}\; B &=& a, (A \;\vec{+}\; B)  &{\bf if} \; a \not\in B \\\\
                        &=& A \;\vec{+}\; B       &{\bf if} \; a \in B
 \end{array}
-</script> <p>AsciiMath example:</p> <div class=row><div class="a_linked small-expand columns a_xscroll a_codeblock"> <pre class=hljs><code class="language-markdown"><span class="hljs-code">```math
+</script>
+<p>AsciiMath example:</p>
+<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
+<pre class="hljs"><code class="language-markdown"><span class="hljs-code">```math
 sum_(i=1)^n i^3=((n(n+1))/2)^2
 ```</span>
-</code></pre> </div></div> <p>This is rendered as:</p> <div class=MJXc-display style="text-align: center"><div class=MathJax_Preview>[math]</div><script type="math/asciimath; mode=display">sum_(i=1)^n i^3=((n(n+1))/2)^2
-</script></div> <h2 id=mathSyntax class=a_section data-magellan-target=mathSyntax><code class=hljs>mathSyntax</code> extension<a class=a_hlink href="#mathSyntax"></a></h2> <p>The <code class=hljs>mathSyntax</code> extension enables special syntax for inline and display (block) math. There is no single standard notation for <a href="https://github.com/cben/mathdown/wiki/math-in-markdown">math in Markdown</a>, therefore it can be customized to support several common notations:</p> <div class=row><div class="a_linked small-expand columns a_xscroll a_codeblock"> <pre class=hljs><code class="language-yaml">extension.mathSyntax {
+</code></pre>
+</div></div>
+<p>This is rendered as:</p>
+<div class="MJXc-display" style="text-align: center"><div class="MathJax_Preview">[math]</div><script type="math/asciimath; mode=display">sum_(i=1)^n i^3=((n(n+1))/2)^2
+</script></div>
+<h2 id="mathSyntax" class="a_section" data-magellan-target="mathSyntax"><code class="hljs">mathSyntax</code> extension<a class="a_hlink" href="#mathSyntax"></a></h2>
+<p>The <code class="hljs">mathSyntax</code> extension enables special syntax for inline and display (block) math. There is no single standard notation for <a href="https://github.com/cben/mathdown/wiki/math-in-markdown">math in Markdown</a>, therefore it can be customized to support several common notations:</p>
+<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
+<pre class="hljs"><code class="language-yaml">extension.mathSyntax {
   <span class="hljs-comment"># The following options control the supported delimiters for inline and display (block)</span>
   <span class="hljs-comment"># math syntax. Each can be set to one of "tex", "asciimath" or null (disabled).</span>
   dollarInline     = <span class="hljs-literal">null</span> <span class="hljs-comment"># Single dollar inline, like Pandoc's tex_math_dollars</span>
@@ -39,6 +140,267 @@ sum_(i=1)^n i^3=((n(n+1))/2)^2
   singleBackslash  = <span class="hljs-literal">null</span> <span class="hljs-comment"># Single backslash `\(inline\)` and `\[display\]`</span>
   doubleBackslash  = <span class="hljs-literal">null</span> <span class="hljs-comment"># Double backslash `\\(inline\\)` and `\\[display\\]`</span>
   dollarInlineCode = <span class="hljs-literal">null</span> <span class="hljs-comment"># Single dollar at beginning and end of inline code</span>
-}</code></pre> <a href="https://github.com/szeiger/ornate/blob/v0.3/core/src/main/resources/ornate-reference.conf#L132-L140" class=a_sourcelink>ornate-reference.conf</a></div></div> <blockquote class=note> <p>The <code class=hljs>mathSyntax</code> extension is enabled by default but all notations are disabled.</p> </blockquote> <ul> <li> <p><code class=hljs>dollarInline</code>: Standard TeX inline math notation, with the same syntax as <a href="http://pandoc.org/MANUAL.html#math">Pandoc's <code class=hljs>tex_math_dollars</code> extension</a>: Anything between two <code class=hljs>$</code> characters is treated as math. The opening <code class=hljs>$</code> must have a non-space character immediately to its right, while the closing <code class=hljs>$</code> must have a non-space character immediately to its left, and must not be followed immediately by a digit. If for some reason you need to enclose text in literal <code class=hljs>$</code> characters, backslash-escape them and they won’t be treated as math delimiters.</p> <p>Example:</p> <div class=row><div class="a_linked small-expand columns a_xscroll a_codeblock"> <pre class=hljs><code class="language-markdown">Here is some inline math $a+b$ but neither is <span class="hljs-code">`$a+b$`</span> nor $20,000 and $30,000, nor \$a+b\$.
-</code></pre> </div></div> <p>This is rendered as:</p> <p>Here is some inline math <span class=MathJax_Preview>[math]</span><script type="math/asciimath">a+b</script> but neither is <code class=hljs>$a+b$</code> nor $20,000 and $30,000, nor $a+b$.</p> <blockquote class=note> <p>Note that the inline math notation is parsed before any other inline notation, in particular before inline code. This can have unwanted side effects when using the single dollar syntax. For example, when placing another inline code section <code class=hljs>`$a+b$`</code> at the end of the previous paragraph, everything from <code class=hljs>$20,000</code> to the first <code class=hljs>$</code> of the inline code section would be recognized as inline math.</p> </blockquote> </li> <li> <p><code class=hljs>dollarBlock</code>: Standard TeX display math notation. Blocks delimited by <code class=hljs>$$</code> are treated as display math.</p> <p>Example:</p> <div class=row><div class="a_linked small-expand columns a_xscroll a_codeblock"> <pre class=hljs><code class="language-markdown">$$ \lim_{x \to \infty} \exp(-x) = 0 $$
-</code></pre> </div></div> <p>This is rendered as:</p> <div class=MathJax_Preview>[math]</div><script type="math/tex; mode=display"> \lim_{x \to \infty} \exp(-x) = 0 </script></li> <li> <p><code class=hljs>singleBackslash</code>: Standard LaTeX notation for <code class=hljs>\(inline\)</code> and <code class=hljs>\[display\]</code> math.</p> </li> <li> <p><code class=hljs>doubleBackslash</code>: MultiMarkdown's adaptation of LaTeX notation for <code class=hljs>\\(inline\\)</code> and <code class=hljs>\\[display\\]</code> math.</p> </li> <li> <p><code class=hljs>dollarInlineCode</code>: Inline code blocks with <code class=hljs>$</code> characters at the beginning and end like <code class=hljs>`$a+b$`</code> are parsed as inline math. The initial <code class=hljs>$</code> can be escaped as <code class=hljs>\$</code> to prevent math parsing.</p> </li> </ul> </main> <div data-sticky-container class="small-12 medium-12 large-2 large-order-1 columns a_sitenav_container"> <nav class=a_sitenav data-sticky data-sticky-on=large data-anchor=_sections> <ul> <li> <a href="index.html">Introduction</a> </li> <li> <a href="running.html">Running</a> </li> <li> <a href="configuration.html">Configuration</a> </li> <li> <a href="markdown.html">Markdown Extensions</a> </li> <li> <a href="images.html">Image Elements</a> </li> <li> <a href="uris.html">URIs</a> </li> <li> <a href="highlighting.html">Code Highlighting</a> </li> <li> <a href="diagrams.html">Diagrams</a> </li> <li class=a_thispage> <a href="math.html">Math</a> </li> <li> <a href="default-theme.html">Default Theme</a> </li> <li> <a href="elements.html">All Elements</a> </li> </ul> </nav> </div> <div class="small-12 medium-12 large-2 large-order-3 columns a_show-for-xlarge" data-sticky-container> <nav class=a_pagenav data-sticky data-sticky-on=large data-anchor=_sections> <header><p>On This Page</p> </header> <ul class="vertical menu" data-magellan> <li> <a href="#math">Math</a> <ul class="vertical menu"> <li> <a href="#fenced-code-blocks">Fenced Code Blocks</a> </li> <li> <a href="#mathSyntax">mathSyntax extension</a> </li> </ul> </li> </ul> </nav> </div> </div> </div> </div> </div> <footer class="small-12 medium-12 large-12 columns align-self-bottom a_footer"> <div class=row> <div class="small-12 medium-12 large-12 columns top-bar"> <div class=top-bar-left> <p>© Copyright 2016 Stefan Zeiger</p> </div> <div class=top-bar-right> <p>Generated with <a href="https://github.com/szeiger/ornate">Ornate</a>.</p> </div> </div> </div> </footer> </div> <script src="theme/js/jquery.min.js"></script> <script src="theme/js/what-input.min.js"></script> <script src="theme/js/foundation.min.js"></script> <script src="theme/js/app.js"></script> </body> </html>
+  dollarFenced     = <span class="hljs-literal">null</span> <span class="hljs-comment"># Single dollar for inline math in fenced code blocks</span>
+}</code></pre>
+<a href="https://github.com/szeiger/ornate/blob/v0.4/core/src/main/resources/ornate-reference.conf#L144-L153" class="a_sourcelink">ornate-reference.conf</a></div></div>
+<blockquote class="note">
+<p>The <code class="hljs">mathSyntax</code> extension is enabled by default but all notations are disabled.</p>
+</blockquote>
+<ul>
+<li>
+<p><code class="hljs">dollarInline</code>: Standard TeX inline math notation, with the same syntax as <a href="http://pandoc.org/MANUAL.html#math">Pandoc’s <code class="hljs">tex_math_dollars</code> extension</a>: Anything between two <code class="hljs">$</code> characters is treated as math. The opening <code class="hljs">$</code> must have a non-space character immediately to its right, while the closing <code class="hljs">$</code> must have a non-space character immediately to its left, and must not be followed immediately by a digit. If for some reason you need to enclose text in literal <code class="hljs">$</code> characters, backslash-escape them and they won’t be treated as math delimiters.</p>
+<p>Example:</p>
+<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
+<pre class="hljs"><code class="language-markdown">Here is some inline math $a+b$ but neither is <span class="hljs-code">`$a+b$`</span> nor $20,000 and $30,000, nor \$a+b\$.
+</code></pre>
+</div></div>
+<p>This is rendered as:</p>
+<p>Here is some inline math <span class="MathJax_Preview">[math]</span><script type="math/asciimath">a+b</script> but neither is <code class="hljs">$a+b$</code> nor $20,000 and $30,000, nor $a+b$.</p>
+<blockquote class="note">
+<p>Note that the inline math notation is parsed before any other inline notation, in particular before inline code. This can have unwanted side effects when using the single dollar syntax. For example, when placing another inline code section <code class="hljs">`$a+b$`</code> at the end of the previous paragraph, everything from <code class="hljs">$20,000</code> to the first <code class="hljs">$</code> of the inline code section would be recognized as inline math.</p>
+</blockquote>
+</li>
+<li>
+<p><code class="hljs">dollarBlock</code>: Standard TeX display math notation. Blocks delimited by <code class="hljs">$$</code> are treated as display math.</p>
+<p>Example:</p>
+<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
+<pre class="hljs"><code class="language-markdown">$$ \lim_{x \to \infty} \exp(-x) = 0 $$
+</code></pre>
+</div></div>
+<p>This is rendered as:</p>
+<div class="MathJax_Preview">[math]</div><script type="math/tex; mode=display"> \lim_{x \to \infty} \exp(-x) = 0 </script></li>
+<li>
+<p><code class="hljs">singleBackslash</code>: Standard LaTeX notation for <code class="hljs">\(inline\)</code> and <code class="hljs">\[display\]</code> math.</p>
+</li>
+<li>
+<p><code class="hljs">doubleBackslash</code>: MultiMarkdown’s adaptation of LaTeX notation for <code class="hljs">\\(inline\\)</code> and <code class="hljs">\\[display\\]</code> math.</p>
+</li>
+<li>
+<p><code class="hljs">dollarInlineCode</code>: Inline code blocks with <code class="hljs">$</code> characters at the beginning and end like <code class="hljs">`$a+b$`</code> are parsed as inline math. The initial <code class="hljs">$</code> can be escaped as <code class="hljs">\$</code> to prevent math parsing.</p>
+</li>
+<li>
+<p><code class="hljs">dollarFenced</code>: Standard TeX inline math notation (like with <code class="hljs">dollarInline</code>) in fenced code blocks. The usual <a href="highlighting.html">highlighting</a> will be applied to such blocks. In order to minimize unwanted interaction of the highlighter with the unexpected math notation, inline math appears as a regular ASCII identifier to the highlighter. The real math notation is spliced back in after highlighting. This setting can be configured individually for each fenced code block with <code class="hljs">dollarMath=tex|asciimath|null</code> in the info string.</p>
+<p>For example:</p>
+<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
+<pre class="hljs"><code class="language-markdown"><span class="hljs-code">```scala dollarMath=tex
+def copy[$\mathit{tps}\,$]($\mathit{ps}'_1\,$)$\ldots$($\mathit{ps}'_n$): $c$[$\mathit{tps}\,$] = new $c$[$\mathit{Ts}\,$]($\mathit{xs}_1\,$)$\ldots$($\mathit{xs}_n$)
+```</span>
+</code></pre>
+</div></div>
+<p>This is rendered as:</p>
+<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
+<pre class="hljs"><code class="language-scala"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">copy</span></span>[<span class="MathJax_Preview">[math]</span><script type="math/tex">\mathit{tps}\,</script>](<span class="MathJax_Preview">[math]</span><script type="math/tex">\mathit{ps}'_1\,</script>)<span class="MathJax_Preview">[math]</span><script type="math/tex">\ldots</script>(<span class="MathJax_Preview">[math]</span><script type="math/tex">\mathit{ps}'_n</script>): <span class="MathJax_Preview">[math]</span><script type="math/tex">c</script>[<span class="MathJax_Preview">[math]</span><script type="math/tex">\mathit{tps}\,</script>] = <span class="hljs-keyword">new</span> <span class="MathJax_Preview">[math]</span><script type="math/tex">c</script>[<span class="MathJax_Preview">[math]</span><script type="math/tex">\mathit{Ts}\,</script>](<span class="MathJax_Preview">[math]</span><script type="math/tex">\mathit{xs}_1\,</script>)<span class="MathJax_Preview">[math]</span><script type="math/tex">\ldots</script>(<span class="MathJax_Preview">[math]</span><script type="math/tex">\mathit{xs}_n</script>)
+</code></pre>
+</div></div>
+</li>
+</ul>
+
+                 
+  <ul class="menu align-right simple a_navbar a_navbar_bottom">
+    
+      
+        <li><a href="diagrams.html"  title="Diagrams" ><span class="a_foundation_icon"></span>  Previous</a></li>
+      
+    
+      
+        <li><a href="default-theme.html"  title="Default Theme" ><span class="a_foundation_icon"></span>  Next</a></li>
+      
+    
+      
+        <li><a href="https://github.com/szeiger/ornate/blob/master/doc/src/math.md" ><span class="a_foundation_icon"></span>  Edit on GitHub</a></li>
+      
+    
+      
+        <li><a href="site-contents.html"  title="Table of Contents" ><span class="a_foundation_icon"></span>  Contents</a></li>
+      
+    
+  </ul>
+ 
+              </main>
+              
+              
+                <div data-sticky-container class="small-12 medium-12 large-2 large-order-1 columns a_sitenav_container">
+                  <nav class="a_sitenav" data-sticky data-sticky-on="large" data-anchor="_sections">
+                    
+                    <ul>
+                       
+  <li >
+    
+      
+        <a href="index.html">Introduction</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="running.html">Running</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="configuration.html">Configuration</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="markdown.html">Markdown Extensions</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="images.html">Image Elements</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="uris.html">URIs</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="highlighting.html">Code Highlighting</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="diagrams.html">Diagrams</a>
+      
+    
+    
+  </li>
+  
+  <li  class="a_thispage" >
+    
+      
+        <a href="math.html">Math</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="default-theme.html">Default Theme</a>
+      
+    
+    
+  </li>
+  
+  <li >
+    
+      
+        <a href="elements.html">All Elements</a>
+      
+    
+    
+  </li>
+ 
+                    </ul>
+                    
+                    
+                  </nav>
+                </div>
+              
+              
+              
+                <div class="small-12 medium-12 large-2 large-order-3 columns a_show-for-xlarge" data-sticky-container>
+                  <nav class="a_pagenav" data-sticky data-sticky-on="large" data-anchor="_sections">
+                     <header><p>On This Page</p>
+</header> 
+                    <ul class="vertical menu" data-magellan>
+                       
+  
+    <li>
+      
+         <a href="#math">Math</a> 
+      
+      
+        <ul class="vertical menu">  
+  
+    <li>
+      
+         <a href="#fenced-code-blocks">Fenced Code Blocks</a> 
+      
+      
+    </li>
+  
+  
+  
+    <li>
+      
+         <a href="#mathSyntax">mathSyntax extension</a> 
+      
+      
+    </li>
+  
+  </ul>
+      
+    </li>
+  
+ 
+                    </ul>
+                  </nav>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer class="small-12 medium-12 large-12 columns align-self-bottom a_footer">
+        <div class="row">
+          <div class="small-12 medium-12 large-12 columns top-bar">
+            <div class="top-bar-left">
+              <p>© Copyright 2016-2017 Stefan Zeiger</p>
+
+            </div>
+            <div class="top-bar-right">
+              <p>Generated with <a href="https://github.com/szeiger/ornate">Ornate</a>.</p>
+
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+      <div style="display: none">
+        <a href="../" id="_version_idx"></a>
+        <a href="./" id="_site_root"></a>
+      </div>
+    
+    <script src="theme/js/jquery.min.js"></script>
+    <script src="theme/js/what-input.min.js"></script>
+    <script src="theme/js/foundation.min.js"></script>
+    
+    <script src="theme/js/app.js"></script>
+    
+  </body>
+</html>

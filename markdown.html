@@ -21,7 +21,7 @@
             <div class="row">
               <div class="large-12 columns a_limited top-bar">
                 <div class="top-bar-left">
-                  <p>Ornate <a class="a_vnav2" data-toggle="_id3">0.4</a><span class="dropdown-pane a_vnav2_pane" id="_id3"><span>Loading…</span></span> Manual</p>
+                  <p>Ornate 0.5 Manual</p>
 
                 </div>
                 <div class="top-bar-right align-right row">
@@ -88,7 +88,7 @@ globalRefs           = com.novocode.ornate.GlobalRefsExtension
 scaladocLinks        = com.novocode.ornate.ScaladocLinksExtension
 externalLinks        = com.novocode.ornate.ExternalLinksExtension
 highlightjs          = com.novocode.ornate.highlight.HighlightJSExtension</code></pre>
-<a href="https://github.com/szeiger/ornate/blob/v0.4/core/src/main/resources/ornate-reference.conf#L27-L47" class="a_sourcelink">ornate-reference.conf</a></div></div>
+<a href="https://github.com/szeiger/ornate/blob/v0.5/core/src/main/resources/ornate-reference.conf#L27-L47" class="a_sourcelink">ornate-reference.conf</a></div></div>
 <p>Not all extensions are enabled by default. This can be configured on a per-page basis through the <code class="hljs">extensions</code> setting. The following is the default configuration:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-yaml"><span class="hljs-comment"># Extensions (alias or class name) to use on the page</span>
@@ -115,7 +115,7 @@ extensions = [
   <span class="hljs-comment">#smartPunctuation</span>
   highlightjs
 ]</code></pre>
-<a href="https://github.com/szeiger/ornate/blob/v0.4/core/src/main/resources/ornate-reference.conf#L64-L87" class="a_sourcelink">ornate-reference.conf</a></div></div>
+<a href="https://github.com/szeiger/ornate/blob/v0.5/core/src/main/resources/ornate-reference.conf#L64-L87" class="a_sourcelink">ornate-reference.conf</a></div></div>
 <p>HOCON does not allow the removal of list elements when overriding a setting. (You can only replace the entire list or add elements at the beginning or end of it.) For <code class="hljs">global.extensions</code> Ornate supports the use of a minus (<code class="hljs">-</code>) prefix to remove existing elements.</p>
 <p>The order in which extensions are added generally does not matter. Extensions perform their processing in predefined phases to automatically handle dependencies correctly (e.g. first include external code snippets, then expand variables in them, then perform highlighting).</p>
 <h2 id="commonmark-java-extensions" class="a_section" data-magellan-target="commonmark-java-extensions">commonmark-java extensions<a class="a_hlink" href="#commonmark-java-extensions"></a></h2>
@@ -214,10 +214,10 @@ public class AttributedHeading extends Heading {
 <p>This gets rendered as:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span></span>(args: <span class="hljs-type">Array</span>[<span class="hljs-type">String</span>]): <span class="hljs-type">Unit</span> = {
-  <span class="hljs-keyword">val</span> res = runToStatus(args)
+  <span class="hljs-keyword">val</span> res = runToStatus(args)(<span class="hljs-number">0</span>).asInstanceOf[<span class="hljs-type">Int</span>]
   <span class="hljs-keyword">if</span>(res != <span class="hljs-number">0</span>) <span class="hljs-type">System</span>.exit(res)
 }</code></pre>
-<a href="https://github.com/szeiger/ornate/blob/v0.4/core/src/main/scala/com/novocode/ornate/Main.scala#L22-L25" class="a_sourcelink">Main.scala</a></div></div>
+<a href="https://github.com/szeiger/ornate/blob/v0.5/core/src/main/scala/com/novocode/ornate/Main.scala#L22-L25" class="a_sourcelink">Main.scala</a></div></div>
 <p><code class="hljs">includeCode</code> can be configured to remove certain lines (matching a regular expression). This is useful for removing delimiter lines in case of overlapping delimited sections. The default configuration removes lines containing <code class="hljs">//#</code> with nothing but whitespace in front from <code class="hljs">.java</code>, <code class="hljs">.scala</code> and <code class="hljs">.sbt</code> snippets:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-yaml">extension.includeCode {
@@ -228,13 +228,13 @@ public class AttributedHeading extends Heading {
     sbt   = ${extension.includeCode.remove.java}
   }
 }</code></pre>
-<a href="https://github.com/szeiger/ornate/blob/v0.4/core/src/main/resources/ornate-reference.conf#L126-L133" class="a_sourcelink">ornate-reference.conf</a></div></div>
+<a href="https://github.com/szeiger/ornate/blob/v0.5/core/src/main/resources/ornate-reference.conf#L126-L133" class="a_sourcelink">ornate-reference.conf</a></div></div>
 <p>Links to the snippet sources can be generated automatically if a mapping is defined. For example, this manual has the following configuration under <code class="hljs">extension.includeCode</code>:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-yaml">sourceLinks {
   <span class="hljs-string">"../../"</span>: <span class="hljs-string">"https://github.com/szeiger/ornate/blob/"</span>${tag}<span class="hljs-string">"/#ghLines"</span>
 }</code></pre>
-<a href="https://github.com/szeiger/ornate/blob/v0.4/doc/ornate.conf#L36-L38" class="a_sourcelink">ornate.conf</a></div></div>
+<a href="https://github.com/szeiger/ornate/blob/v0.5/doc/ornate.conf#L34-L36" class="a_sourcelink">ornate.conf</a></div></div>
 <p>Each <code class="hljs">sourceLinks</code> entry maps a <code class="hljs">file:</code> URI (relative to <code class="hljs">global.sourceDir</code>) denoting a base directory under which snippets referenced from the pages can be found to a base URI for the link destination. All snippets from the configured source directory get a corresponding <code class="hljs">sourceLinkURI</code> attribute (unless one was specified manually). It is up to the <a href="default-theme.html#snippet-source-links">theme</a> to make use of it.</p>
 <p>If the link destination has the special fragment <code class="hljs">#ghLines</code>, github-style line highlighting fragments are appended to the generated URIs for snippets which include only parts of a file. Note that github can only highlight one continuous region. If the snippet consists of multiple blocks, the first line of the first block and the last line of the last block are used.</p>
 <h2 id="rendermarkdown" class="a_section" data-magellan-target="rendermarkdown"><code class="hljs">renderMarkdown</code><a class="a_hlink" href="#rendermarkdown"></a></h2>
@@ -270,7 +270,7 @@ public class AttributedHeading extends Heading {
   fencedCodeBlock   = <span class="hljs-literal">false</span> // in fenced code blocks
                             // (can be overridden with expandVars=<span class="hljs-literal">true</span>|<span class="hljs-literal">false</span> attribute)
 }</code></pre>
-<a href="https://github.com/szeiger/ornate/blob/v0.4/core/src/main/resources/ornate-reference.conf#L112-L122" class="a_sourcelink">ornate-reference.conf</a></div></div>
+<a href="https://github.com/szeiger/ornate/blob/v0.5/core/src/main/resources/ornate-reference.conf#L112-L122" class="a_sourcelink">ornate-reference.conf</a></div></div>
 <p>Example source:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-markdown"><span class="hljs-code">```yaml expandVars=true
@@ -281,8 +281,8 @@ version = "{{version}}"
 </div></div>
 <p>This gets rendered as:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-yaml"><span class="hljs-comment"># Set the version to 0.4:</span>
-version = <span class="hljs-string">"0.4"</span>
+<pre class="hljs"><code class="language-yaml"><span class="hljs-comment"># Set the version to 0.5:</span>
+version = <span class="hljs-string">"0.5"</span>
 </code></pre>
 </div></div>
 <p>In plain text you can also use objects with <a href="images.html#config">config</a> URIs instead of <code class="hljs">expandVars</code> but this is not possible in code elements, which cannot contain embedded Markdown syntax.</p>
@@ -299,7 +299,7 @@ version = <span class="hljs-string">"0.4"</span>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-yaml"><span class="hljs-comment"># Emoji format (svg, png, png_128x128, png_512x512, unicode)</span>
 extension.emoji.global.format = svg</code></pre>
-<a href="https://github.com/szeiger/ornate/blob/v0.4/core/src/main/resources/ornate-reference.conf#L107-L108" class="a_sourcelink">ornate-reference.conf</a></div></div>
+<a href="https://github.com/szeiger/ornate/blob/v0.5/core/src/main/resources/ornate-reference.conf#L107-L108" class="a_sourcelink">ornate-reference.conf</a></div></div>
 <h2 id="smartquotes" class="a_section" data-magellan-target="smartquotes"><code class="hljs">smartQuotes</code><a class="a_hlink" href="#smartquotes"></a></h2>
 <p>This extension converts single (<code class="hljs">&#x27;</code>) and double (<code class="hljs">&quot;</code>) ASCII quotes to balanced Unicode quotes (<code class="hljs">‘single’</code> and <code class="hljs">“double”</code>) in all text content (including link and image titles). Code sections are not processed.</p>
 <p>Example source:</p>
@@ -351,7 +351,7 @@ So is ‘pine.’</p>
   <span class="hljs-comment"># A map of reference labels to targets</span>
   refs = {}
 }</code></pre>
-<a href="https://github.com/szeiger/ornate/blob/v0.4/core/src/main/resources/ornate-reference.conf#L137-L140" class="a_sourcelink">ornate-reference.conf</a></div></div>
+<a href="https://github.com/szeiger/ornate/blob/v0.5/core/src/main/resources/ornate-reference.conf#L137-L140" class="a_sourcelink">ornate-reference.conf</a></div></div>
 <p>The keys in the map are the reference labels. The values are defined in the same way as <a href="configuration.html#table-of-contents">TOC entries</a>, either as a string (containing the link target) or an object with the fields <code class="hljs">url</code> and <code class="hljs">title</code>.</p>
 <p>For example, this manual uses for following global refs:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
@@ -361,7 +361,7 @@ So is ‘pine.’</p>
 <span class="hljs-attr">  ghfm:</span> <span class="hljs-string">"https://help.github.com/categories/writing-on-github/"</span>
 <span class="hljs-attr">  config:</span> <span class="hljs-string">"https://github.com/typesafehub/config"</span>
 }</code></pre>
-<a href="https://github.com/szeiger/ornate/blob/v0.4/doc/ornate.conf#L25-L30" class="a_sourcelink">ornate.conf</a></div></div>
+<a href="https://github.com/szeiger/ornate/blob/v0.5/doc/ornate.conf#L23-L28" class="a_sourcelink">ornate.conf</a></div></div>
 <h2 id="scaladoclinks" class="a_section" data-magellan-target="scaladoclinks"><code class="hljs">scaladocLinks</code><a class="a_hlink" href="#scaladoclinks"></a></h2>
 <p>This extension simplifies linking to scaladoc entries by adding custom URI schemes that correspond to scaladoc sets. The extension is enabled by default but no schemes are configured. This manual uses the following configuration:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
@@ -370,7 +370,7 @@ So is ‘pine.’</p>
     index = <span class="hljs-string">"unchecked:/api/index.html"</span>
   }
 }</code></pre>
-<a href="https://github.com/szeiger/ornate/blob/v0.4/doc/ornate.conf#L43-L47" class="a_sourcelink">ornate.conf</a></div></div>
+<a href="https://github.com/szeiger/ornate/blob/v0.5/doc/ornate.conf#L41-L45" class="a_sourcelink">ornate.conf</a></div></div>
 <p>Each key in the configuration (in this case only one, <code class="hljs">api</code>) adds a URI scheme. The value is a config object with an <code class="hljs">index</code> setting that defines the URI of the <code class="hljs">index.html</code> file produced by scaladoc.</p>
 <blockquote class="note">
 <p>Note the use of the <a href="uris.html#unchecked"><code class="hljs">unchecked</code> prefix</a> to suppress the errors that would otherwise be generated when building the manual without the scaladocs already in place. This is recommended for scaladoc links because the standard link checking is useless for scaladocs (use <a href="https://github.com/typesafehub/sbt-sdlc">sdlc</a> instead) and you may want to quickly build the manual without building the scaladocs first (which can be slow for large projects).</p>
@@ -400,7 +400,7 @@ So is ‘pine.’</p>
     text = <span class="hljs-string">"szeiger/ornate#[all]"</span>
   }
 }</code></pre>
-<a href="https://github.com/szeiger/ornate/blob/v0.4/doc/ornate.conf#L51-L56" class="a_sourcelink">ornate.conf</a></div></div>
+<a href="https://github.com/szeiger/ornate/blob/v0.5/doc/ornate.conf#L49-L54" class="a_sourcelink">ornate.conf</a></div></div>
 <p>Each key in the configuration adds a URI scheme. The value is a config object with a <code class="hljs">uri</code> setting that defines the pattern for the link target and an optional <code class="hljs">text</code> setting that defines a pattern for the link text. Link texts are only generated if <code class="hljs">text</code> is defined and a link does not already have a text. All occurences of <code class="hljs">[all]</code> in the patterns are replaced by the scheme-specific part of the link target.</p>
 <p>Example source:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
@@ -739,11 +739,6 @@ So is ‘pine.’</p>
         </div>
       </footer>
     </div>
-    
-      <div style="display: none">
-        <a href="../" id="_version_idx"></a>
-        <a href="./" id="_site_root"></a>
-      </div>
     
     <script src="theme/js/jquery.min.js"></script>
     <script src="theme/js/what-input.min.js"></script>

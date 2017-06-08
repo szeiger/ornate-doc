@@ -21,7 +21,7 @@
             <div class="row">
               <div class="large-12 columns a_limited top-bar">
                 <div class="top-bar-left">
-                  <p>Ornate <a class="a_vnav2" data-toggle="_id0">0.4</a><span class="dropdown-pane a_vnav2_pane" id="_id0"><span>Loading…</span></span> Manual</p>
+                  <p>Ornate 0.5 Manual</p>
 
                 </div>
                 <div class="top-bar-right align-right row">
@@ -65,7 +65,7 @@
  
                 
                 <h1 id="introduction" class="a_section" data-magellan-target="introduction">Introduction<a class="a_hlink" href="#introduction"></a></h1>
-<p><em>Ornate</em> is a tool for building multi-page HTML sites from Markdown sources. The design goals are:</p>
+<p><em>Ornate</em> is a tool for building multi-page HTML sites (like this one) from Markdown sources. The design goals are:</p>
 <ul>
 <li>Runs on the JVM; No installation required: Resolve the versioned dependencies in your build process for reproducible documentation builds with no external dependencies.</li>
 <li>Based on <a href="http://commonmark.org/">CommonMark</a>, a standardized version of <a href="http://daringfireball.net/projects/markdown/">Markdown</a>.</li>
@@ -76,6 +76,11 @@
 <li>Clean, modern <a href="default-theme.html">default theme</a> using responsive design for a good user experience on all devices from mobile phones to desktop PCs.</li>
 </ul>
 <h2 id="release-notes" class="a_section" data-magellan-target="release-notes">Release Notes<a class="a_hlink" href="#release-notes"></a></h2>
+<h3 id="v0.5" class="a_section" data-magellan-target="v0.5">v0.5<a class="a_hlink" href="#v0.5"></a></h3>
+<ul>
+<li>Fix sbt scoping (<a href="https://github.com/szeiger/ornate/issues/9">szeiger/ornate#9</a>)</li>
+<li>Avoid conflicts with <a href="https://github.com/sbt/sbt-site">sbt-site</a> (<a href="https://github.com/szeiger/ornate/issues/6">szeiger/ornate#6</a>)</li>
+</ul>
 <h3 id="v0.4" class="a_section" data-magellan-target="v0.4">v0.4<a class="a_hlink" href="#v0.4"></a></h3>
 <ul>
 <li>Math notation in fenced code blocks</li>
@@ -292,6 +297,15 @@
   
     <li>
       
+         <a href="#v0.5">v0.5</a> 
+      
+      
+    </li>
+  
+  
+  
+    <li>
+      
          <a href="#v0.4">v0.4</a> 
       
       
@@ -366,11 +380,6 @@
         </div>
       </footer>
     </div>
-    
-      <div style="display: none">
-        <a href="../" id="_version_idx"></a>
-        <a href="./" id="_site_root"></a>
-      </div>
     
     <script src="theme/js/jquery.min.js"></script>
     <script src="theme/js/what-input.min.js"></script>

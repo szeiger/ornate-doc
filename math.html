@@ -33,7 +33,7 @@
             <div class="row">
               <div class="large-12 columns a_limited top-bar">
                 <div class="top-bar-left">
-                  <p>Ornate <a class="a_vnav2" data-toggle="_id0">0.4</a><span class="dropdown-pane a_vnav2_pane" id="_id0"><span>Loading…</span></span> Manual</p>
+                  <p>Ornate 0.5 Manual</p>
 
                 </div>
                 <div class="top-bar-right align-right row">
@@ -98,7 +98,7 @@ mathJax {
 <span class="hljs-attr">    skipStartupTypeset:</span> <span class="hljs-literal">true</span>
   }
 }</code></pre>
-<a href="https://github.com/szeiger/ornate/blob/v0.4/core/src/main/resources/ornate-reference.conf#L224-L236" class="a_sourcelink">ornate-reference.conf</a></div></div>
+<a href="https://github.com/szeiger/ornate/blob/v0.5/core/src/main/resources/ornate-reference.conf#L224-L236" class="a_sourcelink">ornate-reference.conf</a></div></div>
 <p>This default configuration disables preprocessing (which is not needed if you use Ornate’s math syntax extensions) and preloads a config file with everything that is needed for rendering TeX, <a href="http://asciimath.org/">AsciiMath</a> and MathML. Since Ornate only adds MathJax to pages that actually need it, the use of a <code class="hljs">-full</code> config file is recommended. If you only need AsciiMath notation, you can use the smaller <code class="hljs">AM_CHTML-full</code> configuration.</p>
 <h2 id="fenced-code-blocks" class="a_section" data-magellan-target="fenced-code-blocks">Fenced Code Blocks<a class="a_hlink" href="#fenced-code-blocks"></a></h2>
 <p>Fenced code blocks whose info string starts with the language codes <code class="hljs">texmath</code>, <code class="hljs">asciimath</code> (or simply <code class="hljs">math</code>) and <code class="hljs">mathml</code> are
@@ -142,7 +142,7 @@ sum_(i=1)^n i^3=((n(n+1))/2)^2
   dollarInlineCode = <span class="hljs-literal">null</span> <span class="hljs-comment"># Single dollar at beginning and end of inline code</span>
   dollarFenced     = <span class="hljs-literal">null</span> <span class="hljs-comment"># Single dollar for inline math in fenced code blocks</span>
 }</code></pre>
-<a href="https://github.com/szeiger/ornate/blob/v0.4/core/src/main/resources/ornate-reference.conf#L144-L153" class="a_sourcelink">ornate-reference.conf</a></div></div>
+<a href="https://github.com/szeiger/ornate/blob/v0.5/core/src/main/resources/ornate-reference.conf#L144-L153" class="a_sourcelink">ornate-reference.conf</a></div></div>
 <blockquote class="note">
 <p>The <code class="hljs">mathSyntax</code> extension is enabled by default but all notations are disabled.</p>
 </blockquote>
@@ -390,11 +390,6 @@ def copy[$\mathit{tps}\,$]($\mathit{ps}'_1\,$)$\ldots$($\mathit{ps}'_n$): $c$[$\
         </div>
       </footer>
     </div>
-    
-      <div style="display: none">
-        <a href="../" id="_version_idx"></a>
-        <a href="./" id="_site_root"></a>
-      </div>
     
     <script src="theme/js/jquery.min.js"></script>
     <script src="theme/js/what-input.min.js"></script>

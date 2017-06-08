@@ -412,23 +412,26 @@
       </a>
     </span>
       
-    </li><li name="com.novocode.ornate.Main#runToStatus" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="runToStatus(args:Array[String]):Int"></a>
-      <a id="runToStatus(Array[String]):Int"></a>
+    </li><li name="com.novocode.ornate.Main#runToStatus" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="runToStatus(args:Array[String]):Array[AnyRef]"></a>
+      <a id="runToStatus(Array[String]):Array[AnyRef]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">runToStatus</span><span class="params">(<span name="args">args: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+        <span class="name">runToStatus</span><span class="params">(<span name="args">args: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.AnyRef">AnyRef</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#com.novocode.ornate.Main$@runToStatus(args:Array[String]):Int" title="Permalink" target="_top">
+      <a href="../../../index.html#com.novocode.ornate.Main$@runToStatus(args:Array[String]):Array[AnyRef]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Like <code>main</code> but returns the status instead of calling <code>System.exit</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Like <code>main</code> but returns the status instead of calling <code>System.exit</code>. This is used by the sbt plugin.
+The return value is an array containing the status code as a <code>java.lang.Integer</code> and the target dir
+as a <code>String</code> (can be <code>null</code> if running fails before the target dir is known).
+</p></div></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>

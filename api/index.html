@@ -1,104 +1,174 @@
 <!DOCTYPE html >
 <html>
         <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
           <title></title>
           <meta name="description" content="" />
           <meta name="keywords" content="" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
       <script type="text/javascript" src="lib/jquery.js"></script>
-      <script type="text/javascript" src="lib/jquery-ui.js"></script>
-      <script type="text/javascript" src="lib/jquery.layout.js"></script>
+      <script type="text/javascript" src="lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="lib/jquery.mousewheel.min.js"></script>
       <script type="text/javascript" src="lib/index.js"></script>
+      <script type="text/javascript" src="index.js"></script>
       <script type="text/javascript" src="lib/scheduler.js"></script>
+      <script type="text/javascript" src="lib/template.js"></script>
+      <script type="text/javascript" src="lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '';
+      </script>
     
         </head>
         <body>
-      <div id="library">
-        <img class="class icon" alt="class icon" src="lib/class.png" />
-        <img class="trait icon" alt="trait icon" src="lib/trait.png" />
-        <img class="object icon" alt="trait icon" src="lib/object.png" />
-        <img class="package icon" alt="trait icon" src="lib/package.png" />
-      </div>
-      <div id="browser" class="ui-layout-west">
-      <div class="ui-west-center">
-      <div id="filter">
-          <div id="textfilter"></div>
-          <div id="letters"><a target="template" href="index/index-_.html">#</a><a target="template" href="index/index-a.html">A</a><a target="template" href="index/index-b.html">B</a><a target="template" href="index/index-c.html">C</a><a target="template" href="index/index-d.html">D</a><a target="template" href="index/index-e.html">E</a><a target="template" href="index/index-f.html">F</a><a target="template" href="index/index-g.html">G</a><a target="template" href="index/index-h.html">H</a><a target="template" href="index/index-i.html">I</a><a target="template" href="index/index-j.html">J</a><span>K</span><a target="template" href="index/index-l.html">L</a><a target="template" href="index/index-m.html">M</a><a target="template" href="index/index-n.html">N</a><a target="template" href="index/index-o.html">O</a><a target="template" href="index/index-p.html">P</a><a target="template" href="index/index-q.html">Q</a><a target="template" href="index/index-r.html">R</a><a target="template" href="index/index-s.html">S</a><a target="template" href="index/index-t.html">T</a><a target="template" href="index/index-u.html">U</a><a target="template" href="index/index-v.html">V</a><a target="template" href="index/index-w.html">W</a><span>X</span><span>Y</span><span>Z</span> – <span>deprecated</span></div>
-      </div>
-      <div class="pack" id="tpl">
-            
-            <ol class="templates"></ol>
-            <ol class="packages"> <li class="pack" title="better">
-            <a class="tplshow" href="better/package.html" target="template">better</a>
-            <ol class="templates"></ol>
-            <ol class="packages"> <li class="pack" title="better.files">
-            <a class="tplshow" href="better/files/package.html" target="template">better.files</a>
-            <ol class="templates"></ol>
-            <ol class="packages"> </ol>
-          </li></ol>
-          </li><li class="pack" title="com">
-            <a class="tplshow" href="com/package.html" target="template">com</a>
-            <ol class="templates"></ol>
-            <ol class="packages"> <li class="pack" title="com.novocode">
-            <a class="tplshow" href="com/novocode/package.html" target="template">com.novocode</a>
-            <ol class="templates"></ol>
-            <ol class="packages"> <li class="pack" title="com.novocode.ornate">
-            <a class="tplshow" href="com/novocode/ornate/package.html" target="template">com.novocode.ornate</a>
-            <ol class="templates"><li title="com.novocode.ornate.Color"><a class="tplshow" href="com/novocode/ornate/Color$.html" target="template"><span class="object">(object)</span></a><a class="tplshow" href="com/novocode/ornate/Color.html" target="template"><span class="trait">(trait)</span><span class="tplLink">Color</span></a></li><li title="com.novocode.ornate.Emoji"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/Emoji.html" target="template"><span class="class">(class)</span><span class="tplLink">Emoji</span></a></li><li title="com.novocode.ornate.EmojiExtension"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/EmojiExtension.html" target="template"><span class="class">(class)</span><span class="tplLink">EmojiExtension</span></a></li><li title="com.novocode.ornate.EmojiParserExtension"><a class="tplshow" href="com/novocode/ornate/EmojiParserExtension$.html" target="template"><span class="object">(object)</span></a><a class="tplshow" href="com/novocode/ornate/EmojiParserExtension.html" target="template"><span class="class">(class)</span><span class="tplLink">EmojiParserExtension</span></a></li><li title="com.novocode.ornate.ErrorRecognitionAppender"><a class="tplshow" href="com/novocode/ornate/ErrorRecognitionAppender$.html" target="template"><span class="object">(object)</span></a><a class="tplshow" href="com/novocode/ornate/ErrorRecognitionAppender.html" target="template"><span class="class">(class)</span><span class="tplLink">ErrorRecognitionAppender</span></a></li><li title="com.novocode.ornate.ExpandTocProcessor"><a class="tplshow" href="com/novocode/ornate/ExpandTocProcessor$.html" target="template"><span class="object">(object)</span></a><a class="tplshow" href="com/novocode/ornate/ExpandTocProcessor.html" target="template"><span class="class">(class)</span><span class="tplLink">ExpandTocProcessor</span></a></li><li title="com.novocode.ornate.ExpandVarsExtension"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/ExpandVarsExtension.html" target="template"><span class="class">(class)</span><span class="tplLink">ExpandVarsExtension</span></a></li><li title="com.novocode.ornate.ExpandVarsProcessor"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/ExpandVarsProcessor.html" target="template"><span class="class">(class)</span><span class="tplLink">ExpandVarsProcessor</span></a></li><li title="com.novocode.ornate.Extension"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/Extension.html" target="template"><span class="trait">(trait)</span><span class="tplLink">Extension</span></a></li><li title="com.novocode.ornate.Extensions"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/Extensions.html" target="template"><span class="class">(class)</span><span class="tplLink">Extensions</span></a></li><li title="com.novocode.ornate.ExternalLinksExtension"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/ExternalLinksExtension.html" target="template"><span class="class">(class)</span><span class="tplLink">ExternalLinksExtension</span></a></li><li title="com.novocode.ornate.FileMatcher"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/FileMatcher.html" target="template"><span class="class">(class)</span><span class="tplLink">FileMatcher</span></a></li><li title="com.novocode.ornate.GlobalRefsExtension"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/GlobalRefsExtension.html" target="template"><span class="class">(class)</span><span class="tplLink">GlobalRefsExtension</span></a></li><li title="com.novocode.ornate.HeadingSection"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/HeadingSection.html" target="template"><span class="case class">(case class)</span><span class="tplLink">HeadingSection</span></a></li><li title="com.novocode.ornate.HSLColor"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/HSLColor.html" target="template"><span class="case class">(case class)</span><span class="tplLink">HSLColor</span></a></li><li title="com.novocode.ornate.IncludeCodeExtension"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/IncludeCodeExtension.html" target="template"><span class="class">(class)</span><span class="tplLink">IncludeCodeExtension</span></a></li><li title="com.novocode.ornate.Logging"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/Logging.html" target="template"><span class="trait">(trait)</span><span class="tplLink">Logging</span></a></li><li title="com.novocode.ornate.Main"><a class="tplshow" href="com/novocode/ornate/Main$.html" target="template"><span class="object">(object)</span><div class="placeholder"></div><span class="tplLink">Main</span></a></li><li title="com.novocode.ornate.NoHighlightProcessor"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/NoHighlightProcessor.html" target="template"><span class="class">(class)</span><span class="tplLink">NoHighlightProcessor</span></a></li><li title="com.novocode.ornate.Page"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/Page.html" target="template"><span class="class">(class)</span><span class="tplLink">Page</span></a></li><li title="com.novocode.ornate.PageParser"><a class="tplshow" href="com/novocode/ornate/PageParser$.html" target="template"><span class="object">(object)</span><div class="placeholder"></div><span class="tplLink">PageParser</span></a></li><li title="com.novocode.ornate.PageProcessor"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/PageProcessor.html" target="template"><span class="class">(class)</span><span class="tplLink">PageProcessor</span></a></li><li title="com.novocode.ornate.PageSection"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/PageSection.html" target="template"><span class="case class">(case class)</span><span class="tplLink">PageSection</span></a></li><li title="com.novocode.ornate.Phase"><a class="tplshow" href="com/novocode/ornate/Phase$.html" target="template"><span class="object">(object)</span></a><a class="tplshow" href="com/novocode/ornate/Phase.html" target="template"><span class="class">(class)</span><span class="tplLink">Phase</span></a></li><li title="com.novocode.ornate.PreProcessor"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/PreProcessor.html" target="template"><span class="class">(class)</span><span class="tplLink">PreProcessor</span></a></li><li title="com.novocode.ornate.RenderMarkdownExtension"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/RenderMarkdownExtension.html" target="template"><span class="class">(class)</span><span class="tplLink">RenderMarkdownExtension</span></a></li><li title="com.novocode.ornate.RGBColor"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/RGBColor.html" target="template"><span class="case class">(case class)</span><span class="tplLink">RGBColor</span></a></li><li title="com.novocode.ornate.ScaladocLinksExtension"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/ScaladocLinksExtension.html" target="template"><span class="class">(class)</span><span class="tplLink">ScaladocLinksExtension</span></a></li><li title="com.novocode.ornate.Section"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/Section.html" target="template"><span class="class">(class)</span><span class="tplLink">Section</span></a></li><li title="com.novocode.ornate.Site"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/Site.html" target="template"><span class="class">(class)</span><span class="tplLink">Site</span></a></li><li title="com.novocode.ornate.TocEntry"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/TocEntry.html" target="template"><span class="case class">(case class)</span><span class="tplLink">TocEntry</span></a></li><li title="com.novocode.ornate.TocLocation"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/TocLocation.html" target="template"><span class="case class">(case class)</span><span class="tplLink">TocLocation</span></a></li><li title="com.novocode.ornate.TocParser"><a class="tplshow" href="com/novocode/ornate/TocParser$.html" target="template"><span class="object">(object)</span><div class="placeholder"></div><span class="tplLink">TocParser</span></a></li><li title="com.novocode.ornate.UntitledSection"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/UntitledSection.html" target="template"><span class="case class">(case class)</span><span class="tplLink">UntitledSection</span></a></li><li title="com.novocode.ornate.URIExtensionMethods"><a class="tplshow" href="com/novocode/ornate/URIExtensionMethods$.html" target="template"><span class="object">(object)</span></a><a class="tplshow" href="com/novocode/ornate/URIExtensionMethods.html" target="template"><span class="class">(class)</span><span class="tplLink">URIExtensionMethods</span></a></li><li title="com.novocode.ornate.Util"><a class="tplshow" href="com/novocode/ornate/Util$.html" target="template"><span class="object">(object)</span><div class="placeholder"></div><span class="tplLink">Util</span></a></li></ol>
-            <ol class="packages"> <li class="pack" title="com.novocode.ornate.commonmark">
-            <a class="tplshow" href="com/novocode/ornate/commonmark/package.html" target="template">com.novocode.ornate.commonmark</a>
-            <ol class="templates"><li title="com.novocode.ornate.commonmark.Attributed"><a class="tplshow" href="com/novocode/ornate/commonmark/Attributed$.html" target="template"><span class="object">(object)</span></a><a class="tplshow" href="com/novocode/ornate/commonmark/Attributed.html" target="template"><span class="trait">(trait)</span><span class="tplLink">Attributed</span></a></li><li title="com.novocode.ornate.commonmark.AttributedBlockQuote"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/commonmark/AttributedBlockQuote.html" target="template"><span class="class">(class)</span><span class="tplLink">AttributedBlockQuote</span></a></li><li title="com.novocode.ornate.commonmark.AttributedFencedCodeBlock"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/commonmark/AttributedFencedCodeBlock.html" target="template"><span class="class">(class)</span><span class="tplLink">AttributedFencedCodeBlock</span></a></li><li title="com.novocode.ornate.commonmark.AttributedHeading"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/commonmark/AttributedHeading.html" target="template"><span class="class">(class)</span><span class="tplLink">AttributedHeading</span></a></li><li title="com.novocode.ornate.commonmark.AttributeFencedCodeBlocksProcessor"><a class="tplshow" href="com/novocode/ornate/commonmark/AttributeFencedCodeBlocksProcessor$.html" target="template"><span class="object">(object)</span><div class="placeholder"></div><span class="tplLink">AttributeFencedCodeBlocksProcessor</span></a></li><li title="com.novocode.ornate.commonmark.AutoIdentifiersExtension"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/commonmark/AutoIdentifiersExtension.html" target="template"><span class="class">(class)</span><span class="tplLink">AutoIdentifiersExtension</span></a></li><li title="com.novocode.ornate.commonmark.AutoIdentifiersProcessor"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/commonmark/AutoIdentifiersProcessor.html" target="template"><span class="class">(class)</span><span class="tplLink">AutoIdentifiersProcessor</span></a></li><li title="com.novocode.ornate.commonmark.BlockQuoteAttributesExtension"><a class="tplshow" href="com/novocode/ornate/commonmark/BlockQuoteAttributesExtension$.html" target="template"><span class="object">(object)</span></a><a class="tplshow" href="com/novocode/ornate/commonmark/BlockQuoteAttributesExtension.html" target="template"><span class="class">(class)</span><span class="tplLink">BlockQuoteAttributesExtension</span></a></li><li title="com.novocode.ornate.commonmark.CustomParser"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/commonmark/CustomParser.html" target="template"><span class="class">(class)</span><span class="tplLink">CustomParser</span></a></li><li title="com.novocode.ornate.commonmark.CustomParserBuilder"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/commonmark/CustomParserBuilder.html" target="template"><span class="class">(class)</span><span class="tplLink">CustomParserBuilder</span></a></li><li title="com.novocode.ornate.commonmark.HeaderAttributesExtension"><a class="tplshow" href="com/novocode/ornate/commonmark/HeaderAttributesExtension$.html" target="template"><span class="object">(object)</span></a><a class="tplshow" href="com/novocode/ornate/commonmark/HeaderAttributesExtension.html" target="template"><span class="class">(class)</span><span class="tplLink">HeaderAttributesExtension</span></a></li><li title="com.novocode.ornate.commonmark.HtmlBlockMatcher"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/commonmark/HtmlBlockMatcher.html" target="template"><span class="class">(class)</span><span class="tplLink">HtmlBlockMatcher</span></a></li><li title="com.novocode.ornate.commonmark.HtmlNodeRendererContextExtensionMethods"><a class="tplshow" href="com/novocode/ornate/commonmark/HtmlNodeRendererContextExtensionMethods$.html" target="template"><span class="object">(object)</span></a><a class="tplshow" href="com/novocode/ornate/commonmark/HtmlNodeRendererContextExtensionMethods.html" target="template"><span class="class">(class)</span><span class="tplLink">HtmlNodeRendererContextExtensionMethods</span></a></li><li title="com.novocode.ornate.commonmark.IndexBlock"><a class="tplshow" href="com/novocode/ornate/commonmark/IndexBlock$.html" target="template"><span class="object">(object)</span></a><a class="tplshow" href="com/novocode/ornate/commonmark/IndexBlock.html" target="template"><span class="class">(class)</span><span class="tplLink">IndexBlock</span></a></li><li title="com.novocode.ornate.commonmark.InlineMath"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/commonmark/InlineMath.html" target="template"><span class="class">(class)</span><span class="tplLink">InlineMath</span></a></li><li title="com.novocode.ornate.commonmark.MathBlock"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/commonmark/MathBlock.html" target="template"><span class="class">(class)</span><span class="tplLink">MathBlock</span></a></li><li title="com.novocode.ornate.commonmark.MathNode"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/commonmark/MathNode.html" target="template"><span class="trait">(trait)</span><span class="tplLink">MathNode</span></a></li><li title="com.novocode.ornate.commonmark.MathSyntaxExtension"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/commonmark/MathSyntaxExtension.html" target="template"><span class="class">(class)</span><span class="tplLink">MathSyntaxExtension</span></a></li><li title="com.novocode.ornate.commonmark.MathSyntaxParserExtension"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/commonmark/MathSyntaxParserExtension.html" target="template"><span class="class">(class)</span><span class="tplLink">MathSyntaxParserExtension</span></a></li><li title="com.novocode.ornate.commonmark.MergeTabsExtension"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/commonmark/MergeTabsExtension.html" target="template"><span class="class">(class)</span><span class="tplLink">MergeTabsExtension</span></a></li><li title="com.novocode.ornate.commonmark.MergeTabsProcessor"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/commonmark/MergeTabsProcessor.html" target="template"><span class="class">(class)</span><span class="tplLink">MergeTabsProcessor</span></a></li><li title="com.novocode.ornate.commonmark.NodeExtensionMethods"><a class="tplshow" href="com/novocode/ornate/commonmark/NodeExtensionMethods$.html" target="template"><span class="object">(object)</span></a><a class="tplshow" href="com/novocode/ornate/commonmark/NodeExtensionMethods.html" target="template"><span class="class">(class)</span><span class="tplLink">NodeExtensionMethods</span></a></li><li title="com.novocode.ornate.commonmark.NodeUtil"><a class="tplshow" href="com/novocode/ornate/commonmark/NodeUtil$.html" target="template"><span class="object">(object)</span><div class="placeholder"></div><span class="tplLink">NodeUtil</span></a></li><li title="com.novocode.ornate.commonmark.SimpleHtmlNodeRenderer"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/commonmark/SimpleHtmlNodeRenderer.html" target="template"><span class="case class">(case class)</span><span class="tplLink">SimpleHtmlNodeRenderer</span></a></li><li title="com.novocode.ornate.commonmark.SmartPunctuationExtension"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/commonmark/SmartPunctuationExtension.html" target="template"><span class="class">(class)</span><span class="tplLink">SmartPunctuationExtension</span></a></li><li title="com.novocode.ornate.commonmark.SmartPunctuationProcessor"><a class="tplshow" href="com/novocode/ornate/commonmark/SmartPunctuationProcessor$.html" target="template"><span class="object">(object)</span><div class="placeholder"></div><span class="tplLink">SmartPunctuationProcessor</span></a></li><li title="com.novocode.ornate.commonmark.SmartQuotesExtension"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/commonmark/SmartQuotesExtension.html" target="template"><span class="class">(class)</span><span class="tplLink">SmartQuotesExtension</span></a></li><li title="com.novocode.ornate.commonmark.SmartQuotesProcessor"><a class="tplshow" href="com/novocode/ornate/commonmark/SmartQuotesProcessor$.html" target="template"><span class="object">(object)</span><div class="placeholder"></div><span class="tplLink">SmartQuotesProcessor</span></a></li><li title="com.novocode.ornate.commonmark.SpecialImage"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/commonmark/SpecialImage.html" target="template"><span class="trait">(trait)</span><span class="tplLink">SpecialImage</span></a></li><li title="com.novocode.ornate.commonmark.SpecialImageBlock"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/commonmark/SpecialImageBlock.html" target="template"><span class="class">(class)</span><span class="tplLink">SpecialImageBlock</span></a></li><li title="com.novocode.ornate.commonmark.SpecialImageInline"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/commonmark/SpecialImageInline.html" target="template"><span class="class">(class)</span><span class="tplLink">SpecialImageInline</span></a></li><li title="com.novocode.ornate.commonmark.SpecialImageMatcher"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/commonmark/SpecialImageMatcher.html" target="template"><span class="class">(class)</span><span class="tplLink">SpecialImageMatcher</span></a></li><li title="com.novocode.ornate.commonmark.SpecialImageParagraphMatcher"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/commonmark/SpecialImageParagraphMatcher.html" target="template"><span class="class">(class)</span><span class="tplLink">SpecialImageParagraphMatcher</span></a></li><li title="com.novocode.ornate.commonmark.SpecialImageProcessor"><a class="tplshow" href="com/novocode/ornate/commonmark/SpecialImageProcessor$.html" target="template"><span class="object">(object)</span></a><a class="tplshow" href="com/novocode/ornate/commonmark/SpecialImageProcessor.html" target="template"><span class="class">(class)</span><span class="tplLink">SpecialImageProcessor</span></a></li><li title="com.novocode.ornate.commonmark.StaggeredDelimiterProcessor"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/commonmark/StaggeredDelimiterProcessor.html" target="template"><span class="class">(class)</span><span class="tplLink">StaggeredDelimiterProcessor</span></a></li><li title="com.novocode.ornate.commonmark.Subscript"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/commonmark/Subscript.html" target="template"><span class="class">(class)</span><span class="tplLink">Subscript</span></a></li><li title="com.novocode.ornate.commonmark.SubscriptExtension"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/commonmark/SubscriptExtension.html" target="template"><span class="class">(class)</span><span class="tplLink">SubscriptExtension</span></a></li><li title="com.novocode.ornate.commonmark.Superscript"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/commonmark/Superscript.html" target="template"><span class="class">(class)</span><span class="tplLink">Superscript</span></a></li><li title="com.novocode.ornate.commonmark.SuperscriptExtension"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/commonmark/SuperscriptExtension.html" target="template"><span class="class">(class)</span><span class="tplLink">SuperscriptExtension</span></a></li><li title="com.novocode.ornate.commonmark.SuperscriptSubscriptDelimiterProcessor"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/commonmark/SuperscriptSubscriptDelimiterProcessor.html" target="template"><span class="class">(class)</span><span class="tplLink">SuperscriptSubscriptDelimiterProcessor</span></a></li><li title="com.novocode.ornate.commonmark.SuperscriptSubscriptExtension"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/commonmark/SuperscriptSubscriptExtension.html" target="template"><span class="class">(class)</span><span class="tplLink">SuperscriptSubscriptExtension</span></a></li><li title="com.novocode.ornate.commonmark.TabItem"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/commonmark/TabItem.html" target="template"><span class="class">(class)</span><span class="tplLink">TabItem</span></a></li><li title="com.novocode.ornate.commonmark.TabView"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/commonmark/TabView.html" target="template"><span class="class">(class)</span><span class="tplLink">TabView</span></a></li><li title="com.novocode.ornate.commonmark.TextProcessor"><a class="tplshow" href="com/novocode/ornate/commonmark/TextProcessor$.html" target="template"><span class="object">(object)</span></a><a class="tplshow" href="com/novocode/ornate/commonmark/TextProcessor.html" target="template"><span class="class">(class)</span><span class="tplLink">TextProcessor</span></a></li><li title="com.novocode.ornate.commonmark.TocBlock"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/commonmark/TocBlock.html" target="template"><span class="class">(class)</span><span class="tplLink">TocBlock</span></a></li></ol>
-            <ol class="packages"> </ol>
-          </li><li class="pack" title="com.novocode.ornate.config">
-            <a class="tplshow" href="com/novocode/ornate/config/package.html" target="template">com.novocode.ornate.config</a>
-            <ol class="templates"><li title="com.novocode.ornate.config.ConfigExtensionMethods"><a class="tplshow" href="com/novocode/ornate/config/ConfigExtensionMethods$.html" target="template"><span class="object">(object)</span></a><a class="tplshow" href="com/novocode/ornate/config/ConfigExtensionMethods.html" target="template"><span class="class">(class)</span><span class="tplLink">ConfigExtensionMethods</span></a></li><li title="com.novocode.ornate.config.ConfiguredObject"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/config/ConfiguredObject.html" target="template"><span class="class">(class)</span><span class="tplLink">ConfiguredObject</span></a></li><li title="com.novocode.ornate.config.ConfiguredObjectKind"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/config/ConfiguredObjectKind.html" target="template"><span class="class">(class)</span><span class="tplLink">ConfiguredObjectKind</span></a></li><li title="com.novocode.ornate.config.Global"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/config/Global.html" target="template"><span class="class">(class)</span><span class="tplLink">Global</span></a></li><li title="com.novocode.ornate.config.ReferenceConfig"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/config/ReferenceConfig.html" target="template"><span class="class">(class)</span><span class="tplLink">ReferenceConfig</span></a></li><li title="com.novocode.ornate.config.UserConfig"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/config/UserConfig.html" target="template"><span class="class">(class)</span><span class="tplLink">UserConfig</span></a></li></ol>
-            <ol class="packages"> </ol>
-          </li><li class="pack" title="com.novocode.ornate.highlight">
-            <a class="tplshow" href="com/novocode/ornate/highlight/package.html" target="template">com.novocode.ornate.highlight</a>
-            <ol class="templates"><li title="com.novocode.ornate.highlight.Highlighter"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/highlight/Highlighter.html" target="template"><span class="class">(class)</span><span class="tplLink">Highlighter</span></a></li><li title="com.novocode.ornate.highlight.HighlightJSExtension"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/highlight/HighlightJSExtension.html" target="template"><span class="class">(class)</span><span class="tplLink">HighlightJSExtension</span></a></li><li title="com.novocode.ornate.highlight.HighlightJSHighlighter"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/highlight/HighlightJSHighlighter.html" target="template"><span class="class">(class)</span><span class="tplLink">HighlightJSHighlighter</span></a></li><li title="com.novocode.ornate.highlight.HighlightResult"><a class="tplshow" href="com/novocode/ornate/highlight/HighlightResult$.html" target="template"><span class="object">(object)</span></a><a class="tplshow" href="com/novocode/ornate/highlight/HighlightResult.html" target="template"><span class="case class">(case class)</span><span class="tplLink">HighlightResult</span></a></li><li title="com.novocode.ornate.highlight.Highlit"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/highlight/Highlit.html" target="template"><span class="trait">(trait)</span><span class="tplLink">Highlit</span></a></li><li title="com.novocode.ornate.highlight.HighlitBlock"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/highlight/HighlitBlock.html" target="template"><span class="class">(class)</span><span class="tplLink">HighlitBlock</span></a></li><li title="com.novocode.ornate.highlight.HighlitInline"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/highlight/HighlitInline.html" target="template"><span class="class">(class)</span><span class="tplLink">HighlitInline</span></a></li></ol>
-            <ol class="packages"> </ol>
-          </li><li class="pack" title="com.novocode.ornate.js">
-            <a class="tplshow" href="com/novocode/ornate/js/package.html" target="template">com.novocode.ornate.js</a>
-            <ol class="templates"><li title="com.novocode.ornate.js.CSSO"><a class="tplshow" href="com/novocode/ornate/js/CSSO$.html" target="template"><span class="object">(object)</span><div class="placeholder"></div><span class="tplLink">CSSO</span></a></li><li title="com.novocode.ornate.js.ElasticlunrSearch"><a class="tplshow" href="com/novocode/ornate/js/ElasticlunrSearch$.html" target="template"><span class="object">(object)</span><div class="placeholder"></div><span class="tplLink">ElasticlunrSearch</span></a></li><li title="com.novocode.ornate.js.JSMap"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/js/JSMap.html" target="template"><span class="trait">(trait)</span><span class="tplLink">JSMap</span></a></li><li title="com.novocode.ornate.js.JSResultConverter"><a class="tplshow" href="com/novocode/ornate/js/JSResultConverter$.html" target="template"><span class="object">(object)</span></a><a class="tplshow" href="com/novocode/ornate/js/JSResultConverter.html" target="template"><span class="trait">(trait)</span><span class="tplLink">JSResultConverter</span></a></li><li title="com.novocode.ornate.js.Modules"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/js/Modules.html" target="template"><span class="class">(class)</span><span class="tplLink">Modules</span></a></li><li title="com.novocode.ornate.js.NashornSupport"><a class="tplshow" href="com/novocode/ornate/js/NashornSupport$.html" target="template"><span class="object">(object)</span></a><a class="tplshow" href="com/novocode/ornate/js/NashornSupport.html" target="template"><span class="trait">(trait)</span><span class="tplLink">NashornSupport</span></a></li><li title="com.novocode.ornate.js.RequireFunction"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/js/RequireFunction.html" target="template"><span class="trait">(trait)</span><span class="tplLink">RequireFunction</span></a></li><li title="com.novocode.ornate.js.WebJarSupport"><a class="tplshow" href="com/novocode/ornate/js/WebJarSupport$.html" target="template"><span class="object">(object)</span></a><a class="tplshow" href="com/novocode/ornate/js/WebJarSupport.html" target="template"><span class="trait">(trait)</span><span class="tplLink">WebJarSupport</span></a></li></ol>
-            <ol class="packages"> </ol>
-          </li><li class="pack" title="com.novocode.ornate.theme">
-            <a class="tplshow" href="com/novocode/ornate/theme/package.html" target="template">com.novocode.ornate.theme</a>
-            <ol class="templates"><li title="com.novocode.ornate.theme.Clean"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/theme/Clean.html" target="template"><span class="class">(class)</span><span class="tplLink">Clean</span></a></li><li title="com.novocode.ornate.theme.Dump"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/theme/Dump.html" target="template"><span class="class">(class)</span><span class="tplLink">Dump</span></a></li><li title="com.novocode.ornate.theme.HtmlFeatures"><a class="tplshow" href="com/novocode/ornate/theme/HtmlFeatures$.html" target="template"><span class="object">(object)</span></a><a class="tplshow" href="com/novocode/ornate/theme/HtmlFeatures.html" target="template"><span class="class">(class)</span><span class="tplLink">HtmlFeatures</span></a></li><li title="com.novocode.ornate.theme.HtmlPageContext"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/theme/HtmlPageContext.html" target="template"><span class="class">(class)</span><span class="tplLink">HtmlPageContext</span></a></li><li title="com.novocode.ornate.theme.HtmlPageModel"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/theme/HtmlPageModel.html" target="template"><span class="class">(class)</span><span class="tplLink">HtmlPageModel</span></a></li><li title="com.novocode.ornate.theme.HtmlSiteContext"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/theme/HtmlSiteContext.html" target="template"><span class="class">(class)</span><span class="tplLink">HtmlSiteContext</span></a></li><li title="com.novocode.ornate.theme.HtmlSiteModel"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/theme/HtmlSiteModel.html" target="template"><span class="class">(class)</span><span class="tplLink">HtmlSiteModel</span></a></li><li title="com.novocode.ornate.theme.HtmlTheme"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/theme/HtmlTheme.html" target="template"><span class="class">(class)</span><span class="tplLink">HtmlTheme</span></a></li><li title="com.novocode.ornate.theme.PageResources"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/theme/PageResources.html" target="template"><span class="class">(class)</span><span class="tplLink">PageResources</span></a></li><li title="com.novocode.ornate.theme.ResourceSpec"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/theme/ResourceSpec.html" target="template"><span class="case class">(case class)</span><span class="tplLink">ResourceSpec</span></a></li><li title="com.novocode.ornate.theme.SpecialLinkProcessor"><a class="tplshow" href="com/novocode/ornate/theme/SpecialLinkProcessor$.html" target="template"><span class="object">(object)</span></a><a class="tplshow" href="com/novocode/ornate/theme/SpecialLinkProcessor.html" target="template"><span class="class">(class)</span><span class="tplLink">SpecialLinkProcessor</span></a></li><li title="com.novocode.ornate.theme.Theme"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/theme/Theme.html" target="template"><span class="class">(class)</span><span class="tplLink">Theme</span></a></li></ol>
-            <ol class="packages"> <li class="pack" title="com.novocode.ornate.theme.default">
-            <a class="tplshow" href="com/novocode/ornate/theme/default/package.html" target="template">com.novocode.ornate.theme.default</a>
-            <ol class="templates"><li title="com.novocode.ornate.theme.default.DefaultPageContext"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/theme/default/DefaultPageContext.html" target="template"><span class="class">(class)</span><span class="tplLink">DefaultPageContext</span></a></li><li title="com.novocode.ornate.theme.default.DefaultPageModel"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/theme/default/DefaultPageModel.html" target="template"><span class="class">(class)</span><span class="tplLink">DefaultPageModel</span></a></li><li title="com.novocode.ornate.theme.default.DefaultSiteModel"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/theme/default/DefaultSiteModel.html" target="template"><span class="class">(class)</span><span class="tplLink">DefaultSiteModel</span></a></li><li title="com.novocode.ornate.theme.default.DefaultTheme"><a class="tplshow" href="com/novocode/ornate/theme/default/DefaultTheme$.html" target="template"><span class="object">(object)</span></a><a class="tplshow" href="com/novocode/ornate/theme/default/DefaultTheme.html" target="template"><span class="class">(class)</span><span class="tplLink">DefaultTheme</span></a></li><li title="com.novocode.ornate.theme.default.FoundationIcons"><a class="tplshow" href="com/novocode/ornate/theme/default/FoundationIcons$.html" target="template"><span class="object">(object)</span><div class="placeholder"></div><span class="tplLink">FoundationIcons</span></a></li></ol>
-            <ol class="packages"> <li class="pack" title="com.novocode.ornate.theme.default.html">
-            <a class="tplshow" href="com/novocode/ornate/theme/default/html/package.html" target="template">com.novocode.ornate.theme.default.html</a>
-            <ol class="templates"><li title="com.novocode.ornate.theme.default.html.default"><a class="tplshow" href="com/novocode/ornate/theme/default/html/default$.html" target="template"><span class="object">(object)</span></a><a class="tplshow" href="com/novocode/ornate/theme/default/html/default.html" target="template"><span class="class">(class)</span><span class="tplLink">default</span></a></li><li title="com.novocode.ornate.theme.default.html.main"><a class="tplshow" href="com/novocode/ornate/theme/default/html/main$.html" target="template"><span class="object">(object)</span></a><a class="tplshow" href="com/novocode/ornate/theme/default/html/main.html" target="template"><span class="class">(class)</span><span class="tplLink">main</span></a></li><li title="com.novocode.ornate.theme.default.html.search"><a class="tplshow" href="com/novocode/ornate/theme/default/html/search$.html" target="template"><span class="object">(object)</span></a><a class="tplshow" href="com/novocode/ornate/theme/default/html/search.html" target="template"><span class="class">(class)</span><span class="tplLink">search</span></a></li></ol>
-            <ol class="packages"> </ol>
-          </li><li class="pack" title="com.novocode.ornate.theme.default.txt">
-            <a class="tplshow" href="com/novocode/ornate/theme/default/txt/package.html" target="template">com.novocode.ornate.theme.default.txt</a>
-            <ol class="templates"><li title="com.novocode.ornate.theme.default.txt.app_css"><a class="tplshow" href="com/novocode/ornate/theme/default/txt/app_css$.html" target="template"><span class="object">(object)</span></a><a class="tplshow" href="com/novocode/ornate/theme/default/txt/app_css.html" target="template"><span class="class">(class)</span><span class="tplLink">app_css</span></a></li></ol>
-            <ol class="packages"> </ol>
-          </li></ol>
-          </li><li class="pack" title="com.novocode.ornate.theme.pdf">
-            <a class="tplshow" href="com/novocode/ornate/theme/pdf/package.html" target="template">com.novocode.ornate.theme.pdf</a>
-            <ol class="templates"><li title="com.novocode.ornate.theme.pdf.PdfPageModel"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/theme/pdf/PdfPageModel.html" target="template"><span class="class">(class)</span><span class="tplLink">PdfPageModel</span></a></li><li title="com.novocode.ornate.theme.pdf.PdfTheme"><div class="placeholder"></div><a class="tplshow" href="com/novocode/ornate/theme/pdf/PdfTheme.html" target="template"><span class="class">(class)</span><span class="tplLink">PdfTheme</span></a></li></ol>
-            <ol class="packages"> <li class="pack" title="com.novocode.ornate.theme.pdf.html">
-            <a class="tplshow" href="com/novocode/ornate/theme/pdf/html/package.html" target="template">com.novocode.ornate.theme.pdf.html</a>
-            <ol class="templates"><li title="com.novocode.ornate.theme.pdf.html.default"><a class="tplshow" href="com/novocode/ornate/theme/pdf/html/default$.html" target="template"><span class="object">(object)</span></a><a class="tplshow" href="com/novocode/ornate/theme/pdf/html/default.html" target="template"><span class="class">(class)</span><span class="tplLink">default</span></a></li></ol>
-            <ol class="packages"> </ol>
-          </li><li class="pack" title="com.novocode.ornate.theme.pdf.txt">
-            <a class="tplshow" href="com/novocode/ornate/theme/pdf/txt/package.html" target="template">com.novocode.ornate.theme.pdf.txt</a>
-            <ol class="templates"><li title="com.novocode.ornate.theme.pdf.txt.app_css"><a class="tplshow" href="com/novocode/ornate/theme/pdf/txt/app_css$.html" target="template"><span class="object">(object)</span></a><a class="tplshow" href="com/novocode/ornate/theme/pdf/txt/app_css.html" target="template"><span class="class">(class)</span><span class="tplLink">app_css</span></a></li></ol>
-            <ol class="packages"> </ol>
-          </li></ol>
-          </li></ol>
-          </li></ol>
-          </li></ol>
-          </li></ol>
-          </li></ol>
-          </div></div><script src="index.js"></script>
+      <div id="search">
+        <span id="doc-title"><span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
     </div>
-      <div id="content" class="ui-layout-center">
-        <iframe id="template" name="template" src="package.html"></iframe>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 current" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="index.html#_root_" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">root</span>
+      </span>
+      
+      
+    </li><li name="_root_.better" visbl="pub" class="indented1 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="better"></a><a id="better:better"></a>
+      <span class="permalink">
+      <a href="index.html#better" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="better/index.html"><span class="name">better</span></a>
+      </span>
+      
+      
+    </li><li name="_root_.com" visbl="pub" class="indented1 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="com"></a><a id="com:com"></a>
+      <span class="permalink">
+      <a href="index.html#com" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="com/index.html"><span class="name">com</span></a>
+      </span>
+      
+      
+    </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="package value">
+      <div id="definition">
+        <div class="big-circle package">p</div>
+        
+        <h1>root package<span class="permalink">
+      <a href="index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">root</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
       </div>
     </body>
       </html>

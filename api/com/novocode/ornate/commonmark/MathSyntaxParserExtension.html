@@ -1,42 +1,333 @@
 <!DOCTYPE html >
 <html>
         <head>
-          <title>MathSyntaxParserExtension - com.novocode.ornate.commonmark.MathSyntaxParserExtension</title>
-          <meta name="description" content="MathSyntaxParserExtension - com.novocode.ornate.commonmark.MathSyntaxParserExtension" />
-          <meta name="keywords" content="MathSyntaxParserExtension com.novocode.ornate.commonmark.MathSyntaxParserExtension" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title></title>
+          <meta name="description" content="" />
+          <meta name="keywords" content="" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
+      <link href="../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../../../lib/jquery.js" id="jquery-js"></script>
-      <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../lib/scheduler.js"></script>
       <script type="text/javascript" src="../../../../lib/template.js"></script>
       <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
       
       <script type="text/javascript">
-         if(top === self) {
-            var url = '../../../../index.html';
-            var hash = 'com.novocode.ornate.commonmark.MathSyntaxParserExtension';
-            var anchor = window.location.hash;
-            var anchor_opt = '';
-            if (anchor.length >= 1)
-              anchor_opt = '@' + anchor.substring(1);
-            window.location.href = url + '#' + hash + anchor_opt;
-         }
-   	  </script>
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../';
+      </script>
     
         </head>
-        <body class="type">
-      <div id="definition">
-        <img alt="Class" src="../../../../lib/class_big.png" />
-        <p id="owner"><a href="../../../package.html" class="extype" name="com">com</a>.<a href="../../package.html" class="extype" name="com.novocode">novocode</a>.<a href="../package.html" class="extype" name="com.novocode.ornate">ornate</a>.<a href="package.html" class="extype" name="com.novocode.ornate.commonmark">commonmark</a></p>
-        <h1>MathSyntaxParserExtension</h1><h3><span class="morelinks"><div>Related Doc:
-            <a href="package.html" class="extype" name="com.novocode.ornate.commonmark">package commonmark</a>
-          </div></span></h3><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.commonmark.MathSyntaxParserExtension" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
+        <body>
+      <div id="search">
+        <span id="doc-title"><span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="index.html#_root_" title="Permalink">
+        <i class="material-icons"></i>
       </a>
     </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.com" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="com"></a><a id="com:com"></a>
+      <span class="permalink">
+      <a href="index.html#com" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">com</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="com.novocode" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="novocode"></a><a id="novocode:novocode"></a>
+      <span class="permalink">
+      <a href="../com/index.html#novocode" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">novocode</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="com">com</a></dd></dl></div>
+    </li><li name="com.novocode.ornate" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ornate"></a><a id="ornate:ornate"></a>
+      <span class="permalink">
+      <a href="../../com/novocode/index.html#ornate" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">ornate</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="com.novocode">novocode</a></dd></dl></div>
+    </li><li name="com.novocode.ornate.commonmark" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="commonmark"></a><a id="commonmark:commonmark"></a>
+      <span class="permalink">
+      <a href="../../../com/novocode/ornate/index.html#commonmark" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="index.html"><span class="name">commonmark</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="com.novocode.ornate">ornate</a></dd></dl></div>
+    </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="object" href="AttributeFencedCodeBlocksProcessor$.html" title="Replace FencedCodeBlocks with AttributedFencedCodeBlocks"></a>
+                        <a href="AttributeFencedCodeBlocksProcessor$.html" title="Replace FencedCodeBlocks with AttributedFencedCodeBlocks">AttributeFencedCodeBlocksProcessor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Attributed$.html" title=""></a>
+                        <a class="trait" href="Attributed.html" title=""></a>
+                        <a href="Attributed.html" title="">Attributed</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="AttributedBlockQuote.html" title=""></a>
+                        <a href="AttributedBlockQuote.html" title="">AttributedBlockQuote</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="AttributedFencedCodeBlock.html" title=""></a>
+                        <a href="AttributedFencedCodeBlock.html" title="">AttributedFencedCodeBlock</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="AttributedHeading.html" title=""></a>
+                        <a href="AttributedHeading.html" title="">AttributedHeading</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="AutoIdentifiersExtension.html" title="Give all headings an ID so they can be linked to from the TOC and other places."></a>
+                        <a href="AutoIdentifiersExtension.html" title="Give all headings an ID so they can be linked to from the TOC and other places.">AutoIdentifiersExtension</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="AutoIdentifiersProcessor.html" title=""></a>
+                        <a href="AutoIdentifiersProcessor.html" title="">AutoIdentifiersProcessor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="BlockQuoteAttributesExtension$.html" title=""></a>
+                        <a class="class" href="BlockQuoteAttributesExtension.html" title=""></a>
+                        <a href="BlockQuoteAttributesExtension.html" title="">BlockQuoteAttributesExtension</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="CustomParser.html" title=""></a>
+                        <a href="CustomParser.html" title="">CustomParser</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="CustomParserBuilder.html" title="Allow customization of inline parsing by hooking into the parser internals."></a>
+                        <a href="CustomParserBuilder.html" title="Allow customization of inline parsing by hooking into the parser internals.">CustomParserBuilder</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="HeaderAttributesExtension$.html" title=""></a>
+                        <a class="class" href="HeaderAttributesExtension.html" title=""></a>
+                        <a href="HeaderAttributesExtension.html" title="">HeaderAttributesExtension</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="HtmlBlockMatcher.html" title=""></a>
+                        <a href="HtmlBlockMatcher.html" title="">HtmlBlockMatcher</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="HtmlNodeRendererContextExtensionMethods$.html" title=""></a>
+                        <a class="class" href="HtmlNodeRendererContextExtensionMethods.html" title=""></a>
+                        <a href="HtmlNodeRendererContextExtensionMethods.html" title="">HtmlNodeRendererContextExtensionMethods</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="IndexBlock$.html" title=""></a>
+                        <a class="class" href="IndexBlock.html" title=""></a>
+                        <a href="IndexBlock.html" title="">IndexBlock</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="InlineMath.html" title=""></a>
+                        <a href="InlineMath.html" title="">InlineMath</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="MathBlock.html" title=""></a>
+                        <a href="MathBlock.html" title="">MathBlock</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="MathNode.html" title=""></a>
+                        <a href="MathNode.html" title="">MathNode</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="MathSyntaxExtension.html" title="Parse inline and block math notation."></a>
+                        <a href="MathSyntaxExtension.html" title="Parse inline and block math notation.">MathSyntaxExtension</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="" title=""></a>
+                        <a href="" title="">MathSyntaxParserExtension</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="MergeTabsExtension.html" title="Merge adjacent fenced code blocks into tabs."></a>
+                        <a href="MergeTabsExtension.html" title="Merge adjacent fenced code blocks into tabs.">MergeTabsExtension</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="MergeTabsProcessor.html" title=""></a>
+                        <a href="MergeTabsProcessor.html" title="">MergeTabsProcessor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="NodeExtensionMethods$.html" title=""></a>
+                        <a class="class" href="NodeExtensionMethods.html" title=""></a>
+                        <a href="NodeExtensionMethods.html" title="">NodeExtensionMethods</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="object" href="NodeUtil$.html" title=""></a>
+                        <a href="NodeUtil$.html" title="">NodeUtil</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="SimpleHtmlNodeRenderer.html" title=""></a>
+                        <a href="SimpleHtmlNodeRenderer.html" title="">SimpleHtmlNodeRenderer</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="SmartPunctuationExtension.html" title="Replace ASCII punctuation by Unicode em-dashes, en-dashes and ellipses in text content."></a>
+                        <a href="SmartPunctuationExtension.html" title="Replace ASCII punctuation by Unicode em-dashes, en-dashes and ellipses in text content.">SmartPunctuationExtension</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="object" href="SmartPunctuationProcessor$.html" title=""></a>
+                        <a href="SmartPunctuationProcessor$.html" title="">SmartPunctuationProcessor</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="SmartQuotesExtension.html" title="Replace ASCII quotes by proper Unicode quotes in text content."></a>
+                        <a href="SmartQuotesExtension.html" title="Replace ASCII quotes by proper Unicode quotes in text content.">SmartQuotesExtension</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="object" href="SmartQuotesProcessor$.html" title=""></a>
+                        <a href="SmartQuotesProcessor$.html" title="">SmartQuotesProcessor</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="SpecialImage.html" title=""></a>
+                        <a href="SpecialImage.html" title="">SpecialImage</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="SpecialImageBlock.html" title=""></a>
+                        <a href="SpecialImageBlock.html" title="">SpecialImageBlock</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="SpecialImageInline.html" title=""></a>
+                        <a href="SpecialImageInline.html" title="">SpecialImageInline</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="SpecialImageMatcher.html" title=""></a>
+                        <a href="SpecialImageMatcher.html" title="">SpecialImageMatcher</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="SpecialImageParagraphMatcher.html" title=""></a>
+                        <a href="SpecialImageParagraphMatcher.html" title="">SpecialImageParagraphMatcher</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="SpecialImageProcessor$.html" title=""></a>
+                        <a class="class" href="SpecialImageProcessor.html" title="Replace &quot;config&quot;, &quot;toctree&quot; and &quot;index&quot; images and image paragraphs, and convert other matched images from Image to SpecialImage nodes."></a>
+                        <a href="SpecialImageProcessor.html" title="Replace &quot;config&quot;, &quot;toctree&quot; and &quot;index&quot; images and image paragraphs, and convert other matched images from Image to SpecialImage nodes.">SpecialImageProcessor</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="StaggeredDelimiterProcessor.html" title=""></a>
+                        <a href="StaggeredDelimiterProcessor.html" title="">StaggeredDelimiterProcessor</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Subscript.html" title=""></a>
+                        <a href="Subscript.html" title="">Subscript</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="SubscriptExtension.html" title="Parse superscript notation, delimited by ~, with no other markup or unescaped whitespace in between."></a>
+                        <a href="SubscriptExtension.html" title="Parse superscript notation, delimited by ~, with no other markup or unescaped whitespace in between.">SubscriptExtension</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Superscript.html" title=""></a>
+                        <a href="Superscript.html" title="">Superscript</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="SuperscriptExtension.html" title="Parse superscript notation, delimited by ^, with no other markup or unescaped whitespace in between."></a>
+                        <a href="SuperscriptExtension.html" title="Parse superscript notation, delimited by ^, with no other markup or unescaped whitespace in between.">SuperscriptExtension</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="SuperscriptSubscriptDelimiterProcessor.html" title=""></a>
+                        <a href="SuperscriptSubscriptDelimiterProcessor.html" title="">SuperscriptSubscriptDelimiterProcessor</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="SuperscriptSubscriptExtension.html" title=""></a>
+                        <a href="SuperscriptSubscriptExtension.html" title="">SuperscriptSubscriptExtension</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="TabItem.html" title=""></a>
+                        <a href="TabItem.html" title="">TabItem</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="TabView.html" title=""></a>
+                        <a href="TabView.html" title="">TabView</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="TextProcessor$.html" title=""></a>
+                        <a class="class" href="TextProcessor.html" title=""></a>
+                        <a href="TextProcessor.html" title="">TextProcessor</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="TocBlock.html" title=""></a>
+                        <a href="TocBlock.html" title="">TocBlock</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="class type">
+      <div id="definition">
+        <div class="big-circle class">c</div>
+        <p id="owner"><a href="../../../index.html" class="extype" name="com">com</a>.<a href="../../index.html" class="extype" name="com.novocode">novocode</a>.<a href="../index.html" class="extype" name="com.novocode.ornate">ornate</a>.<a href="index.html" class="extype" name="com.novocode.ornate.commonmark">commonmark</a></p>
+        <h1>MathSyntaxParserExtension<span class="permalink">
+      <a href="../../../../com/novocode/ornate/commonmark/MathSyntaxParserExtension.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        <h3><span class="morelinks"></span></h3>
       </div>
 
       <h4 id="signature" class="signature">
@@ -48,50 +339,65 @@
         <span class="name">MathSyntaxParserExtension</span><span class="result"> extends <span class="extype" name="org.commonmark.parser.Parser.ParserExtension">ParserExtension</span> with <a href="../Logging.html" class="extype" name="com.novocode.ornate.Logging">Logging</a></span>
       </span>
       </h4>
+
       
           <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
-          <span class="toggle">Linear Supertypes</span>
+          <span class="toggle">
+            Linear Supertypes
+          </span>
           <div class="superTypes hiddenContent"><a href="../Logging.html" class="extype" name="com.novocode.ornate.Logging">Logging</a>, <span class="extype" name="org.commonmark.parser.Parser.ParserExtension">ParserExtension</span>, <span class="extype" name="org.commonmark.Extension">org.commonmark.Extension</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
       <div id="mbrsel">
-        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
-        <div id="order">
-              <span class="filtertype">Ordering</span>
-              <ol>
-                
-                <li class="alpha in"><span>Alphabetic</span></li>
-                <li class="inherit out"><span>By Inheritance</span></li>
-              </ol>
-            </div>
-        <div id="ancestors">
-                <span class="filtertype">Inherited<br />
-                </span>
-                <ol id="linearization">
-                  <li class="in" name="com.novocode.ornate.commonmark.MathSyntaxParserExtension"><span>MathSyntaxParserExtension</span></li><li class="in" name="com.novocode.ornate.Logging"><span>Logging</span></li><li class="in" name="org.commonmark.parser.Parser.ParserExtension"><span>ParserExtension</span></li><li class="in" name="org.commonmark.Extension"><span>Extension</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
-                </ol>
-              </div><div id="ancestors">
-            <span class="filtertype"></span>
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
             <ol>
-              <li class="hideall out"><span>Hide All</span></li>
-              <li class="showall in"><span>Show All</span></li>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              <li class="inherit out"><span>By Inheritance</span></li>
             </ol>
           </div>
-        <div id="visbl">
-            <span class="filtertype">Visibility</span>
-            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
-          </div>
+          <div class="ancestors">
+                  <span class="filtertype">Inherited<br />
+                  </span>
+                  <ol id="linearization">
+                    <li class="in" name="com.novocode.ornate.commonmark.MathSyntaxParserExtension"><span>MathSyntaxParserExtension</span></li><li class="in" name="com.novocode.ornate.Logging"><span>Logging</span></li><li class="in" name="org.commonmark.parser.Parser.ParserExtension"><span>ParserExtension</span></li><li class="in" name="org.commonmark.Extension"><span>Extension</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+              <span class="filtertype"></span>
+              <ol>
+                <li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show All</span></li>
+              </ol>
+            </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
       </div>
 
       <div id="template">
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="com.novocode.ornate.commonmark.MathSyntaxParserExtension#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(co:com.novocode.ornate.config.ConfiguredObject,pageConfig:com.typesafe.config.Config):com.novocode.ornate.commonmark.MathSyntaxParserExtension"></a>
-      <a id="&lt;init&gt;:MathSyntaxParserExtension"></a>
-      <h4 class="signature">
+              <ol><li name="com.novocode.ornate.commonmark.MathSyntaxParserExtension#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(co:com.novocode.ornate.config.ConfiguredObject,pageConfig:com.typesafe.config.Config):com.novocode.ornate.commonmark.MathSyntaxParserExtension"></a><a id="&lt;init&gt;:MathSyntaxParserExtension"></a>
+      <span class="permalink">
+      <a href="../../../../com/novocode/ornate/commonmark/MathSyntaxParserExtension.html#&lt;init&gt;(co:com.novocode.ornate.config.ConfiguredObject,pageConfig:com.typesafe.config.Config):com.novocode.ornate.commonmark.MathSyntaxParserExtension" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
@@ -99,45 +405,44 @@
       <span class="symbol">
         <span class="name">MathSyntaxParserExtension</span><span class="params">(<span name="co">co: <a href="../config/ConfiguredObject.html" class="extype" name="com.novocode.ornate.config.ConfiguredObject">ConfiguredObject</a></span>, <span name="pageConfig">pageConfig: <span class="extype" name="com.typesafe.config.Config">Config</span></span>)</span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.commonmark.MathSyntaxParserExtension@&lt;init&gt;(co:com.novocode.ornate.config.ConfiguredObject,pageConfig:com.typesafe.config.Config):com.novocode.ornate.commonmark.MathSyntaxParserExtension" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
+      
       
     </li></ol>
             </div>
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="com.novocode.ornate.commonmark.MathSyntaxParserExtension.MathBlockParserFactory" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="MathBlockParserFactoryextendsAbstractBlockParserFactory"></a>
-      <a id="MathBlockParserFactory:MathBlockParserFactory"></a>
-      <h4 class="signature">
+              <ol><li name="com.novocode.ornate.commonmark.MathSyntaxParserExtension.MathBlockParserFactory" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MathBlockParserFactoryextendsAbstractBlockParserFactory"></a><a id="MathBlockParserFactory:MathBlockParserFactory"></a>
+      <span class="permalink">
+      <a href="../../../../com/novocode/ornate/commonmark/MathSyntaxParserExtension.html#MathBlockParserFactoryextendsAbstractBlockParserFactory" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="MathSyntaxParserExtension$MathBlockParserFactory.html"><span class="name">MathBlockParserFactory</span></a><span class="result"> extends <span class="extype" name="org.commonmark.parser.block.AbstractBlockParserFactory">AbstractBlockParserFactory</span></span>
+        <a title="" href="MathSyntaxParserExtension$MathBlockParserFactory.html"><span class="name">MathBlockParserFactory</span></a><span class="result"> extends <span class="extype" name="org.commonmark.parser.block.AbstractBlockParserFactory">AbstractBlockParserFactory</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.commonmark.MathSyntaxParserExtension@MathBlockParserFactoryextendsAbstractBlockParserFactory" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
+      
       
     </li></ol>
             </div>
 
         
 
-        <div id="values" class="values members">
+        <div class="values members">
               <h3>Value Members</h3>
-              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="!=(x$1:Any):Boolean"></a>
-      <a id="!=(Any):Boolean"></a>
-      <h4 class="signature">
+              <ol>
+                <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../com/novocode/ornate/commonmark/MathSyntaxParserExtension.html#!=(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
@@ -145,16 +450,15 @@
       <span class="symbol">
         <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.commonmark.MathSyntaxParserExtension@!=(x$1:Any):Boolean" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <span class="permalink">
+      <a href="../../../../com/novocode/ornate/commonmark/MathSyntaxParserExtension.html###():Int" title="Permalink">
+        <i class="material-icons"></i>
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="##():Int"></a>
-      <a id="##():Int"></a>
-      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
@@ -162,16 +466,15 @@
       <span class="symbol">
         <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.commonmark.MathSyntaxParserExtension@##():Int" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../com/novocode/ornate/commonmark/MathSyntaxParserExtension.html#==(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="==(x$1:Any):Boolean"></a>
-      <a id="==(Any):Boolean"></a>
-      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
@@ -179,16 +482,15 @@
       <span class="symbol">
         <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.commonmark.MathSyntaxParserExtension@==(x$1:Any):Boolean" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <span class="permalink">
+      <a href="../../../../com/novocode/ornate/commonmark/MathSyntaxParserExtension.html#asInstanceOf[T0]:T0" title="Permalink">
+        <i class="material-icons"></i>
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="asInstanceOf[T0]:T0"></a>
-      <a id="asInstanceOf[T0]:T0"></a>
-      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
@@ -196,16 +498,15 @@
       <span class="symbol">
         <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.commonmark.MathSyntaxParserExtension@asInstanceOf[T0]:T0" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a><a id="clone():AnyRef"></a>
+      <span class="permalink">
+      <a href="../../../../com/novocode/ornate/commonmark/MathSyntaxParserExtension.html#clone():Object" title="Permalink">
+        <i class="material-icons"></i>
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="clone():Object"></a>
-      <a id="clone():AnyRef"></a>
-      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -213,22 +514,23 @@
       <span class="symbol">
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.commonmark.MathSyntaxParserExtension@clone():Object" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="com.novocode.ornate.commonmark.MathSyntaxParserExtension#dollarBlock" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="com.novocode.ornate.commonmark.MathSyntaxParserExtension#dollarBlock" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="dollarBlock:String"></a>
-      <a id="dollarBlock:String"></a>
-      <h4 class="signature">
+      <span class="permalink">
+      <a href="../../../../com/novocode/ornate/commonmark/MathSyntaxParserExtension.html#dollarBlock:String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
@@ -236,16 +538,15 @@
       <span class="symbol">
         <span class="name">dollarBlock</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.commonmark.MathSyntaxParserExtension@dollarBlock:String" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      
+      
+    </li><li name="com.novocode.ornate.commonmark.MathSyntaxParserExtension#dollarFenced" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="dollarFenced:String"></a>
+      <span class="permalink">
+      <a href="../../../../com/novocode/ornate/commonmark/MathSyntaxParserExtension.html#dollarFenced:String" title="Permalink">
+        <i class="material-icons"></i>
       </a>
     </span>
-      
-    </li><li name="com.novocode.ornate.commonmark.MathSyntaxParserExtension#dollarFenced" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="dollarFenced:String"></a>
-      <a id="dollarFenced:String"></a>
-      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
@@ -253,16 +554,15 @@
       <span class="symbol">
         <span class="name">dollarFenced</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.commonmark.MathSyntaxParserExtension@dollarFenced:String" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      
+      
+    </li><li name="com.novocode.ornate.commonmark.MathSyntaxParserExtension#dollarInline" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="dollarInline:String"></a>
+      <span class="permalink">
+      <a href="../../../../com/novocode/ornate/commonmark/MathSyntaxParserExtension.html#dollarInline:String" title="Permalink">
+        <i class="material-icons"></i>
       </a>
     </span>
-      
-    </li><li name="com.novocode.ornate.commonmark.MathSyntaxParserExtension#dollarInline" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="dollarInline:String"></a>
-      <a id="dollarInline:String"></a>
-      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
@@ -270,16 +570,15 @@
       <span class="symbol">
         <span class="name">dollarInline</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.commonmark.MathSyntaxParserExtension@dollarInline:String" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      
+      
+    </li><li name="com.novocode.ornate.commonmark.MathSyntaxParserExtension#dollarInlineCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="dollarInlineCode:String"></a>
+      <span class="permalink">
+      <a href="../../../../com/novocode/ornate/commonmark/MathSyntaxParserExtension.html#dollarInlineCode:String" title="Permalink">
+        <i class="material-icons"></i>
       </a>
     </span>
-      
-    </li><li name="com.novocode.ornate.commonmark.MathSyntaxParserExtension#dollarInlineCode" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="dollarInlineCode:String"></a>
-      <a id="dollarInlineCode:String"></a>
-      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
@@ -287,16 +586,15 @@
       <span class="symbol">
         <span class="name">dollarInlineCode</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.commonmark.MathSyntaxParserExtension@dollarInlineCode:String" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      
+      
+    </li><li name="com.novocode.ornate.commonmark.MathSyntaxParserExtension#doubleBackslash" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="doubleBackslash:String"></a>
+      <span class="permalink">
+      <a href="../../../../com/novocode/ornate/commonmark/MathSyntaxParserExtension.html#doubleBackslash:String" title="Permalink">
+        <i class="material-icons"></i>
       </a>
     </span>
-      
-    </li><li name="com.novocode.ornate.commonmark.MathSyntaxParserExtension#doubleBackslash" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="doubleBackslash:String"></a>
-      <a id="doubleBackslash:String"></a>
-      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
@@ -304,16 +602,15 @@
       <span class="symbol">
         <span class="name">doubleBackslash</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.commonmark.MathSyntaxParserExtension@doubleBackslash:String" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      
+      
+    </li><li name="com.novocode.ornate.commonmark.MathSyntaxParserExtension#encodeAsHtml" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="encodeAsHtml(s:String,lang:String):String"></a><a id="encodeAsHtml(String,String):String"></a>
+      <span class="permalink">
+      <a href="../../../../com/novocode/ornate/commonmark/MathSyntaxParserExtension.html#encodeAsHtml(s:String,lang:String):String" title="Permalink">
+        <i class="material-icons"></i>
       </a>
     </span>
-      
-    </li><li name="com.novocode.ornate.commonmark.MathSyntaxParserExtension#encodeAsHtml" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="encodeAsHtml(s:String,lang:String):String"></a>
-      <a id="encodeAsHtml(String,String):String"></a>
-      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -321,16 +618,15 @@
       <span class="symbol">
         <span class="name">encodeAsHtml</span><span class="params">(<span name="s">s: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="lang">lang: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.commonmark.MathSyntaxParserExtension@encodeAsHtml(s:String,lang:String):String" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      
+      
+    </li><li name="com.novocode.ornate.commonmark.MathSyntaxParserExtension#encodeInline" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="encodeInline(s:String):String"></a><a id="encodeInline(String):String"></a>
+      <span class="permalink">
+      <a href="../../../../com/novocode/ornate/commonmark/MathSyntaxParserExtension.html#encodeInline(s:String):String" title="Permalink">
+        <i class="material-icons"></i>
       </a>
     </span>
-      
-    </li><li name="com.novocode.ornate.commonmark.MathSyntaxParserExtension#encodeInline" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="encodeInline(s:String):String"></a>
-      <a id="encodeInline(String):String"></a>
-      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -338,16 +634,15 @@
       <span class="symbol">
         <span class="name">encodeInline</span><span class="params">(<span name="s">s: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.commonmark.MathSyntaxParserExtension@encodeInline(s:String):String" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      
+      <p class="shortcomment cmt">Encode inline math sequences into intermediate inline HTML.</p>
+    </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../com/novocode/ornate/commonmark/MathSyntaxParserExtension.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
       </a>
     </span>
-      <p class="shortcomment cmt">Encode inline math sequences into intermediate inline HTML.</p>
-    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="eq(x$1:AnyRef):Boolean"></a>
-      <a id="eq(AnyRef):Boolean"></a>
-      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
@@ -355,16 +650,15 @@
       <span class="symbol">
         <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.commonmark.MathSyntaxParserExtension@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../com/novocode/ornate/commonmark/MathSyntaxParserExtension.html#equals(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="equals(x$1:Any):Boolean"></a>
-      <a id="equals(Any):Boolean"></a>
-      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -372,16 +666,15 @@
       <span class="symbol">
         <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.commonmark.MathSyntaxParserExtension@equals(x$1:Any):Boolean" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="com.novocode.ornate.commonmark.MathSyntaxParserExtension#extend" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="extend(builder:org.commonmark.parser.Parser.Builder):Unit"></a><a id="extend(Builder):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../com/novocode/ornate/commonmark/MathSyntaxParserExtension.html#extend(builder:org.commonmark.parser.Parser.Builder):Unit" title="Permalink">
+        <i class="material-icons"></i>
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="com.novocode.ornate.commonmark.MathSyntaxParserExtension#extend" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="extend(builder:org.commonmark.parser.Parser.Builder):Unit"></a>
-      <a id="extend(Builder):Unit"></a>
-      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -389,16 +682,15 @@
       <span class="symbol">
         <span class="name">extend</span><span class="params">(<span name="builder">builder: <span class="extype" name="org.commonmark.parser.Parser.Builder">Builder</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.commonmark.MathSyntaxParserExtension@extend(builder:org.commonmark.parser.Parser.Builder):Unit" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.novocode.ornate.commonmark.MathSyntaxParserExtension">MathSyntaxParserExtension</a> → ParserExtension</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../com/novocode/ornate/commonmark/MathSyntaxParserExtension.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.novocode.ornate.commonmark.MathSyntaxParserExtension">MathSyntaxParserExtension</a> → ParserExtension</dd></dl></div>
-    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="finalize():Unit"></a>
-      <a id="finalize():Unit"></a>
-      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -406,22 +698,21 @@
       <span class="symbol">
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.commonmark.MathSyntaxParserExtension@finalize():Unit" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Throwable]</span>
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
-      <a id="getClass():Class[_]"></a>
-      <h4 class="signature">
+      <span class="permalink">
+      <a href="../../../../com/novocode/ornate/commonmark/MathSyntaxParserExtension.html#getClass():Class[_]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
@@ -429,16 +720,18 @@
       <span class="symbol">
         <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.commonmark.MathSyntaxParserExtension@getClass():Class[_]" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <span class="permalink">
+      <a href="../../../../com/novocode/ornate/commonmark/MathSyntaxParserExtension.html#hashCode():Int" title="Permalink">
+        <i class="material-icons"></i>
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="hashCode():Int"></a>
-      <a id="hashCode():Int"></a>
-      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -446,16 +739,18 @@
       <span class="symbol">
         <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.commonmark.MathSyntaxParserExtension@hashCode():Int" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="com.novocode.ornate.commonmark.MathSyntaxParserExtension#htmlPrefix" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="htmlPrefix:String"></a>
+      <span class="permalink">
+      <a href="../../../../com/novocode/ornate/commonmark/MathSyntaxParserExtension.html#htmlPrefix:String" title="Permalink">
+        <i class="material-icons"></i>
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="com.novocode.ornate.commonmark.MathSyntaxParserExtension#htmlPrefix" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="htmlPrefix:String"></a>
-      <a id="htmlPrefix:String"></a>
-      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
@@ -463,16 +758,15 @@
       <span class="symbol">
         <span class="name">htmlPrefix</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.commonmark.MathSyntaxParserExtension@htmlPrefix:String" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      
+      
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../com/novocode/ornate/commonmark/MathSyntaxParserExtension.html#isInstanceOf[T0]:Boolean" title="Permalink">
+        <i class="material-icons"></i>
       </a>
     </span>
-      
-    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="isInstanceOf[T0]:Boolean"></a>
-      <a id="isInstanceOf[T0]:Boolean"></a>
-      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
@@ -480,16 +774,15 @@
       <span class="symbol">
         <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.commonmark.MathSyntaxParserExtension@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="com.novocode.ornate.Logging#logTime" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logTime[T](msg:String)(f:=&gt;T):T"></a><a id="logTime[T](String)(⇒T):T"></a>
+      <span class="permalink">
+      <a href="../../../../com/novocode/ornate/commonmark/MathSyntaxParserExtension.html#logTime[T](msg:String)(f:=&gt;T):T" title="Permalink">
+        <i class="material-icons"></i>
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="com.novocode.ornate.Logging#logTime" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="logTime[T](msg:String)(f:=&gt;T):T"></a>
-      <a id="logTime[T](String)(⇒T):T"></a>
-      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
@@ -497,16 +790,15 @@
       <span class="symbol">
         <span class="name">logTime</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="msg">msg: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="params">(<span name="f">f: ⇒ <span class="extype" name="com.novocode.ornate.Logging.logTime.T">T</span></span>)</span><span class="result">: <span class="extype" name="com.novocode.ornate.Logging.logTime.T">T</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.commonmark.MathSyntaxParserExtension@logTime[T](msg:String)(f:=&gt;T):T" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Logging.html" class="extype" name="com.novocode.ornate.Logging">Logging</a></dd></dl></div>
+    </li><li name="com.novocode.ornate.Logging#logger" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logger:org.slf4j.Logger"></a><a id="logger:Logger"></a>
+      <span class="permalink">
+      <a href="../../../../com/novocode/ornate/commonmark/MathSyntaxParserExtension.html#logger:org.slf4j.Logger" title="Permalink">
+        <i class="material-icons"></i>
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Logging.html" class="extype" name="com.novocode.ornate.Logging">Logging</a></dd></dl></div>
-    </li><li name="com.novocode.ornate.Logging#logger" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="logger:org.slf4j.Logger"></a>
-      <a id="logger:Logger"></a>
-      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
@@ -514,16 +806,15 @@
       <span class="symbol">
         <span class="name">logger</span><span class="result">: <span class="extype" name="org.slf4j.Logger">Logger</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.commonmark.MathSyntaxParserExtension@logger:org.slf4j.Logger" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Logging.html" class="extype" name="com.novocode.ornate.Logging">Logging</a></dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../com/novocode/ornate/commonmark/MathSyntaxParserExtension.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Logging.html" class="extype" name="com.novocode.ornate.Logging">Logging</a></dd></dl></div>
-    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="ne(x$1:AnyRef):Boolean"></a>
-      <a id="ne(AnyRef):Boolean"></a>
-      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
@@ -531,16 +822,15 @@
       <span class="symbol">
         <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.commonmark.MathSyntaxParserExtension@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../com/novocode/ornate/commonmark/MathSyntaxParserExtension.html#notify():Unit" title="Permalink">
+        <i class="material-icons"></i>
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="notify():Unit"></a>
-      <a id="notify():Unit"></a>
-      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
@@ -548,16 +838,18 @@
       <span class="symbol">
         <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.commonmark.MathSyntaxParserExtension@notify():Unit" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../com/novocode/ornate/commonmark/MathSyntaxParserExtension.html#notifyAll():Unit" title="Permalink">
+        <i class="material-icons"></i>
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="notifyAll():Unit"></a>
-      <a id="notifyAll():Unit"></a>
-      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
@@ -565,16 +857,18 @@
       <span class="symbol">
         <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.commonmark.MathSyntaxParserExtension@notifyAll():Unit" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="com.novocode.ornate.commonmark.MathSyntaxParserExtension#processInline" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="processInline(s:String,dollarInline:String,singleBackslash:String,doubleBackslash:String):Seq[AnyRef]"></a><a id="processInline(String,String,String,String):Seq[AnyRef]"></a>
+      <span class="permalink">
+      <a href="../../../../com/novocode/ornate/commonmark/MathSyntaxParserExtension.html#processInline(s:String,dollarInline:String,singleBackslash:String,doubleBackslash:String):Seq[AnyRef]" title="Permalink">
+        <i class="material-icons"></i>
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="com.novocode.ornate.commonmark.MathSyntaxParserExtension#processInline" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="processInline(s:String,dollarInline:String,singleBackslash:String,doubleBackslash:String):Seq[AnyRef]"></a>
-      <a id="processInline(String,String,String,String):Seq[AnyRef]"></a>
-      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -582,16 +876,15 @@
       <span class="symbol">
         <span class="name">processInline</span><span class="params">(<span name="s">s: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dollarInline">dollarInline: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="singleBackslash">singleBackslash: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="doubleBackslash">doubleBackslash: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.AnyRef">AnyRef</span>]</span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.commonmark.MathSyntaxParserExtension@processInline(s:String,dollarInline:String,singleBackslash:String,doubleBackslash:String):Seq[AnyRef]" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      
+      
+    </li><li name="com.novocode.ornate.commonmark.MathSyntaxParserExtension#singleBackslash" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="singleBackslash:String"></a>
+      <span class="permalink">
+      <a href="../../../../com/novocode/ornate/commonmark/MathSyntaxParserExtension.html#singleBackslash:String" title="Permalink">
+        <i class="material-icons"></i>
       </a>
     </span>
-      
-    </li><li name="com.novocode.ornate.commonmark.MathSyntaxParserExtension#singleBackslash" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="singleBackslash:String"></a>
-      <a id="singleBackslash:String"></a>
-      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
@@ -599,16 +892,15 @@
       <span class="symbol">
         <span class="name">singleBackslash</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.commonmark.MathSyntaxParserExtension@singleBackslash:String" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      
+      
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
+      <span class="permalink">
+      <a href="../../../../com/novocode/ornate/commonmark/MathSyntaxParserExtension.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+        <i class="material-icons"></i>
       </a>
     </span>
-      
-    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
-      <a id="synchronized[T0](⇒T0):T0"></a>
-      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
@@ -616,16 +908,15 @@
       <span class="symbol">
         <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.commonmark.MathSyntaxParserExtension@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <span class="permalink">
+      <a href="../../../../com/novocode/ornate/commonmark/MathSyntaxParserExtension.html#toString():String" title="Permalink">
+        <i class="material-icons"></i>
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toString():String"></a>
-      <a id="toString():String"></a>
-      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -633,16 +924,15 @@
       <span class="symbol">
         <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.commonmark.MathSyntaxParserExtension@toString():String" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../com/novocode/ornate/commonmark/MathSyntaxParserExtension.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="wait():Unit"></a>
-      <a id="wait():Unit"></a>
-      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
@@ -650,11 +940,7 @@
       <span class="symbol">
         <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.commonmark.MathSyntaxParserExtension@wait():Unit" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
+      
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -662,10 +948,13 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
-      <a id="wait(Long,Int):Unit"></a>
-      <h4 class="signature">
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../com/novocode/ornate/commonmark/MathSyntaxParserExtension.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
@@ -673,11 +962,7 @@
       <span class="symbol">
         <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.commonmark.MathSyntaxParserExtension@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
+      
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -685,10 +970,13 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="wait(x$1:Long):Unit"></a>
-      <a id="wait(Long):Unit"></a>
-      <h4 class="signature">
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../com/novocode/ornate/commonmark/MathSyntaxParserExtension.html#wait(x$1:Long):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
@@ -696,19 +984,18 @@
       <span class="symbol">
         <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.novocode.ornate.commonmark.MathSyntaxParserExtension@wait(x$1:Long):Unit" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
+      
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
     </span>)</span>
               
         </dd></dl></div>
-    </li></ol>
+    </li>
+              </ol>
             </div>
 
         
@@ -743,7 +1030,9 @@
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-
-
+    </body>
+          </div>
+        </div>
+      </div>
     </body>
       </html>
